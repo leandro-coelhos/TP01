@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1729777995 source:/home/leandrocoelho/Desktop/TP01/Teste/main.cpp
+	<iostream>
+	<string>
+	<stdio.h>
+	"dominios.hpp"
+
+1729777552 /home/leandrocoelho/Desktop/TP01/Teste/dominios.hpp
+	<string>
+
