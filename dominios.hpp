@@ -29,4 +29,14 @@ class Dinheiro {
         string getDinheiroView() const;
 };
 
+class Nome {
+    private:
+        string nome;  
+        bool validar(string n); 
+
+    public:
+        bool setName(string n);  
+        string getName() const;   
+};
+
 #endif // DOMINIOS_HPP_INCLUDED
