@@ -3,6 +3,8 @@
 
 using namespace std;
 
+// HORARIO
+
 bool Horario::validateHora(unsigned short hora, unsigned short minuto){
     //Valida se as horas e minutos estão dentro do padrão
     if (hora > 23 || hora < 0){
@@ -44,6 +46,8 @@ string Horario::getHora() const { //Formata a string para o padrão HH:MM
     }
     return horario;
 }
+
+// DINHEIRO
 
 bool Dinheiro::validateDinheiro(string dinheiro){ //Valida se o dinheiro está no padrão correto
     try {
@@ -87,3 +91,33 @@ string Dinheiro::getDinheiroView() const {
 float Dinheiro::getDinheiro() const {
     return Dinheiro::dinheiro; //Retorna o valor em float
 }
+
+// NOME
+
+bool Nome::validar(string n) {
+    return true;
+}
+bool Nome::validar(string n) {
+    return n.length() >= 1 && n.length() <= 30; // Valida se o nome tem entre 1 e 30 caracteres
+}
+
+bool Nome::setName(string n) {
+    if (!validar(n)) // Verifica se o nome � v�lido
+        return false;
+    this->nome = n; // Atribui o nome se for v�lido
+    return true;
+}
+
+string Nome::getName() const {
+    return nome; // Retorna o nome armazenado
+}
+
+// AVALIAÇÃO
+
+// DURACAO
+
+// DATA
+
+// CODIGO
+
+// SENHA
