@@ -32,11 +32,51 @@ class Dinheiro {
 class Nome {
     private:
         string nome;  
-        bool validar(string n); 
+        bool validateNome(string n); 
 
     public:
         bool setName(string n);  
         string getName() const;   
 };
+
+class Duracao {
+     private:
+          int duracao;
+          bool validateDuracao(int duracao);
+     public:
+          bool setDuracao(int duracao);
+          string getDuracao() const;
+};
+
+class Avaliacao {
+    private: 
+        int avaliacao;
+        bool validateAvaliacao(int avaliacao);
+    public:
+        bool setAvaliacao(int avaliacao);
+        string getAvaliacao() const;
+};
+
+class Data {
+    private:
+        unsigned short dia;
+        unsigned short mes;
+        unsigned short ano;
+        bool validateData(unsigned short d, unsigned short m, unsigned short a);
+    public:
+        bool setData(string data);
+        string getData() const; 
+};
+
+// class Senha{
+//     private:
+//         string senha;
+//     public:
+//         Senha();
+//         void setsenha(const string& s);
+//         string const getsenha() const;
+//         bool validasenha(const string& s);
+//         bool asdsc(const string& s);
+// };
 
 #endif // DOMINIOS_HPP_INCLUDED
