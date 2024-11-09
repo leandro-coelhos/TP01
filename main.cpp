@@ -6,7 +6,7 @@ using namespace std;
 
 int main()
 {
-    cout << "Escolha o serviço desejado: ";
+    cout << "Escolha o servico desejado: ";
     int opcao;
     scanf("%d", &opcao);
 
@@ -85,6 +85,18 @@ int main()
           else {
                printf("Invalido\n");
           }
+     }
+     else if (opcao == 7){
+        Senha senha;
+        string senha_valor;
+        printf("Digite a senha: ");
+        cin >> senha_valor;
+        if(senha.setSenha(senha_valor)){
+            printf("Senha = %s\n", senha.getSenha().c_str());
+        }
+        else {
+            printf("Invalido\n");
+        }
      }
     return 0;
 }

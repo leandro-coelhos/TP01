@@ -1,5 +1,8 @@
 #include "dominios.hpp"
 #include <stdexcept> 
+#include <map>
+#include <vector>
+#include <cctype>
 
 using namespace std;
 
@@ -131,9 +134,7 @@ bool Avaliacao::setAvaliacao(int avaliacao){
 }
 
 string Avaliacao::getAvaliacao() const {
-    string avaliacao;
-    avaliacao = to_string(this->avaliacao);
-    return avaliacao;
+    return to_string(this->avaliacao);
 }
 
 // DURACAO
@@ -158,9 +159,7 @@ bool Duracao::setDuracao(int duracao){
 }
 
 string Duracao::getDuracao() const {
-    string duracao;
-    duracao = to_string(this->duracao);
-    return duracao;
+    return to_string(this->duracao);
 }
 
 // DATA
@@ -251,11 +250,20 @@ string Data::getData() const {
     if (this->dia < 10){
         dia = "0"+ to_string(this->dia);
     }
+    else {
+        dia = to_string(this->dia);
+    }
     if (this->mes < 10){
         mes = "0"+ to_string(this->mes);
     }
+    else {
+        mes = to_string(this->mes);
+    }
     if (this->ano < 10){
         ano = "0"+ to_string(this->ano);
+    }
+    else {
+        ano = to_string(this->ano);
     }
     data = dia + "-" + mes + "-" + ano;
     return data;
@@ -265,39 +273,53 @@ string Data::getData() const {
 
 // SENHA
 
-// Senha::Senha() : senha(""){}
+bool Senha::validateSenha(string senha){
+    if (senha.size() != 5){
+        return false;
+    }
+    for(int i = 0; i < 5; i++){ //Ver se tem numero
+        if(!isdigit(senha[i])){
+            return false;
+        }
+    }
+    vector<char> caracteres;
+    map<char, int> contagem; 
+    for (char c: senha){ 
+        contagem[c]++;
+        if(contagem[c] >= 2){ //Para descobrir se um numero se repete
+            return false;
+        }
+        caracteres.push_back(c - '0'); //subtracao por ascii, para virar inteiro
+    }
+    int contador_cre = 0; //contador de numeros crescentes
+    int contador_dec = 0; //contador de numeros decrescentes
+    int n_anterior = caracteres.at(0);
+    for(int n: caracteres){ //Lógica para ver se a senha é decresce ou crescente
+        if(n==(n_anterior-1)){
+            n_anterior = n;
+            contador_dec++;
+        }
+        else if(n==(n_anterior +1)){
+            n_anterior = n;
+            contador_cre++;
+        }
+        if(contador_cre == 4 || contador_dec == 4){
+            return false;
+        }
+    }
+    return true;
+}
 
-// bool Senha::validasenha(const string& s){
+bool Senha::setSenha(string senha){
+    if(!validateSenha(senha)){
+        return false;
+    }
+    else {
+        this->senha = senha;
+        return true;
+    }
+}
 
-//     if (s.length() < 8)return false;
-
-//     bool upper = false, lower = false, digit = false;
-
-//     for (char ch:s){
-//         if (isupper(ch)) upper = true;
-//         if (islower(ch)) lower = true;
-//         if (isdigit(ch)) digit = true;
-//     }
-//      return upper && lower && digit;
-
-
-// }
-
-// bool Senha::asdsc(const string& s){
-//     int cont = 1;
-//     for (size_t i = 1; i < s.length(); i++){
-//         if (s[i] == s[i-1] + 1){
-//             cont++;
-
-//         }
-//         else{
-//             cont = 1;
-//         }
-
-
-// }
-//     if (cont >= 6){
-//         return false;
-
-//     return true;
-// }
+string Senha::getSenha() const {
+    return this->senha;
+}

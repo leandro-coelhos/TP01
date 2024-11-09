@@ -68,15 +68,13 @@ class Data {
         string getData() const; 
 };
 
-// class Senha{
-//     private:
-//         string senha;
-//     public:
-//         Senha();
-//         void setsenha(const string& s);
-//         string const getsenha() const;
-//         bool validasenha(const string& s);
-//         bool asdsc(const string& s);
-// };
+class Senha {
+    private:
+        string senha;
+        bool validateSenha(string senha);
+    public:
+        bool setSenha(string senha);
+        string getSenha() const;
+};
 
 #endif // DOMINIOS_HPP_INCLUDED
