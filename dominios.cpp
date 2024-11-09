@@ -3,6 +3,7 @@
 #include <map>
 #include <vector>
 #include <cctype>
+#include <algorithm>
 
 using namespace std;
 
@@ -97,19 +98,24 @@ float Dinheiro::getDinheiro() const {
 
 // NOME
 
-bool Nome::validateNome(string n) {
-    return n.length() >= 1 && n.length() <= 30; // Valida se o nome tem entre 1 e 30 caracteres
+bool Nome::validateNome(string nome) {
+    for (char n: nome){
+        if(isdigit(n)){
+            return false;
+        }
+    }
+    return nome.length() >= 1 && nome.length() <= 30; // Valida se o nome tem entre 1 e 30 caracteres
 }
 
-bool Nome::setName(string n) {
-    if (!validateNome(n)) // Verifica se o nome � v�lido
+bool Nome::setName(string nome) {
+    if (!validateNome(nome)) // Verifica se o nome � v�lido
         return false;
-    this->nome = n; // Atribui o nome se for v�lido
+    this->nome = nome; // Atribui o nome se for v�lido
     return true;
 }
 
 string Nome::getName() const {
-    return nome; // Retorna o nome armazenado
+    return this->nome; // Retorna o nome armazenado
 }
 
 // AVALIAÇÃO
@@ -270,6 +276,38 @@ string Data::getData() const {
 }
 
 // CODIGO
+
+bool Codigo::validateCodigo(string codigo){
+    if(codigo.size()!=6){
+        return false;
+    }
+    vector<char> caracteres = {
+        'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 
+        'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
+        'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 
+        'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 
+        '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
+    for (char letra: codigo){
+        if(count(caracteres.begin(), caracteres.end(), letra) < 0){ //Ver se tem os caracteres validos percorrendo pela string e pelo vector
+            return false;
+        }
+    }
+    return true;
+}
+
+bool Codigo::setCodigo(string codigo){
+    if(!validateCodigo(codigo)){
+        return false;
+    }
+    else {
+        this->codigo = codigo;
+        return true;
+    }
+}
+
+string Codigo::getCodigo() const {
+    return this->codigo;
+}
 
 // SENHA
 

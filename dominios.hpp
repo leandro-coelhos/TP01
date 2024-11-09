@@ -32,10 +32,10 @@ class Dinheiro {
 class Nome {
     private:
         string nome;  
-        bool validateNome(string n); 
+        bool validateNome(string nome); 
 
     public:
-        bool setName(string n);  
+        bool setName(string nome);  
         string getName() const;   
 };
 
@@ -75,6 +75,15 @@ class Senha {
     public:
         bool setSenha(string senha);
         string getSenha() const;
+};
+
+class Codigo {
+    private:
+        string codigo;
+        bool validateCodigo(string codigo);
+    public:
+        bool setCodigo(string codigo);
+        string getCodigo() const;
 };
 
 #endif // DOMINIOS_HPP_INCLUDED
