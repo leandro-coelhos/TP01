@@ -1,5 +1,5 @@
 #include "dominios.hpp"
-#include <stdexcept> 
+#include <stdexcept>
 #include <map>
 #include <vector>
 #include <cctype>
@@ -178,12 +178,12 @@ bool Data::validateData(unsigned short dia, unsigned short mes, unsigned short a
         else {
             if ((ano % 4) == 0){  //Analise de ano bissexto
                 if (mes == 2){
-                    if (dia < 1 || dia > 29){ //Analise dos dias de fevereiro 
+                    if (dia < 1 || dia > 29){ //Analise dos dias de fevereiro
                         return false;
                     }
                     else {
                         return true;
-                    }   
+                    }
                 }
                 else {
                     if (mes == 1 || mes == 3 || mes == 5 || mes == 7 || mes == 8 || mes == 10 || mes == 12){
@@ -282,10 +282,10 @@ bool Codigo::validateCodigo(string codigo){
         return false;
     }
     vector<char> caracteres = {
-        'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 
+        'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p',
         'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
-        'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 
-        'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 
+        'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P',
+        'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
         '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
     for (char letra: codigo){
         if(count(caracteres.begin(), caracteres.end(), letra) < 0){ //Ver se tem os caracteres validos percorrendo pela string e pelo vector
@@ -321,8 +321,8 @@ bool Senha::validateSenha(string senha){
         }
     }
     vector<char> caracteres;
-    map<char, int> contagem; 
-    for (char c: senha){ 
+    map<char, int> contagem;
+    for (char c: senha){
         contagem[c]++;
         if(contagem[c] >= 2){ //Para descobrir se um numero se repete
             return false;

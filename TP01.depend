@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1731346541 source:c:\users\willi\desktop\tp01\tp01\dominios.cpp
+	"dominios.hpp"
+	<stdexcept>
+	<map>
+	<vector>
+	<cctype>
+	<algorithm>
+
+1731346518 c:\users\willi\desktop\tp01\tp01\dominios.hpp
+	<string>
+
+1731371494 source:c:\users\willi\desktop\tp01\tp01\main.cpp
+	<iostream>
+	<stdio.h>
+	<limits>
+	"dominios.hpp"
+
+1731439409 source:c:\users\willi\desktop\tp01\tp01\entidades.cpp
+

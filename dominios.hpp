@@ -10,11 +10,11 @@ class Horario {
         unsigned short hora;
         unsigned short minuto;
         bool validateHora(unsigned short h, unsigned short m);
-    
+
     public:
         bool setHora(string h);
         string getHora() const;
-        
+
 };
 
 class Dinheiro {
@@ -31,12 +31,12 @@ class Dinheiro {
 
 class Nome {
     private:
-        string nome;  
-        bool validateNome(string nome); 
+        string nome;
+        bool validateNome(string nome);
 
     public:
-        bool setName(string nome);  
-        string getName() const;   
+        bool setName(string nome);
+        string getName() const;
 };
 
 class Duracao {
@@ -49,7 +49,7 @@ class Duracao {
 };
 
 class Avaliacao {
-    private: 
+    private:
         int avaliacao;
         bool validateAvaliacao(int avaliacao);
     public:
@@ -65,7 +65,7 @@ class Data {
         bool validateData(unsigned short d, unsigned short m, unsigned short a);
     public:
         bool setData(string data);
-        string getData() const; 
+        string getData() const;
 };
 
 class Senha {
