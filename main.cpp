@@ -121,7 +121,7 @@ int main()
             }
         }
         else if (labs == 2) {
-            cout << "1: Horario\n2: Dinheiro\n3: Nome\n4: Duracao\n5: Avaliacao\n6: Data\n7: Senha\n8: Codigo\n9: Parar\n\n";
+            cout << "\n1: Horario\n2: Dinheiro\n3: Nome\n4: Duracao\n5: Avaliacao\n6: Data\n7: Senha\n8: Codigo\n9: Parar\n\n";
             cout << "\nEscolha o servico desejado de: ";
             cin >> opcao;
             cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Limpa o buffer do teclado
@@ -132,10 +132,12 @@ int main()
                 cout << "Formato: HH:MM\n";
                 cout << "Digite o horario: ";
                 getline(cin, hora_valor);
-                if (horario.setHora(hora_valor)) {
-                    cout << "Valor = " << horario.getHora() << "\n";
-                } else {
-                    cout << "Invalido\n";
+                try {
+                    horario.setHora(hora_valor);
+                    cout << "Valor = " << horario.getHora() << "\n\n";
+                } 
+                catch(invalid_argument &exp){
+                    cout << "Excecao: " << exp.what() << "\n\n";
                 }
             }
             else if (opcao == 2) {
@@ -144,10 +146,12 @@ int main()
                 cout << "Formato: 1.000,00\n";
                 cout << "Digite a quantidade dinheiro: ";
                 getline(cin, dinheiro_valor);
-                if (dinheiro.setDinheiro(dinheiro_valor)) {
+                try{
+                    dinheiro.setDinheiro(dinheiro_valor);
                     cout << "Valor = " << dinheiro.getDinheiroView() << "\nValor computacional = " << dinheiro.getDinheiro() << "\n";
-                } else {
-                    cout << "Invalido\n";
+                }
+                catch(invalid_argument &exp){
+                    cout << "Excecao: " << exp.what() << "\n\n";
                 }
             }
             else if (opcao == 3) {
@@ -156,10 +160,12 @@ int main()
                 cout << "Formato: Ate 30 caracteres, somente letras.\n";
                 cout << "Digite o nome: ";
                 getline(cin, nome_valor);
-                if (nome.setName(nome_valor)) {
+                try {
+                    nome.setName(nome_valor);
                     cout << "Nome definido: " << nome.getName() << "\n";
-                } else {
-                    cout << "Invalido.\n";
+                } 
+                catch(invalid_argument &exp) {
+                    cout << "Excecao: " << exp.what() << "\n\n";
                 }
             }
             else if (opcao == 4) {
@@ -191,7 +197,7 @@ int main()
             else if (opcao == 6) {
                 Data data;
                 string data_valor;
-                cout << "Formato: DD/MM/AA, sendo AA de 00 ate 99\n";
+                cout << "Formato: DD-MM-AA, sendo AA de 00 ate 99\n";
                 cout << "Digite a data: ";
                 cin >> data_valor;
                 cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Limpa o buffer do teclado

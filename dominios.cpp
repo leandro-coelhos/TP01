@@ -9,29 +9,30 @@ using namespace std;
 
 // HORARIO
 
-bool Horario::validateHora(unsigned short hora, unsigned short minuto){
+void Horario::validateHora(unsigned short hora, unsigned short minuto){
     //Valida se as horas e minutos estão dentro do padrão
     if (hora > 23 || hora < 0){
-        return false;
+        throw invalid_argument("Argumento invalido");
     }
     else if (minuto > 59 || minuto < 0){
-        return false;
+        throw invalid_argument("Argumento invalido");
     }
-    return true;
 }
 
-bool Horario::setHora(string horario){
+void Horario::setHora(string horario){
     if (horario[2] != ':'){
-        return false; //Se o horário não separar o valor corretamente será inválido
+        throw invalid_argument("Argumento invalido"); //Se o horário não separar o valor corretamente será inválido
     }
     unsigned short HH = stoi(horario.substr(0,2)); //Converte horas string para inteiro
     unsigned short MM = stoi(horario.substr(3 ,2)); //Converte minutos string para inteiro
-    if (validateHora(HH, MM)){ //Atribui valores se forem válidos
+    try {
+        validateHora(HH, MM);            //Atribui valores se forem válidos
         this->hora=HH;
         this->minuto=MM;
-        return true;
     }
-    return false;
+    catch(invalid_argument &exp) {
+        throw invalid_argument("Argumento invalido");
+    }
 }
 
 string Horario::getHora() const { //Formata a string para o padrão HH:MM
@@ -53,23 +54,22 @@ string Horario::getHora() const { //Formata a string para o padrão HH:MM
 
 // DINHEIRO
 
-bool Dinheiro::validateDinheiro(string dinheiro){ //Valida se o dinheiro está no padrão correto
+void Dinheiro::validateDinheiro(string dinheiro){ //Valida se o dinheiro está no padrão correto
     try {
         this->dinheiro = stof(dinheiro); //Converte para float
     }
-    catch (invalid_argument &e){
-        return false;
+    catch (invalid_argument &exp){
+        throw invalid_argument("Argumento invalida");
     }
     if (Dinheiro::dinheiro < 0){
-        return false;
+        throw invalid_argument("Argumento invalida");
     }
     else if (Dinheiro::dinheiro > 200000){
-        return false;
+        throw invalid_argument("Argumento invalida");
     }
-    return true;
 }
 
-bool Dinheiro::setDinheiro(string dinheiro){ //Coloca no padrão de calculo da linguagem
+void Dinheiro::setDinheiro(string dinheiro){ //Coloca no padrão de calculo da linguagem
     this->dinheiroView = dinheiro; //Salva o valor escrito pelo usuário para ser mostrado depois
     for(int i=0; i<dinheiro.size(); i++){
         if (dinheiro[i] == '.'){
@@ -79,12 +79,12 @@ bool Dinheiro::setDinheiro(string dinheiro){ //Coloca no padrão de calculo da l
             dinheiro.replace(i, 1, "."); //Troca os virgulas por pontos
         }
     }
-    if (Dinheiro::validateDinheiro(dinheiro)){
-        return true;
+    try{
+        validateDinheiro(dinheiro);
     }
-    else {
+    catch(invalid_argument &exp) {
         this->dinheiroView = ""; //Se não for um número, o valor é inválido
-        return false;
+        throw invalid_argument("Argumento invalida");
     }
 }
 
@@ -92,26 +92,29 @@ string Dinheiro::getDinheiroView() const {
     return this->dinheiroView; //Retorna o valor escrito pelo usuário
 }
 
-float Dinheiro::getDinheiro() const {
+double Dinheiro::getDinheiro() const {
     return this->dinheiro; //Retorna o valor em float
 }
 
 // NOME
 
-bool Nome::validateNome(string nome) {
+void Nome::validateNome(string nome) {
     for (char n: nome){
         if(isdigit(n)){
-            return false;
+            throw invalid_argument("Argumento invalida");
         }
     }
-    return nome.length() >= 1 && nome.length() <= 30; // Valida se o nome tem entre 1 e 30 caracteres
+    if(nome.length() < 1 || nome.length() > 30) throw invalid_argument("Argumento invalida"); // Valida se o nome tem entre 1 e 30 caracteres
 }
 
-bool Nome::setName(string nome) {
-    if (!validateNome(nome)) // Verifica se o nome � v�lido
-        return false;
+void Nome::setName(string nome) {
+    try{
+        validateNome(nome); // Verifica se o nome � v�lido
+    } 
+    catch(invalid_argument &exp){
+        throw invalid_argument("Argumento invalida");
+    }
     this->nome = nome; // Atribui o nome se for v�lido
-    return true;
 }
 
 string Nome::getName() const {
