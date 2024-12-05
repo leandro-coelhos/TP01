@@ -12,7 +12,7 @@ class Conta {
         void setCodigo(const Codigo&);
         Codigo getCodigo() const;
         void setSenha(const Senha&);
-        Senha getSenha() const;
+        Senha getSenha() const; 
 };
 
 class Viagem {
@@ -46,12 +46,15 @@ class Hospedagem {
 class Destino {
     private:
         Codigo codigo;
+        Nome nome;
         Avaliacao avalicao;
         Data data_inicio;
         Data data_fim;
     public:
         void setCodigo(const Codigo&);
         Codigo getCodigo() const;
+        void setNome(const Nome&);
+        Nome getNome() const;
         void setAvaliacao(const Avaliacao&);
         Avaliacao getAvalicao() const;
         void setDataInicio(const Data&);
@@ -86,4 +89,4 @@ class Atividade {
         Dinheiro getPreco() const;
 };
 
-#endif // ENTIDADES_HPP_INCLUDED
+#endif // ENTIDADES_HPP_INCLUDED;

@@ -18,3 +18,36 @@
 
 1731439409 source:c:\users\willi\desktop\tp01\tp01\entidades.cpp
 
+1733253438 source:c:\users\willi\desktop\tp01_t1\dominios.cpp
+	"dominios.hpp"
+	<stdexcept>
+	<map>
+	<vector>
+	<cctype>
+	<algorithm>
+	<string>
+	<iostream>
+
+1733253435 c:\users\willi\desktop\tp01_t1\dominios.hpp
+	<string>
+
+1733423053 source:c:\users\willi\desktop\tp01_t1\entidades.cpp
+	"entidades.hpp"
+	"dominios.hpp"
+
+1733428458 c:\users\willi\desktop\tp01_t1\entidades.hpp
+	"dominios.hpp"
+
+1733431038 source:c:\users\willi\desktop\tp01_t1\main.cpp
+	<iostream>
+	<limits>
+	"dominios.hpp"
+	"entidades.hpp"
+	"testes.hpp"
+
+1733430752 c:\users\willi\desktop\tp01_t1\testes.hpp
+	<string>
+	<stdexcept>
+	"dominios.hpp"
+	"entidades.hpp"
+

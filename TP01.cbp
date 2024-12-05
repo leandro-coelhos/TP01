@@ -45,6 +45,12 @@
 			<Option target="Debug" />
 		</Unit>
 		<Unit filename="main.cpp" />
+		<Unit filename="testes.cpp">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="testes.hpp">
+			<Option target="Debug" />
+		</Unit>
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>

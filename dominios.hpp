@@ -12,21 +12,20 @@ class Horario {
         void validateHora(unsigned short h, unsigned short m);
 
     public:
-        void setHora(string h);
+        bool setHora(string h);
         string getHora() const;
 
 };
 
 class Dinheiro {
     private:
-        float dinheiro;
-        string dinheiroView;
+        long long dinheiro; //dinheiro em centavos (CALCULOS INTERNOS SERAO FEITOS TODOS EM CENTAVOS usando esse atributo)
+        string dinheiroView; //dinheiro em "R$reais,centavos" (A EXIBICAO DO DINHEIRO SERA COMO USUAL)
         void validateDinheiro(string dinheiro);
 
     public:
-        void setDinheiro(string dinheiro);
-        double getDinheiro() const;
-        string getDinheiroView() const;
+        bool setDinheiro(string dinheiro);//recebe o input do usuario na formatacao "R$reais,centavos" e converte para centavos
+        string getDinheiro() const; //retorna o dinheiro em reais (Valor visual)
 };
 
 class Nome {
@@ -35,25 +34,25 @@ class Nome {
         void validateNome(string nome);
 
     public:
-        void setName(string nome);
+        bool setName(string nome);
         string getName() const;
 };
 
 class Duracao {
      private:
           int duracao;
-          bool validateDuracao(int duracao);
+          void validateDuracao(int duracao);
      public:
-          bool setDuracao(int duracao);
+          bool setDuracao(string duracao);
           string getDuracao() const;
 };
 
 class Avaliacao {
     private:
         int avaliacao;
-        bool validateAvaliacao(int avaliacao);
+        void validateAvaliacao(int avaliacao);
     public:
-        bool setAvaliacao(int avaliacao);
+        bool setAvaliacao(string avaliacao);
         string getAvaliacao() const;
 };
 
@@ -62,7 +61,7 @@ class Data {
         unsigned short dia;
         unsigned short mes;
         unsigned short ano;
-        bool validateData(unsigned short d, unsigned short m, unsigned short a);
+        void validateData(unsigned short d, unsigned short m, unsigned short a);
     public:
         bool setData(string data);
         string getData() const;
@@ -71,7 +70,7 @@ class Data {
 class Senha {
     private:
         string senha;
-        bool validateSenha(string senha);
+        void validateSenha(string senha);
     public:
         bool setSenha(string senha);
         string getSenha() const;
@@ -80,7 +79,7 @@ class Senha {
 class Codigo {
     private:
         string codigo;
-        bool validateCodigo(string codigo);
+        void validateCodigo(string codigo);
     public:
         bool setCodigo(string codigo);
         string getCodigo() const;
