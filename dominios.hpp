@@ -34,8 +34,8 @@ class Nome {
         void validateNome(string nome);
 
     public:
-        bool setName(string nome);
-        string getName() const;
+        bool setNome(string nome);
+        string getNome() const;
 };
 
 class Duracao {

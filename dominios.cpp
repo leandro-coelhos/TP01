@@ -110,13 +110,13 @@ void Nome::validateNome(string nome) {
     if(nome.length() < 1 || nome.length() > 30) throw invalid_argument("Argumento invalido"); // Valida se o nome tem entre 1 e 30 caracteres
 }
 
-bool Nome::setName(string nome) {
+bool Nome::setNome(string nome) {
     validateNome(nome);
     this->nome = nome;
     return true;
 }
 
-string Nome::getName() const {
+string Nome::getNome() const {
     return this->nome; // Retorna o nome armazenado
 }
 

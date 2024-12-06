@@ -38,6 +38,13 @@ void Viagem::setAvaliacao(const Avaliacao& avaliacao){
 Avaliacao Viagem::getAvalicao() const {
     return this->avalicao;
 }
+void Viagem::setNome(const Nome& nome){
+    this->nome = nome;
+}
+
+Nome Viagem::getNome() const {
+    return this->nome;
+}
 
 //Hospedagem
 

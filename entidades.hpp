@@ -19,11 +19,14 @@ class Viagem {
     private:
         Codigo codigo;
         Avaliacao avalicao;
+        Nome nome;
     public:
         void setCodigo(const Codigo&);
         Codigo getCodigo() const;
         void setAvaliacao(const Avaliacao&);
         Avaliacao getAvalicao() const;
+        void setNome(const Nome&);
+        Nome getNome() const;
 };
 
 class Hospedagem {

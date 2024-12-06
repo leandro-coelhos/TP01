@@ -153,8 +153,8 @@ void TUNome::tearDown() {
 
 void TUNome::testarCenarioValorValido() {
   try {
-      nome->setName(nome_valido);
-      if (nome->getName() != nome_valido)
+      nome->setNome(nome_valido);
+      if (nome->getNome() != nome_valido)
           estado = FALHA;
   }
   catch(invalid_argument &excecao){
@@ -164,11 +164,11 @@ void TUNome::testarCenarioValorValido() {
 
 void TUNome::testarCenarioValorInvalido() {
   try {
-    nome->setName(nome_invalido);
+    nome->setNome(nome_invalido);
     estado = FALHA;
   }
   catch(invalid_argument &excecao) {
-      if (nome->getName() == nome_invalido)
+      if (nome->getNome() == nome_invalido)
           estado = FALHA;
   }
 }
@@ -447,6 +447,11 @@ void TUViagem::testarCenario(){
     avaliacao.setAvaliacao(avaliacao_valida);
     viagem->setAvaliacao(avaliacao);
     if(viagem->getAvalicao().getAvaliacao() != avaliacao_valida ) estado = FALHA;
+    //Nome
+    Nome nome;
+    nome.setNome(nome_valido);
+    viagem->setNome(nome);
+    if(viagem->getNome().getNome() != nome_valido ) estado = FALHA;
 }
 
 int TUViagem::run() {
@@ -475,9 +480,9 @@ void TUDestino::testarCenario(){
     if(destino->getCodigo().getCodigo() != codigo_valido) estado = FALHA;
     // Teste de codigo valido
     Nome nome;
-    nome.setName(nome_valido);
+    nome.setNome(nome_valido);
     destino->setNome(nome);
-    if(destino->getNome().getName() != nome_valido) estado = FALHA;
+    if(destino->getNome().getNome() != nome_valido) estado = FALHA;
     estado = FALHA;
     // Teste de avaliacao valida
     Avaliacao avaliacao;
@@ -521,9 +526,9 @@ void TUHospedagem::testarCenario(){
     if(hospedagem->getCodigo().getCodigo() != codigo_valido) estado = FALHA;
     // Teste de codigo valido
     Nome nome;
-    nome.setName(nome_valido);
+    nome.setNome(nome_valido);
     hospedagem->setNome(nome);
-    if(hospedagem->getNome().getName() != nome_valido) estado = FALHA; estado = FALHA;
+    if(hospedagem->getNome().getNome() != nome_valido) estado = FALHA; estado = FALHA;
     // Teste de avaliacao valida
     Avaliacao avaliacao;
     avaliacao.setAvaliacao(avaliacao_valida);
@@ -561,9 +566,9 @@ void TUAtividade::testarCenario(){
     if(atividade->getCodigo().getCodigo() != codigo_valido) estado = FALHA;
     // Teste de codigo valido
     Nome nome;
-    nome.setName(nome_valido);
+    nome.setNome(nome_valido);
     atividade->setNome(nome);
-    if(atividade->getNome().getName() != nome_valido) estado = FALHA; estado = FALHA;
+    if(atividade->getNome().getNome() != nome_valido) estado = FALHA; estado = FALHA;
     // Teste de avaliacao valida
     Avaliacao avaliacao;
     avaliacao.setAvaliacao(avaliacao_valida);
