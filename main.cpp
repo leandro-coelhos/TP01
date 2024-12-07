@@ -51,6 +51,7 @@ int main(){
     int cardapio;
     int dominios;
     int entidades;
+    cout << '\n';
     while(true){
         cout << "1: Entidades\n2: Dominios\n3: Testes\n4: Fechar\n\n";
         cin >> cardapio;
