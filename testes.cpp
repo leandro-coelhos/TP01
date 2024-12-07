@@ -487,7 +487,6 @@ void TUDestino::testarCenario(){
     nome.setNome(nome_valido);
     destino->setNome(nome);
     if(destino->getNome().getNome() != nome_valido) estado = FALHA;
-    estado = FALHA;
     // Teste de avaliacao valida
     Avaliacao avaliacao;
     avaliacao.setAvaliacao(avaliacao_valida);
@@ -501,7 +500,7 @@ void TUDestino::testarCenario(){
     // Teste de data valida
     Data data_inicio;
     data_inicio.setData(data_inicio_valida);
-    destino->setDataFim(data_inicio);
+    destino->setDataInicio(data_inicio);
     if(destino->getDataInicio().getData() != data_inicio_valida) estado = FALHA;
 }
 
@@ -532,7 +531,7 @@ void TUHospedagem::testarCenario(){
     Nome nome;
     nome.setNome(nome_valido);
     hospedagem->setNome(nome);
-    if(hospedagem->getNome().getNome() != nome_valido) estado = FALHA; estado = FALHA;
+    if(hospedagem->getNome().getNome() != nome_valido) estado = FALHA;
     // Teste de avaliacao valida
     Avaliacao avaliacao;
     avaliacao.setAvaliacao(avaliacao_valida);
@@ -572,7 +571,7 @@ void TUAtividade::testarCenario(){
     Nome nome;
     nome.setNome(nome_valido);
     atividade->setNome(nome);
-    if(atividade->getNome().getNome() != nome_valido) estado = FALHA; estado = FALHA;
+    if(atividade->getNome().getNome() != nome_valido) estado = FALHA; 
     // Teste de avaliacao valida
     Avaliacao avaliacao;
     avaliacao.setAvaliacao(avaliacao_valida);

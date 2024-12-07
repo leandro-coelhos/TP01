@@ -11,19 +11,19 @@
 using namespace std;
 
 void inputConta();
-Viagem inputViagem();
-Hospedagem inputHospedagem();
-Destino inputDestino();
-Atividade inputAtividade();
+void inputViagem();
+void inputHospedagem();
+void inputDestino();
+void inputAtividade();
 
-Horario inputHorario();
-Dinheiro inputDinheiro();
-Nome inputNome();
-Duracao inputDuracao();
-Avaliacao inputAvaliacao();
-Data inputData();
-Senha inputSenha();
-Codigo inputCodigo();
+void inputHorario();
+void inputDinheiro();
+void inputNome();
+void inputDuracao();
+void inputAvaliacao();
+void inputData();
+void inputSenha();
+void inputCodigo();
 
 string testeConta();
 string testeViagem();
@@ -59,13 +59,13 @@ int main(){
             cout << '\n';
             if(entidades==1) inputConta();
             else if(entidades==2) inputViagem();
-            // else if(entidades==3) inputHospedagem();
-            // else if(entidades==4) inputDestino();
-            // else if(entidades==5) inputAtividade();
+            else if(entidades==3) inputHospedagem();
+            else if(entidades==4) inputDestino();
+            else if(entidades==5) inputAtividade();
             else if(entidades==6) break;
         }
         else if(cardapio==2){
-            cout << "\n1: Horario\n2: Dinheiro\n3: Nome\n4: Duracao\n5: Avaliacao" 
+            cout << "\n1: Horario\n2: Dinheiro\n3: Nome\n4: Duracao\n5: Avaliacao"
             << "\n6: Data\n7: Senha\n8: Codigo\n9: Fechar\n\n";
             cin >> dominios;
             limpabuffer();
@@ -78,7 +78,7 @@ int main(){
             else if(dominios == 6) inputData();
             else if(dominios == 7) inputSenha();
             else if(dominios == 8) inputCodigo();
-            else if(dominios == 9){ 
+            else if(dominios == 9){
                 cout << "Finalizando a aplicacao\n";
                 break;
             }
@@ -109,102 +109,296 @@ int main(){
 }
 
 //-------------------------Entidades-----------------------------------
+//-------------------------Conta-----------------------------------
 
 void inputConta(){
     cout << testeConta();
 
-    Conta conta;
-    Codigo codigo = inputCodigo();
+    Conta* conta = new Conta();
+    Codigo codigo;
+    codigo.setCodigo("123456");
+    cout << '\n' << testeCodigo();
     try {
-        conta.setCodigo(codigo);
-    }
-    catch(invalid_argument &exp){
+    conta->setCodigo(codigo);
+        cout << "Valor: " << conta->getCodigo().getCodigo() << "\n\n";
+    } catch (invalid_argument &exp) {
         cout << "Excecao: " << exp.what() << "\n\n";
     }
-    try{
-        conta.setCodigo(codigo);
-        cout << "Valor: " << conta.getCodigo().getCodigo() << "\n\n";
-    }
-    catch(invalid_argument &exp){
-        cout << "Valor invalido \n\n";
-    }
-    cout << "\n";
-    Senha senha = inputSenha();
+    Senha senha;
+    senha.setSenha("53692");
+    cout << '\n' << testeSenha();
+    try {
+        conta->setSenha(senha);
+        cout << "Valor: " << conta->getSenha().getSenha() << "\n\n";
+    } catch (invalid_argument &exp) {
+        cout << "Excecao: " << exp.what() << "\n\n";}
+    // Libere a memória alocada
 
-    try {
-        conta.setSenha(senha);
-    }
-    catch(invalid_argument &exp){
-        cout << "Excecao: " << exp.what() << "\n\n";
-    }
-    try{
-        conta.setSenha(senha);
-        cout << "Valor: " << conta.getSenha().getSenha() << "\n\n";
-    }
-    catch(invalid_argument &exp){
-        cout << "Valor invalido \n\n";
-    }
+    delete conta;
 }
+//-------------------------Viagem-----------------------------------
 
-Viagem inputViagem(){
+void inputViagem(){
     cout << testeViagem();
 
-    Viagem viagem;
-    Codigo codigo = inputCodigo();
-    try {
-        viagem.setCodigo(codigo);
+    // Usando ponteiro para Viagem
+    Viagem* viagem = new Viagem;
+
+    Codigo codigo;
+    codigo.setCodigo("123456");
+    cout << '\n' << testeCodigo();
+    try{
+        viagem->setCodigo(codigo);
+        cout << "Valor: " << viagem->getCodigo().getCodigo() << "\n\n";
+    } catch (invalid_argument &exp) {
+        cout << "Excecao: " << exp.what() << "\n\n"; 
     }
-    catch(invalid_argument &exp){
+    Avaliacao avaliacao;
+    avaliacao.setAvaliacao("3");
+    cout << '\n' << testeAvaliacao();
+    try {
+        viagem->setAvaliacao(avaliacao);
+        cout << "Valor: " << viagem->getAvaliacao().getAvaliacao() << "\n\n";
+    } catch (invalid_argument &exp) {
         cout << "Excecao: " << exp.what() << "\n\n";
     }
-    Viagem *ptrV;
-    ptrV = new Viagem();
-    try{
-        ptrV->setCodigo(codigo);
-        cout << "Valor: " << ptrV->getCodigo().getCodigo() << "\n\n";
-    }
-    catch(invalid_argument &exp){
-        cout << "Valor invalido \n\n";
-    }
 
-    Avaliacao avaliacao = inputAvaliacao();
+    Nome nome;
+    nome.setNome("Viagem a Paris");
+    cout << '\n' << testeNome();
     try {
-        viagem.setAvaliacao(avaliacao);
-    }
-    catch(invalid_argument &exp){
+        viagem->setNome(nome);
+        cout << "Valor: " << viagem->getNome().getNome() << "\n\n";
+    } catch (invalid_argument &exp) {
         cout << "Excecao: " << exp.what() << "\n\n";
     }
-    try{
-        ptrV->setAvaliacao(avaliacao);
-        cout << "Valor: " << ptrV->getAvaliacao().getAvaliacao() << "\n\n";
-    }
-    catch(invalid_argument &exp){
-        cout << "Valor invalido \n\n";
-    }
 
-    Nome nome = inputNome();
-    try {
-        viagem.setNome(nome);
-    }
-    catch(invalid_argument &exp){
-        cout << "Excecao: " << exp.what() << "\n\n";
-    }
-    try{
-        ptrV->setNome(nome);
-        cout << "Valor: " << ptrV->getNome().getNome() << "\n\n";
-    }
-    catch(invalid_argument &exp){
-        cout << "Valor invalido \n\n";
-    }
-
-    delete ptrV;
+    delete viagem;
 }
 
+//-------------------------Hospedagem-----------------------------------
+
+void inputHospedagem(){
+    cout << testeHospedagem();
+
+    // Usando ponteiro para Hospedagem
+    Hospedagem* hospedagem = new Hospedagem;
+
+    Codigo codigo;
+    codigo.setCodigo("123456");
+    cout << '\n' << testeCodigo();
+    try{
+        hospedagem->setCodigo(codigo);
+        cout << "Valor: " << hospedagem->getCodigo().getCodigo() << "\n\n";
+    } catch (invalid_argument &exp) {
+        cout << "Excecao: " << exp.what() << "\n\n"; }
+    
+    Avaliacao avaliacao;
+    avaliacao.setAvaliacao("3");
+    cout << '\n' << testeAvaliacao();
+    try {
+        hospedagem->setAvaliacao(avaliacao);
+        cout << "Valor: " << hospedagem->getAvaliacao().getAvaliacao() << "\n\n";
+    } catch (invalid_argument &exp) {
+        cout << "Excecao: " << exp.what() << "\n\n";
+    }
+
+    Nome nome;
+    nome.setNome("Hotel Paris");
+    cout << '\n' << testeNome();
+    try {
+        hospedagem->setNome(nome);
+        cout << "Valor: " << hospedagem->getNome().getNome() << "\n\n";
+    } catch (invalid_argument &exp) {
+        cout << "Excecao: " << exp.what() << "\n\n";
+    }
+
+    Dinheiro diaria;
+    diaria.setDinheiro("1000,00");
+    cout << '\n' << testeDinheiro();
+    try {
+        hospedagem->setDiaria(diaria);
+        cout << "Valor: " << hospedagem->getDiaria().getDinheiroView() << '\n' 
+        << "Valor computacional: " << hospedagem->getDiaria().getDinheiro() << "\n\n";
+    } catch (invalid_argument &exp) {
+        cout << "Excecao: " << exp.what() << "\n\n";
+    }
+
+    delete hospedagem;
+}
+
+//-------------------------Destino-----------------------------------
 
 
+void inputDestino(){
+    cout << testeDestino();
+
+    // Usando ponteiro para Destino
+    Destino* destino = new Destino;
+
+    Codigo codigo;
+    codigo.setCodigo("123456");
+    cout << '\n' << testeCodigo();
+
+    try{
+        destino->setCodigo(codigo);
+        cout << "Valor: " << destino->getCodigo().getCodigo() << "\n\n";
+    } catch (invalid_argument &exp) {
+        cout << "Excecao: " << exp.what() << "\n\n"; }
+
+    cout << "\n";
+    
+    Avaliacao avaliacao;
+    avaliacao.setAvaliacao("3");
+    cout << '\n' << testeAvaliacao();
+
+    try {
+        destino->setAvaliacao(avaliacao);
+        cout << "Valor: " << destino->getAvaliacao().getAvaliacao() << "\n\n";
+    } catch (invalid_argument &exp) {
+        cout << "Excecao: " << exp.what() << "\n\n";
+    }
+
+    cout << "\n";
+    Nome nome;
+    nome.setNome("Paris");
+    cout << '\n' << testeNome();
+
+    try {
+        destino->setNome(nome);
+        cout << "Valor: " << destino->getNome().getNome() << "\n\n";
+    } catch (invalid_argument &exp) {
+        cout << "Excecao: " << exp.what() << "\n\n";
+    }
+
+    cout << "\n";
+    Data dataInicio;
+    dataInicio.setData("01-01-21");
+    cout << '\n' << testeData();
+
+    try {
+        destino->setDataInicio(dataInicio);
+        cout << "Valor: " << destino->getDataInicio().getData() << "\n\n";
+    } catch (invalid_argument &exp) {
+        cout << "Excecao: " << exp.what() << "\n\n";
+    }
+
+    cout << "\n";
+    Data dataFim;
+    dataFim.setData("05-01-21");
+    cout << '\n' << testeData();
+
+    try {
+        destino->setDataFim(dataFim);
+        cout << "Valor: " << destino->getDataFim().getData() << "\n\n";
+    } catch (invalid_argument &exp) {
+        cout << "Excecao: " << exp.what() << "\n\n";}
+
+    delete destino;
+    }
+
+//-------------------------Atividade-----------------------------------
+
+void inputAtividade(){
+    cout << testeAtividade();
+
+    // Usando ponteiro para Atividade
+    Atividade* atividade = new Atividade;
+
+    Codigo codigo;
+    codigo.setCodigo("123456");
+    cout << '\n' << testeCodigo();
+
+    try{
+        atividade->setCodigo(codigo);
+        cout << "Valor: " << atividade->getCodigo().getCodigo() << "\n\n";
+    } catch (invalid_argument &exp) {
+        cout << "Excecao: " << exp.what() << "\n\n"; }
+
+    cout << "\n";
+
+    Avaliacao avaliacao;
+    avaliacao.setAvaliacao("3");
+    cout << '\n' << testeAvaliacao();
+
+    try {
+        atividade->setAvaliacao(avaliacao);
+        cout << "Valor: " << atividade->getAvaliacao().getAvaliacao() << "\n\n";
+    } catch (invalid_argument &exp) {
+        cout << "Excecao: " << exp.what() << "\n\n";
+    }
+
+    cout << "\n";
+
+    Nome nome;
+    nome.setNome("Torre Eiffel");
+    cout << '\n' << testeNome();
+
+    try {
+        atividade->setNome(nome);
+        cout << "Valor: " << atividade->getNome().getNome() << "\n\n";
+    } catch (invalid_argument &exp) {
+        cout << "Excecao: " << exp.what() << "\n\n";
+    }
+
+    cout << "\n";
+
+    Data data;
+    data.setData("01-01-21");
+    cout << '\n' << testeData();
+
+    try {
+        atividade->setData(data);
+        cout << "Valor: " << atividade->getData().getData() << "\n\n";
+    } catch (invalid_argument &exp) {
+        cout << "Excecao: " << exp.what() << "\n\n";
+    }
+
+    cout << "\n";
+
+    Horario horario;
+    horario.setHora("12:00");
+    cout << '\n' << testeHorario();
+
+    try {
+        atividade->setHorario(horario);
+        cout << "Valor: " << atividade->getHorario().getHora() << "\n\n";
+    } catch (invalid_argument &exp) {
+        cout << "Excecao: " << exp.what() << "\n\n";
+    }
+
+    cout << "\n";
+
+    Duracao duracao;
+    duracao.setDuracao("60");
+    cout << '\n' << testeDuracao();
+
+    try {
+        atividade->setDuracao(duracao);
+        cout << "Valor: " << atividade->getDuracao().getDuracao() << "\n\n";
+    } catch (invalid_argument &exp) {
+        cout << "Excecao: " << exp.what() << "\n\n";
+    }
+
+    cout << "\n";
+
+    Dinheiro preco;
+    preco.setDinheiro("100,00");
+    cout << '\n' << testeDinheiro();
+
+    try {
+        atividade->setPreco(preco);
+        cout << "Valor: " << atividade->getPreco().getDinheiroView() << '\n' 
+        << "Valor computacional: " << atividade->getPreco().getDinheiro() << "\n\n";
+    } catch (invalid_argument &exp) {
+        cout << "Excecao: " << exp.what() << "\n\n";
+    }
+
+    delete atividade;
+}
 //-------------------------Dominios-----------------------------------
 
-Horario inputHorario(){
+void inputHorario(){
     cout << testeHorario();
 
     Horario horario;
@@ -235,7 +429,7 @@ Horario inputHorario(){
     delete ptrH;
 }
 
-Dinheiro inputDinheiro(){
+void inputDinheiro(){
     cout << testeDinheiro();
 
     Dinheiro dinheiro;
@@ -258,7 +452,7 @@ Dinheiro inputDinheiro(){
 
     try{
         ptrD->setDinheiro(dinheiro_valor);
-        cout << "Valor: " << ptrD->getDinheiroView() 
+        cout << "Valor: " << ptrD->getDinheiroView()
         << "\nValor computacional: " << fixed << setprecision(2) << ptrD->getDinheiro() <<"\n\n";
     }
     catch(invalid_argument &exp){
@@ -267,7 +461,7 @@ Dinheiro inputDinheiro(){
     delete ptrD;
 }
 
-Nome inputNome(){
+void inputNome(){
     cout << testeNome();
 
     Nome nome;
@@ -275,7 +469,7 @@ Nome inputNome(){
     cout << "Formato: ate 30 caracteres\n";
     cout << "Digite o nome: ";
     cin >> nome_valor;
-    limpabuffer();    
+    limpabuffer();
     try {
         nome.setNome(nome_valor);
     }
@@ -298,7 +492,7 @@ Nome inputNome(){
     delete ptrN;
 }
 
-Avaliacao inputAvaliacao(){
+void inputAvaliacao(){
     cout << testeAvaliacao();
 
     Avaliacao avaliacao;
@@ -328,7 +522,7 @@ Avaliacao inputAvaliacao(){
     delete ptrA;
 }
 
-Duracao inputDuracao(){
+void inputDuracao(){
     testeDuracao();
 
     Duracao duracao;
@@ -359,7 +553,7 @@ Duracao inputDuracao(){
 
 }
 
-Data inputData(){
+void inputData(){
     testeData();
 
     Data data;
@@ -389,7 +583,7 @@ Data inputData(){
     delete ptrData;
 }
 
-Senha inputSenha(){
+void inputSenha(){
     testeSenha();
 
     Senha senha;
@@ -419,7 +613,7 @@ Senha inputSenha(){
     delete ptrS;
 }
 
-Codigo inputCodigo(){
+void inputCodigo(){
     testeCodigo();
 
     Codigo codigo;
@@ -456,11 +650,11 @@ string testeConta(){
     {
     case TUConta::SUCESSO: return "SUCESSO\n\n";
         break;
-    
+
     case TUConta::FALHA: return "FALHA\n\n";
         break;
     }
-    
+
 }
 
 string testeViagem(){
