@@ -5,6 +5,10 @@
 
 using namespace std;
 
+/**
+ * @class Horario
+ * @brief Representa um horário no formato HH:MM.
+ */
 class Horario { //Leandro Coelho da Silva, MAT:232011396
     private:
         /**
@@ -185,6 +189,10 @@ class Avaliacao { //Leandro Coelho da Silva, MAT:232011396
         string getAvaliacao() const;
 };
 
+/**
+ * @class Data
+ * @brief Representa uma data no formato DD-MM-AA.
+ */
 class Data { //Leandro Coelho da Silva, MAT:232011396
     private:
 

@@ -67,7 +67,10 @@ int main(){
             else if(entidades==3) inputHospedagem();
             else if(entidades==4) inputDestino();
             else if(entidades==5) inputAtividade();
-            else if(entidades==6) break;
+            else if(entidades==6){ 
+                cout << "Finalizando a aplicacao\n";
+                break;
+            }
         }
         else if(cardapio==2){
             cout << "\n1: Horario\n2: Dinheiro\n3: Nome\n4: Duracao\n5: Avaliacao"

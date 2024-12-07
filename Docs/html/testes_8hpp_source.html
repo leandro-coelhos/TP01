@@ -1,0 +1,600 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ViajaMaisUNB: Código-Fonte de C:/Users/willi/Desktop/TP01_T1/testes.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="unb-universidade-de-brasilia-logo-2F07D677C6-seeklogo.com.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">ViajaMaisUNB<span id="projectnumber">&#160;2.5</span>
+   </div>
+   <div id="projectbrief">Projeto orientado objeto para simular viagens.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Localizar',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="doc-content">
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrada</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">C:/Users/willi/Desktop/TP01_T1/testes.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="testes_8hpp.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef TESTES_HPP_INCLUDED</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define TESTES_HPP_INCLUDED</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;stdexcept&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &quot;<a class="code" href="dominios_8hpp.html">dominios.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &quot;<a class="code" href="entidades_8hpp.html">entidades.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">using namespace </span>std;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment">//-------------------------TestesDomínio-----------------------------------</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment">//FEITO POR EDUARDO LUNA SCALASSARA, MAT:232011289</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">//********************HORARIO********************</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="foldopen" id="foldopen00043" data-start="{" data-end="};">
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="class_t_u_horario.html">   43</a></span><span class="keyword">class </span><a class="code hl_class" href="class_t_u_horario.html">TUHorario</a> {</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">string</span> horario_valido;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">string</span> horario_invalido;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <a class="code hl_class" href="class_horario.html">Horario</a> *horario;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keywordtype">int</span> estado;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="keywordtype">void</span> setUp();</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <span class="keywordtype">void</span> tearDown();</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <span class="keywordtype">void</span> testarCenarioValorValido();</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <span class="keywordtype">void</span> testarCenarioValorInvalido();</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="class_t_u_horario.html#a58974951411c48a2ef16b505b65ee991">   88</a></span>        <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_t_u_horario.html#a58974951411c48a2ef16b505b65ee991">SUCESSO</a> = 0;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="class_t_u_horario.html#a93d6fabcab04d0ac3bc695bbf2e4cf1b">   91</a></span>        <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_t_u_horario.html#a93d6fabcab04d0ac3bc695bbf2e4cf1b">FALHA</a> = -1;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        <span class="keywordtype">int</span> <a class="code hl_function" href="class_t_u_horario.html#ac6e790d002f6854f57a6a85f9a3c9eeb">run</a>();</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>};</div>
+</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="comment">//********************DINHEIRO********************</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="foldopen" id="foldopen00112" data-start="{" data-end="};">
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno"><a class="line" href="class_t_u_dinheiro.html">  112</a></span><span class="keyword">class </span><a class="code hl_class" href="class_t_u_dinheiro.html">TUDinheiro</a></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>{</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">string</span> dinheiro_valido;</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">string</span> dinheiro_invalido;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <a class="code hl_class" href="class_dinheiro.html">Dinheiro</a> *dinheiro;</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <span class="keywordtype">int</span> estado;</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    <span class="keywordtype">void</span> setUp();</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    <span class="keywordtype">void</span> tearDown();</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    <span class="keywordtype">void</span> testarCenarioValorValido();</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    <span class="keywordtype">void</span> testarCenarioValorInvalido();</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno"><a class="line" href="class_t_u_dinheiro.html#a061cd8b5cd51de4ed726a2d0fedffbb6">  159</a></span>    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_t_u_dinheiro.html#a061cd8b5cd51de4ed726a2d0fedffbb6">SUCESSO</a> = 0;</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno"><a class="line" href="class_t_u_dinheiro.html#a2fd6908de3aafae2b88c2932483a43b4">  162</a></span>    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_t_u_dinheiro.html#a2fd6908de3aafae2b88c2932483a43b4">FALHA</a> = -1;</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span> </div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_t_u_dinheiro.html#a65c84d31615a16535c72157dc172d1df">run</a>();</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>};</div>
+</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span> </div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span><span class="comment">//********************NOME********************</span></div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span> </div>
+<div class="foldopen" id="foldopen00183" data-start="{" data-end="};">
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno"><a class="line" href="class_t_u_nome.html">  183</a></span><span class="keyword">class </span><a class="code hl_class" href="class_t_u_nome.html">TUNome</a></div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>{</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">string</span> nome_valido;</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span> </div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">string</span> nome_invalido;</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span> </div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>    <a class="code hl_class" href="class_nome.html">Nome</a> *nome;</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span> </div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    <span class="keywordtype">int</span> estado;</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span> </div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>    <span class="keywordtype">void</span> setUp();</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span> </div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>    <span class="keywordtype">void</span> tearDown();</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span> </div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>    <span class="keywordtype">void</span> testarCenarioValorValido();</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span> </div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>    <span class="keywordtype">void</span> testarCenarioValorInvalido();</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span> </div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno"><a class="line" href="class_t_u_nome.html#af1d3faa5a4f6a302f96d193478f3013b">  230</a></span>    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_t_u_nome.html#af1d3faa5a4f6a302f96d193478f3013b">SUCESSO</a> = 0;</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span> </div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno"><a class="line" href="class_t_u_nome.html#a50bf8928bc5e773eaf15a2fb5eb2f065">  233</a></span>    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_t_u_nome.html#a50bf8928bc5e773eaf15a2fb5eb2f065">FALHA</a> = -1;</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span> </div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_t_u_nome.html#ae20734cb15f71890e57aff02a00f6313">run</a>();</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>};</div>
+</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span> </div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span><span class="comment">//********************DURACAO********************</span></div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span> </div>
+<div class="foldopen" id="foldopen00254" data-start="{" data-end="};">
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno"><a class="line" href="class_t_u_duracao.html">  254</a></span><span class="keyword">class </span><a class="code hl_class" href="class_t_u_duracao.html">TUDuracao</a></div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>{</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">string</span> duracao_valida;</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span> </div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">string</span> duracao_invalida;</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span> </div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>    <a class="code hl_class" href="class_duracao.html">Duracao</a> *duracao;</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span> </div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>    <span class="keywordtype">int</span> estado;</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span> </div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>    <span class="keywordtype">void</span> setUp();</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span> </div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>    <span class="keywordtype">void</span> tearDown();</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span> </div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>    <span class="keywordtype">void</span> testarCenarioValorValido();</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span> </div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>    <span class="keywordtype">void</span> testarCenarioValorInvalido();</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span> </div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno"><a class="line" href="class_t_u_duracao.html#a6a0754cf3ffd57cb7fddea9217018cc7">  301</a></span>    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_t_u_duracao.html#a6a0754cf3ffd57cb7fddea9217018cc7">SUCESSO</a> = 0;</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span> </div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno"><a class="line" href="class_t_u_duracao.html#a4a2c5d2f7449bb017266148c97b9fc13">  304</a></span>    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_t_u_duracao.html#a4a2c5d2f7449bb017266148c97b9fc13">FALHA</a> = -1;</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span> </div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_t_u_duracao.html#ae1b82a9f2b93befc6a64601b6d051517">run</a>();</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>};</div>
+</div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span> </div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span><span class="comment">//********************AVALIACAO********************</span></div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span> </div>
+<div class="foldopen" id="foldopen00325" data-start="{" data-end="};">
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno"><a class="line" href="class_t_u_avaliacao.html">  325</a></span><span class="keyword">class </span><a class="code hl_class" href="class_t_u_avaliacao.html">TUAvaliacao</a></div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>{</div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">string</span> avaliacao_valida;</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span> </div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">string</span> avaliacao_invalida;</div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span> </div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>    <a class="code hl_class" href="class_avaliacao.html">Avaliacao</a> *avaliacao;</div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span> </div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>    <span class="keywordtype">int</span> estado;</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span> </div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>    <span class="keywordtype">void</span> setUp();</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span> </div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>    <span class="keywordtype">void</span> tearDown();</div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span> </div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>    <span class="keywordtype">void</span> testarCenarioValorValido();</div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span> </div>
+<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>    <span class="keywordtype">void</span> testarCenarioValorInvalido();</div>
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span> </div>
+<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00372" name="l00372"></a><span class="lineno"><a class="line" href="class_t_u_avaliacao.html#a697dce874d58847a37766795210fc360">  372</a></span>    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_t_u_avaliacao.html#a697dce874d58847a37766795210fc360">SUCESSO</a> = 0;</div>
+<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span> </div>
+<div class="line"><a id="l00375" name="l00375"></a><span class="lineno"><a class="line" href="class_t_u_avaliacao.html#ae55d06cff56296d44ca12e76fd82ca1b">  375</a></span>    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_t_u_avaliacao.html#ae55d06cff56296d44ca12e76fd82ca1b">FALHA</a> = -1;</div>
+<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span> </div>
+<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_t_u_avaliacao.html#aed2383c33ca301a41c3c364af6e5a4af">run</a>();</div>
+<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>};</div>
+</div>
+<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span> </div>
+<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span><span class="comment">//********************DATA********************</span></div>
+<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span> </div>
+<div class="foldopen" id="foldopen00396" data-start="{" data-end="};">
+<div class="line"><a id="l00396" name="l00396"></a><span class="lineno"><a class="line" href="class_t_u_data.html">  396</a></span><span class="keyword">class </span><a class="code hl_class" href="class_t_u_data.html">TUData</a></div>
+<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span>{</div>
+<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span>    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">string</span> data_valida;</div>
+<div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span> </div>
+<div class="line"><a id="l00403" name="l00403"></a><span class="lineno">  403</span>    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">string</span> data_invalida;</div>
+<div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span> </div>
+<div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span>    <a class="code hl_class" href="class_data.html">Data</a> *data;</div>
+<div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span> </div>
+<div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span>    <span class="keywordtype">int</span> estado;</div>
+<div class="line"><a id="l00410" name="l00410"></a><span class="lineno">  410</span> </div>
+<div class="line"><a id="l00416" name="l00416"></a><span class="lineno">  416</span>    <span class="keywordtype">void</span> setUp();</div>
+<div class="line"><a id="l00417" name="l00417"></a><span class="lineno">  417</span> </div>
+<div class="line"><a id="l00423" name="l00423"></a><span class="lineno">  423</span>    <span class="keywordtype">void</span> tearDown();</div>
+<div class="line"><a id="l00424" name="l00424"></a><span class="lineno">  424</span> </div>
+<div class="line"><a id="l00431" name="l00431"></a><span class="lineno">  431</span>    <span class="keywordtype">void</span> testarCenarioValorValido();</div>
+<div class="line"><a id="l00432" name="l00432"></a><span class="lineno">  432</span> </div>
+<div class="line"><a id="l00439" name="l00439"></a><span class="lineno">  439</span>    <span class="keywordtype">void</span> testarCenarioValorInvalido();</div>
+<div class="line"><a id="l00440" name="l00440"></a><span class="lineno">  440</span> </div>
+<div class="line"><a id="l00441" name="l00441"></a><span class="lineno">  441</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00443" name="l00443"></a><span class="lineno"><a class="line" href="class_t_u_data.html#a59be2c38007b733030111a5aadfb4517">  443</a></span>    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_t_u_data.html#a59be2c38007b733030111a5aadfb4517">SUCESSO</a> = 0;</div>
+<div class="line"><a id="l00444" name="l00444"></a><span class="lineno">  444</span> </div>
+<div class="line"><a id="l00446" name="l00446"></a><span class="lineno"><a class="line" href="class_t_u_data.html#a691cfac8c7fc4b3da149ef868de44f35">  446</a></span>    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_t_u_data.html#a691cfac8c7fc4b3da149ef868de44f35">FALHA</a> = -1;</div>
+<div class="line"><a id="l00447" name="l00447"></a><span class="lineno">  447</span> </div>
+<div class="line"><a id="l00455" name="l00455"></a><span class="lineno">  455</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_t_u_data.html#a4fd95b821fa6d55bdc82be6f3a3cbef2">run</a>();</div>
+<div class="line"><a id="l00456" name="l00456"></a><span class="lineno">  456</span>};</div>
+</div>
+<div class="line"><a id="l00457" name="l00457"></a><span class="lineno">  457</span> </div>
+<div class="line"><a id="l00458" name="l00458"></a><span class="lineno">  458</span><span class="comment">//********************SENHA********************</span></div>
+<div class="line"><a id="l00459" name="l00459"></a><span class="lineno">  459</span> </div>
+<div class="foldopen" id="foldopen00467" data-start="{" data-end="};">
+<div class="line"><a id="l00467" name="l00467"></a><span class="lineno"><a class="line" href="class_t_u_senha.html">  467</a></span><span class="keyword">class </span><a class="code hl_class" href="class_t_u_senha.html">TUSenha</a></div>
+<div class="line"><a id="l00468" name="l00468"></a><span class="lineno">  468</span>{</div>
+<div class="line"><a id="l00469" name="l00469"></a><span class="lineno">  469</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00471" name="l00471"></a><span class="lineno">  471</span>    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">string</span> senha_valida;</div>
+<div class="line"><a id="l00472" name="l00472"></a><span class="lineno">  472</span> </div>
+<div class="line"><a id="l00474" name="l00474"></a><span class="lineno">  474</span>    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">string</span> senha_invalida;</div>
+<div class="line"><a id="l00475" name="l00475"></a><span class="lineno">  475</span> </div>
+<div class="line"><a id="l00477" name="l00477"></a><span class="lineno">  477</span>    <a class="code hl_class" href="class_senha.html">Senha</a> *senha;</div>
+<div class="line"><a id="l00478" name="l00478"></a><span class="lineno">  478</span> </div>
+<div class="line"><a id="l00480" name="l00480"></a><span class="lineno">  480</span>    <span class="keywordtype">int</span> estado;</div>
+<div class="line"><a id="l00481" name="l00481"></a><span class="lineno">  481</span> </div>
+<div class="line"><a id="l00487" name="l00487"></a><span class="lineno">  487</span>    <span class="keywordtype">void</span> setUp();</div>
+<div class="line"><a id="l00488" name="l00488"></a><span class="lineno">  488</span> </div>
+<div class="line"><a id="l00494" name="l00494"></a><span class="lineno">  494</span>    <span class="keywordtype">void</span> tearDown();</div>
+<div class="line"><a id="l00495" name="l00495"></a><span class="lineno">  495</span> </div>
+<div class="line"><a id="l00502" name="l00502"></a><span class="lineno">  502</span>    <span class="keywordtype">void</span> testarCenarioValorValido();</div>
+<div class="line"><a id="l00503" name="l00503"></a><span class="lineno">  503</span> </div>
+<div class="line"><a id="l00510" name="l00510"></a><span class="lineno">  510</span>    <span class="keywordtype">void</span> testarCenarioValorInvalido();</div>
+<div class="line"><a id="l00511" name="l00511"></a><span class="lineno">  511</span> </div>
+<div class="line"><a id="l00512" name="l00512"></a><span class="lineno">  512</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00514" name="l00514"></a><span class="lineno"><a class="line" href="class_t_u_senha.html#a1a1dabe034b25a899150c95acbc0684c">  514</a></span>    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_t_u_senha.html#a1a1dabe034b25a899150c95acbc0684c">SUCESSO</a> = 0;</div>
+<div class="line"><a id="l00515" name="l00515"></a><span class="lineno">  515</span> </div>
+<div class="line"><a id="l00517" name="l00517"></a><span class="lineno"><a class="line" href="class_t_u_senha.html#a71eb0d9005b2d36da6a8530c0dd31842">  517</a></span>    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_t_u_senha.html#a71eb0d9005b2d36da6a8530c0dd31842">FALHA</a> = -1;</div>
+<div class="line"><a id="l00518" name="l00518"></a><span class="lineno">  518</span> </div>
+<div class="line"><a id="l00526" name="l00526"></a><span class="lineno">  526</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_t_u_senha.html#ac5ddea52ed42b828961f343b82074125">run</a>();</div>
+<div class="line"><a id="l00527" name="l00527"></a><span class="lineno">  527</span>};</div>
+</div>
+<div class="line"><a id="l00528" name="l00528"></a><span class="lineno">  528</span> </div>
+<div class="line"><a id="l00529" name="l00529"></a><span class="lineno">  529</span><span class="comment">//********************CÓDIGO********************</span></div>
+<div class="line"><a id="l00530" name="l00530"></a><span class="lineno">  530</span> </div>
+<div class="foldopen" id="foldopen00539" data-start="{" data-end="};">
+<div class="line"><a id="l00539" name="l00539"></a><span class="lineno"><a class="line" href="class_t_u_codigo.html">  539</a></span><span class="keyword">class </span><a class="code hl_class" href="class_t_u_codigo.html">TUCodigo</a></div>
+<div class="line"><a id="l00540" name="l00540"></a><span class="lineno">  540</span>{</div>
+<div class="line"><a id="l00541" name="l00541"></a><span class="lineno">  541</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00543" name="l00543"></a><span class="lineno">  543</span>    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">string</span> codigo_valido;</div>
+<div class="line"><a id="l00544" name="l00544"></a><span class="lineno">  544</span> </div>
+<div class="line"><a id="l00546" name="l00546"></a><span class="lineno">  546</span>    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">string</span> codigo_invalido;</div>
+<div class="line"><a id="l00547" name="l00547"></a><span class="lineno">  547</span> </div>
+<div class="line"><a id="l00549" name="l00549"></a><span class="lineno">  549</span>    <a class="code hl_class" href="class_codigo.html">Codigo</a> *codigo;</div>
+<div class="line"><a id="l00550" name="l00550"></a><span class="lineno">  550</span> </div>
+<div class="line"><a id="l00552" name="l00552"></a><span class="lineno">  552</span>    <span class="keywordtype">int</span> estado;</div>
+<div class="line"><a id="l00553" name="l00553"></a><span class="lineno">  553</span> </div>
+<div class="line"><a id="l00559" name="l00559"></a><span class="lineno">  559</span>    <span class="keywordtype">void</span> setUp();</div>
+<div class="line"><a id="l00560" name="l00560"></a><span class="lineno">  560</span> </div>
+<div class="line"><a id="l00566" name="l00566"></a><span class="lineno">  566</span>    <span class="keywordtype">void</span> tearDown();</div>
+<div class="line"><a id="l00567" name="l00567"></a><span class="lineno">  567</span> </div>
+<div class="line"><a id="l00574" name="l00574"></a><span class="lineno">  574</span>    <span class="keywordtype">void</span> testarCenarioValorValido();</div>
+<div class="line"><a id="l00575" name="l00575"></a><span class="lineno">  575</span> </div>
+<div class="line"><a id="l00582" name="l00582"></a><span class="lineno">  582</span>    <span class="keywordtype">void</span> testarCenarioValorInvalido();</div>
+<div class="line"><a id="l00583" name="l00583"></a><span class="lineno">  583</span> </div>
+<div class="line"><a id="l00584" name="l00584"></a><span class="lineno">  584</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00586" name="l00586"></a><span class="lineno"><a class="line" href="class_t_u_codigo.html#ae74fd939ebced94047b47878406f53d1">  586</a></span>    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_t_u_codigo.html#ae74fd939ebced94047b47878406f53d1">SUCESSO</a> = 0;</div>
+<div class="line"><a id="l00587" name="l00587"></a><span class="lineno">  587</span> </div>
+<div class="line"><a id="l00589" name="l00589"></a><span class="lineno"><a class="line" href="class_t_u_codigo.html#abff6dd7b04006df40462c76f8b769123">  589</a></span>    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_t_u_codigo.html#abff6dd7b04006df40462c76f8b769123">FALHA</a> = -1;</div>
+<div class="line"><a id="l00590" name="l00590"></a><span class="lineno">  590</span> </div>
+<div class="line"><a id="l00599" name="l00599"></a><span class="lineno">  599</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_t_u_codigo.html#a4e6994bcde0011cdf0b0bb7a2c4d94d9">run</a>();</div>
+<div class="line"><a id="l00600" name="l00600"></a><span class="lineno">  600</span>};</div>
+</div>
+<div class="line"><a id="l00601" name="l00601"></a><span class="lineno">  601</span> </div>
+<div class="line"><a id="l00602" name="l00602"></a><span class="lineno">  602</span><span class="comment">//-------------------------TestesEntidades-----------------------------------</span></div>
+<div class="line"><a id="l00603" name="l00603"></a><span class="lineno">  603</span> </div>
+<div class="line"><a id="l00604" name="l00604"></a><span class="lineno">  604</span><span class="comment">//FEITO POR LUCAS SANTANA CAMILO ALVES, MAT:211060666</span></div>
+<div class="line"><a id="l00605" name="l00605"></a><span class="lineno">  605</span> </div>
+<div class="line"><a id="l00606" name="l00606"></a><span class="lineno">  606</span><span class="comment">// ********************CONTA********************</span></div>
+<div class="line"><a id="l00607" name="l00607"></a><span class="lineno">  607</span> </div>
+<div class="foldopen" id="foldopen00616" data-start="{" data-end="};">
+<div class="line"><a id="l00616" name="l00616"></a><span class="lineno"><a class="line" href="class_t_u_conta.html">  616</a></span><span class="keyword">class </span><a class="code hl_class" href="class_t_u_conta.html">TUConta</a></div>
+<div class="line"><a id="l00617" name="l00617"></a><span class="lineno">  617</span>{</div>
+<div class="line"><a id="l00618" name="l00618"></a><span class="lineno">  618</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00620" name="l00620"></a><span class="lineno">  620</span>    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">string</span> senha_valida;</div>
+<div class="line"><a id="l00621" name="l00621"></a><span class="lineno">  621</span> </div>
+<div class="line"><a id="l00623" name="l00623"></a><span class="lineno">  623</span>    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">string</span> codigo_valido;</div>
+<div class="line"><a id="l00624" name="l00624"></a><span class="lineno">  624</span> </div>
+<div class="line"><a id="l00626" name="l00626"></a><span class="lineno">  626</span>    <a class="code hl_class" href="class_conta.html">Conta</a> *conta;</div>
+<div class="line"><a id="l00627" name="l00627"></a><span class="lineno">  627</span> </div>
+<div class="line"><a id="l00629" name="l00629"></a><span class="lineno">  629</span>    <span class="keywordtype">int</span> estado;</div>
+<div class="line"><a id="l00630" name="l00630"></a><span class="lineno">  630</span> </div>
+<div class="line"><a id="l00636" name="l00636"></a><span class="lineno">  636</span>    <span class="keywordtype">void</span> setUp();</div>
+<div class="line"><a id="l00637" name="l00637"></a><span class="lineno">  637</span> </div>
+<div class="line"><a id="l00643" name="l00643"></a><span class="lineno">  643</span>    <span class="keywordtype">void</span> tearDown();</div>
+<div class="line"><a id="l00644" name="l00644"></a><span class="lineno">  644</span> </div>
+<div class="line"><a id="l00651" name="l00651"></a><span class="lineno">  651</span>    <span class="keywordtype">void</span> testarCenario();</div>
+<div class="line"><a id="l00652" name="l00652"></a><span class="lineno">  652</span> </div>
+<div class="line"><a id="l00653" name="l00653"></a><span class="lineno">  653</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00655" name="l00655"></a><span class="lineno"><a class="line" href="class_t_u_conta.html#aa38dbaa02b6c6225fceea459f4f7be0e">  655</a></span>    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_t_u_conta.html#aa38dbaa02b6c6225fceea459f4f7be0e">SUCESSO</a> = 0;</div>
+<div class="line"><a id="l00656" name="l00656"></a><span class="lineno">  656</span> </div>
+<div class="line"><a id="l00658" name="l00658"></a><span class="lineno"><a class="line" href="class_t_u_conta.html#a110e82cb68cc1c544201cad1f2f61d16">  658</a></span>    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_t_u_conta.html#a110e82cb68cc1c544201cad1f2f61d16">FALHA</a> = -1;</div>
+<div class="line"><a id="l00659" name="l00659"></a><span class="lineno">  659</span> </div>
+<div class="line"><a id="l00668" name="l00668"></a><span class="lineno">  668</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_t_u_conta.html#a409f6d0a34c7104162a2faad61716341">run</a>();</div>
+<div class="line"><a id="l00669" name="l00669"></a><span class="lineno">  669</span>};</div>
+</div>
+<div class="line"><a id="l00670" name="l00670"></a><span class="lineno">  670</span> </div>
+<div class="line"><a id="l00671" name="l00671"></a><span class="lineno">  671</span><span class="comment">//********************VIAGEM********************</span></div>
+<div class="line"><a id="l00672" name="l00672"></a><span class="lineno">  672</span> </div>
+<div class="foldopen" id="foldopen00681" data-start="{" data-end="};">
+<div class="line"><a id="l00681" name="l00681"></a><span class="lineno"><a class="line" href="class_t_u_viagem.html">  681</a></span><span class="keyword">class </span><a class="code hl_class" href="class_t_u_viagem.html">TUViagem</a></div>
+<div class="line"><a id="l00682" name="l00682"></a><span class="lineno">  682</span>{</div>
+<div class="line"><a id="l00683" name="l00683"></a><span class="lineno">  683</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00685" name="l00685"></a><span class="lineno">  685</span>    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">string</span> codigo_valido;</div>
+<div class="line"><a id="l00686" name="l00686"></a><span class="lineno">  686</span> </div>
+<div class="line"><a id="l00688" name="l00688"></a><span class="lineno">  688</span>    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">string</span> nome_valido;</div>
+<div class="line"><a id="l00689" name="l00689"></a><span class="lineno">  689</span> </div>
+<div class="line"><a id="l00691" name="l00691"></a><span class="lineno">  691</span>    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">string</span> avaliacao_valida;</div>
+<div class="line"><a id="l00692" name="l00692"></a><span class="lineno">  692</span> </div>
+<div class="line"><a id="l00694" name="l00694"></a><span class="lineno">  694</span>    <a class="code hl_class" href="class_viagem.html">Viagem</a> *viagem;</div>
+<div class="line"><a id="l00695" name="l00695"></a><span class="lineno">  695</span> </div>
+<div class="line"><a id="l00697" name="l00697"></a><span class="lineno">  697</span>    <span class="keywordtype">int</span> estado;</div>
+<div class="line"><a id="l00698" name="l00698"></a><span class="lineno">  698</span> </div>
+<div class="line"><a id="l00704" name="l00704"></a><span class="lineno">  704</span>    <span class="keywordtype">void</span> setUp();</div>
+<div class="line"><a id="l00705" name="l00705"></a><span class="lineno">  705</span> </div>
+<div class="line"><a id="l00711" name="l00711"></a><span class="lineno">  711</span>    <span class="keywordtype">void</span> tearDown();</div>
+<div class="line"><a id="l00712" name="l00712"></a><span class="lineno">  712</span> </div>
+<div class="line"><a id="l00719" name="l00719"></a><span class="lineno">  719</span>    <span class="keywordtype">void</span> testarCenario();</div>
+<div class="line"><a id="l00720" name="l00720"></a><span class="lineno">  720</span> </div>
+<div class="line"><a id="l00721" name="l00721"></a><span class="lineno">  721</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00723" name="l00723"></a><span class="lineno"><a class="line" href="class_t_u_viagem.html#a3809ca3010c4af0308b32011c7a3aefd">  723</a></span>    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_t_u_viagem.html#a3809ca3010c4af0308b32011c7a3aefd">SUCESSO</a> = 0;</div>
+<div class="line"><a id="l00724" name="l00724"></a><span class="lineno">  724</span> </div>
+<div class="line"><a id="l00726" name="l00726"></a><span class="lineno"><a class="line" href="class_t_u_viagem.html#a7ed6d70d59cd761a930bef1651bf7c2e">  726</a></span>    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_t_u_viagem.html#a7ed6d70d59cd761a930bef1651bf7c2e">FALHA</a> = -1;</div>
+<div class="line"><a id="l00727" name="l00727"></a><span class="lineno">  727</span> </div>
+<div class="line"><a id="l00736" name="l00736"></a><span class="lineno">  736</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_t_u_viagem.html#aff5ad610253c0c70bb7230e25924a4ff">run</a>();</div>
+<div class="line"><a id="l00737" name="l00737"></a><span class="lineno">  737</span>};</div>
+</div>
+<div class="line"><a id="l00738" name="l00738"></a><span class="lineno">  738</span> </div>
+<div class="line"><a id="l00739" name="l00739"></a><span class="lineno">  739</span><span class="comment">//***************************Destino************************</span></div>
+<div class="line"><a id="l00740" name="l00740"></a><span class="lineno">  740</span> </div>
+<div class="foldopen" id="foldopen00749" data-start="{" data-end="};">
+<div class="line"><a id="l00749" name="l00749"></a><span class="lineno"><a class="line" href="class_t_u_destino.html">  749</a></span><span class="keyword">class </span><a class="code hl_class" href="class_t_u_destino.html">TUDestino</a></div>
+<div class="line"><a id="l00750" name="l00750"></a><span class="lineno">  750</span>{</div>
+<div class="line"><a id="l00751" name="l00751"></a><span class="lineno">  751</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00753" name="l00753"></a><span class="lineno">  753</span>    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">string</span> codigo_valido;</div>
+<div class="line"><a id="l00754" name="l00754"></a><span class="lineno">  754</span> </div>
+<div class="line"><a id="l00756" name="l00756"></a><span class="lineno">  756</span>    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">string</span> nome_valido;</div>
+<div class="line"><a id="l00757" name="l00757"></a><span class="lineno">  757</span> </div>
+<div class="line"><a id="l00759" name="l00759"></a><span class="lineno">  759</span>    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">string</span> data_inicio_valida;</div>
+<div class="line"><a id="l00760" name="l00760"></a><span class="lineno">  760</span> </div>
+<div class="line"><a id="l00762" name="l00762"></a><span class="lineno">  762</span>    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">string</span> data_fim_valida;</div>
+<div class="line"><a id="l00763" name="l00763"></a><span class="lineno">  763</span> </div>
+<div class="line"><a id="l00765" name="l00765"></a><span class="lineno">  765</span>    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">string</span> avaliacao_valida;</div>
+<div class="line"><a id="l00766" name="l00766"></a><span class="lineno">  766</span> </div>
+<div class="line"><a id="l00768" name="l00768"></a><span class="lineno">  768</span>    <a class="code hl_class" href="class_destino.html">Destino</a> *destino;</div>
+<div class="line"><a id="l00769" name="l00769"></a><span class="lineno">  769</span> </div>
+<div class="line"><a id="l00771" name="l00771"></a><span class="lineno">  771</span>    <span class="keywordtype">int</span> estado;</div>
+<div class="line"><a id="l00772" name="l00772"></a><span class="lineno">  772</span> </div>
+<div class="line"><a id="l00778" name="l00778"></a><span class="lineno">  778</span>    <span class="keywordtype">void</span> setUp();</div>
+<div class="line"><a id="l00779" name="l00779"></a><span class="lineno">  779</span> </div>
+<div class="line"><a id="l00785" name="l00785"></a><span class="lineno">  785</span>    <span class="keywordtype">void</span> tearDown();</div>
+<div class="line"><a id="l00786" name="l00786"></a><span class="lineno">  786</span> </div>
+<div class="line"><a id="l00793" name="l00793"></a><span class="lineno">  793</span>    <span class="keywordtype">void</span> testarCenario();</div>
+<div class="line"><a id="l00794" name="l00794"></a><span class="lineno">  794</span> </div>
+<div class="line"><a id="l00795" name="l00795"></a><span class="lineno">  795</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00797" name="l00797"></a><span class="lineno"><a class="line" href="class_t_u_destino.html#a4db9aed2d327ed5fa11ab9a565dd8f9f">  797</a></span>    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_t_u_destino.html#a4db9aed2d327ed5fa11ab9a565dd8f9f">SUCESSO</a> = 0;</div>
+<div class="line"><a id="l00798" name="l00798"></a><span class="lineno">  798</span> </div>
+<div class="line"><a id="l00800" name="l00800"></a><span class="lineno"><a class="line" href="class_t_u_destino.html#a63dbbb7174693567c01109c179ac0019">  800</a></span>    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_t_u_destino.html#a63dbbb7174693567c01109c179ac0019">FALHA</a> = -1;</div>
+<div class="line"><a id="l00801" name="l00801"></a><span class="lineno">  801</span> </div>
+<div class="line"><a id="l00810" name="l00810"></a><span class="lineno">  810</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_t_u_destino.html#ad5c9a725772f0526f0e63714718c4256">run</a>();</div>
+<div class="line"><a id="l00811" name="l00811"></a><span class="lineno">  811</span>};</div>
+</div>
+<div class="line"><a id="l00812" name="l00812"></a><span class="lineno">  812</span> </div>
+<div class="line"><a id="l00813" name="l00813"></a><span class="lineno">  813</span><span class="comment">//***************************Atividade************************</span></div>
+<div class="line"><a id="l00814" name="l00814"></a><span class="lineno">  814</span> </div>
+<div class="foldopen" id="foldopen00823" data-start="{" data-end="};">
+<div class="line"><a id="l00823" name="l00823"></a><span class="lineno"><a class="line" href="class_t_u_atividade.html">  823</a></span><span class="keyword">class </span><a class="code hl_class" href="class_t_u_atividade.html">TUAtividade</a></div>
+<div class="line"><a id="l00824" name="l00824"></a><span class="lineno">  824</span>{</div>
+<div class="line"><a id="l00825" name="l00825"></a><span class="lineno">  825</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00827" name="l00827"></a><span class="lineno">  827</span>    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">string</span> codigo_valido;</div>
+<div class="line"><a id="l00828" name="l00828"></a><span class="lineno">  828</span> </div>
+<div class="line"><a id="l00830" name="l00830"></a><span class="lineno">  830</span>    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">string</span> nome_valido;</div>
+<div class="line"><a id="l00831" name="l00831"></a><span class="lineno">  831</span> </div>
+<div class="line"><a id="l00833" name="l00833"></a><span class="lineno">  833</span>    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">string</span> horario_valido;</div>
+<div class="line"><a id="l00834" name="l00834"></a><span class="lineno">  834</span> </div>
+<div class="line"><a id="l00836" name="l00836"></a><span class="lineno">  836</span>    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">string</span> data_valida;</div>
+<div class="line"><a id="l00837" name="l00837"></a><span class="lineno">  837</span> </div>
+<div class="line"><a id="l00839" name="l00839"></a><span class="lineno">  839</span>    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">string</span> duracao_valida;</div>
+<div class="line"><a id="l00840" name="l00840"></a><span class="lineno">  840</span> </div>
+<div class="line"><a id="l00842" name="l00842"></a><span class="lineno">  842</span>    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">string</span> dinheiro_valido;</div>
+<div class="line"><a id="l00843" name="l00843"></a><span class="lineno">  843</span> </div>
+<div class="line"><a id="l00845" name="l00845"></a><span class="lineno">  845</span>    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">string</span> avaliacao_valida;</div>
+<div class="line"><a id="l00846" name="l00846"></a><span class="lineno">  846</span> </div>
+<div class="line"><a id="l00848" name="l00848"></a><span class="lineno">  848</span>    <a class="code hl_class" href="class_atividade.html">Atividade</a> *atividade;</div>
+<div class="line"><a id="l00849" name="l00849"></a><span class="lineno">  849</span> </div>
+<div class="line"><a id="l00851" name="l00851"></a><span class="lineno">  851</span>    <span class="keywordtype">int</span> estado;</div>
+<div class="line"><a id="l00852" name="l00852"></a><span class="lineno">  852</span> </div>
+<div class="line"><a id="l00858" name="l00858"></a><span class="lineno">  858</span>    <span class="keywordtype">void</span> setUp();</div>
+<div class="line"><a id="l00859" name="l00859"></a><span class="lineno">  859</span> </div>
+<div class="line"><a id="l00865" name="l00865"></a><span class="lineno">  865</span>    <span class="keywordtype">void</span> tearDown();</div>
+<div class="line"><a id="l00866" name="l00866"></a><span class="lineno">  866</span> </div>
+<div class="line"><a id="l00873" name="l00873"></a><span class="lineno">  873</span>    <span class="keywordtype">void</span> testarCenario();</div>
+<div class="line"><a id="l00874" name="l00874"></a><span class="lineno">  874</span> </div>
+<div class="line"><a id="l00875" name="l00875"></a><span class="lineno">  875</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00877" name="l00877"></a><span class="lineno"><a class="line" href="class_t_u_atividade.html#a3344c60790acca727ca199423613fe44">  877</a></span>    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_t_u_atividade.html#a3344c60790acca727ca199423613fe44">SUCESSO</a> = 0;</div>
+<div class="line"><a id="l00878" name="l00878"></a><span class="lineno">  878</span> </div>
+<div class="line"><a id="l00880" name="l00880"></a><span class="lineno"><a class="line" href="class_t_u_atividade.html#aee31cbe940905e68111c70e56700b346">  880</a></span>    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_t_u_atividade.html#aee31cbe940905e68111c70e56700b346">FALHA</a> = -1;</div>
+<div class="line"><a id="l00881" name="l00881"></a><span class="lineno">  881</span> </div>
+<div class="line"><a id="l00890" name="l00890"></a><span class="lineno">  890</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_t_u_atividade.html#a394ed4cfdffb7354f57ff8911a0b7d41">run</a>();</div>
+<div class="line"><a id="l00891" name="l00891"></a><span class="lineno">  891</span>};</div>
+</div>
+<div class="line"><a id="l00892" name="l00892"></a><span class="lineno">  892</span> </div>
+<div class="line"><a id="l00893" name="l00893"></a><span class="lineno">  893</span><span class="comment">//***************************Hospedagem************************</span></div>
+<div class="line"><a id="l00894" name="l00894"></a><span class="lineno">  894</span> </div>
+<div class="foldopen" id="foldopen00903" data-start="{" data-end="};">
+<div class="line"><a id="l00903" name="l00903"></a><span class="lineno"><a class="line" href="class_t_u_hospedagem.html">  903</a></span><span class="keyword">class </span><a class="code hl_class" href="class_t_u_hospedagem.html">TUHospedagem</a></div>
+<div class="line"><a id="l00904" name="l00904"></a><span class="lineno">  904</span>{</div>
+<div class="line"><a id="l00905" name="l00905"></a><span class="lineno">  905</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00907" name="l00907"></a><span class="lineno">  907</span>    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">string</span> codigo_valido;</div>
+<div class="line"><a id="l00908" name="l00908"></a><span class="lineno">  908</span> </div>
+<div class="line"><a id="l00910" name="l00910"></a><span class="lineno">  910</span>    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">string</span> nome_valido;</div>
+<div class="line"><a id="l00911" name="l00911"></a><span class="lineno">  911</span> </div>
+<div class="line"><a id="l00913" name="l00913"></a><span class="lineno">  913</span>    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">string</span> dinheiro_valido;</div>
+<div class="line"><a id="l00914" name="l00914"></a><span class="lineno">  914</span> </div>
+<div class="line"><a id="l00916" name="l00916"></a><span class="lineno">  916</span>    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">string</span> avaliacao_valida;</div>
+<div class="line"><a id="l00917" name="l00917"></a><span class="lineno">  917</span> </div>
+<div class="line"><a id="l00919" name="l00919"></a><span class="lineno">  919</span>    <a class="code hl_class" href="class_hospedagem.html">Hospedagem</a> *hospedagem;</div>
+<div class="line"><a id="l00920" name="l00920"></a><span class="lineno">  920</span> </div>
+<div class="line"><a id="l00922" name="l00922"></a><span class="lineno">  922</span>    <span class="keywordtype">int</span> estado;</div>
+<div class="line"><a id="l00923" name="l00923"></a><span class="lineno">  923</span> </div>
+<div class="line"><a id="l00929" name="l00929"></a><span class="lineno">  929</span>    <span class="keywordtype">void</span> setUp();</div>
+<div class="line"><a id="l00930" name="l00930"></a><span class="lineno">  930</span> </div>
+<div class="line"><a id="l00936" name="l00936"></a><span class="lineno">  936</span>    <span class="keywordtype">void</span> tearDown();</div>
+<div class="line"><a id="l00937" name="l00937"></a><span class="lineno">  937</span> </div>
+<div class="line"><a id="l00944" name="l00944"></a><span class="lineno">  944</span>    <span class="keywordtype">void</span> testarCenario();</div>
+<div class="line"><a id="l00945" name="l00945"></a><span class="lineno">  945</span> </div>
+<div class="line"><a id="l00946" name="l00946"></a><span class="lineno">  946</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00948" name="l00948"></a><span class="lineno"><a class="line" href="class_t_u_hospedagem.html#abd707e2f4bdc96075e363a05c3438ccf">  948</a></span>    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_t_u_hospedagem.html#abd707e2f4bdc96075e363a05c3438ccf">SUCESSO</a> = 0;</div>
+<div class="line"><a id="l00949" name="l00949"></a><span class="lineno">  949</span> </div>
+<div class="line"><a id="l00951" name="l00951"></a><span class="lineno"><a class="line" href="class_t_u_hospedagem.html#a4c512dbebcee1d05730a951c2d26416c">  951</a></span>    <span class="keyword">const</span> <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_t_u_hospedagem.html#a4c512dbebcee1d05730a951c2d26416c">FALHA</a> = -1;</div>
+<div class="line"><a id="l00952" name="l00952"></a><span class="lineno">  952</span> </div>
+<div class="line"><a id="l00961" name="l00961"></a><span class="lineno">  961</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_t_u_hospedagem.html#a9c74d0a970d89f5c547257f646b7ecc7">run</a>();</div>
+<div class="line"><a id="l00962" name="l00962"></a><span class="lineno">  962</span>};</div>
+</div>
+<div class="line"><a id="l00963" name="l00963"></a><span class="lineno">  963</span><span class="preprocessor">#endif </span><span class="comment">// TESTES_HPP_INCLUDED;</span></div>
+<div class="ttc" id="aclass_atividade_html"><div class="ttname"><a href="class_atividade.html">Atividade</a></div><div class="ttdoc">Classe que representa uma Atividade.</div><div class="ttdef"><b>Definição</b> entidades.hpp:313</div></div>
+<div class="ttc" id="aclass_avaliacao_html"><div class="ttname"><a href="class_avaliacao.html">Avaliacao</a></div><div class="ttdoc">Representa uma avaliação de 0 a 5.</div><div class="ttdef"><b>Definição</b> dominios.hpp:163</div></div>
+<div class="ttc" id="aclass_codigo_html"><div class="ttname"><a href="class_codigo.html">Codigo</a></div><div class="ttdoc">Representa um código de 6 dígitos.</div><div class="ttdef"><b>Definição</b> dominios.hpp:274</div></div>
+<div class="ttc" id="aclass_conta_html"><div class="ttname"><a href="class_conta.html">Conta</a></div><div class="ttdoc">Classe que representa uma Conta no sistema.</div><div class="ttdef"><b>Definição</b> entidades.hpp:13</div></div>
+<div class="ttc" id="aclass_data_html"><div class="ttname"><a href="class_data.html">Data</a></div><div class="ttdoc">Representa uma data no formato DD-MM-AA.</div><div class="ttdef"><b>Definição</b> dominios.hpp:196</div></div>
+<div class="ttc" id="aclass_destino_html"><div class="ttname"><a href="class_destino.html">Destino</a></div><div class="ttdoc">Classe que representa um Destino.</div><div class="ttdef"><b>Definição</b> entidades.hpp:210</div></div>
+<div class="ttc" id="aclass_dinheiro_html"><div class="ttname"><a href="class_dinheiro.html">Dinheiro</a></div><div class="ttdoc">Representa uma quantia em dinheiro.</div><div class="ttdef"><b>Definição</b> dominios.hpp:51</div></div>
+<div class="ttc" id="aclass_duracao_html"><div class="ttname"><a href="class_duracao.html">Duracao</a></div><div class="ttdoc">Representa uma duração em minutos.</div><div class="ttdef"><b>Definição</b> dominios.hpp:129</div></div>
+<div class="ttc" id="aclass_horario_html"><div class="ttname"><a href="class_horario.html">Horario</a></div><div class="ttdoc">Representa um horário no formato HH:MM.</div><div class="ttdef"><b>Definição</b> dominios.hpp:12</div></div>
+<div class="ttc" id="aclass_hospedagem_html"><div class="ttname"><a href="class_hospedagem.html">Hospedagem</a></div><div class="ttdoc">Classe que representa uma Hospedagem.</div><div class="ttdef"><b>Definição</b> entidades.hpp:125</div></div>
+<div class="ttc" id="aclass_nome_html"><div class="ttname"><a href="class_nome.html">Nome</a></div><div class="ttdoc">Representa um nome.</div><div class="ttdef"><b>Definição</b> dominios.hpp:96</div></div>
+<div class="ttc" id="aclass_senha_html"><div class="ttname"><a href="class_senha.html">Senha</a></div><div class="ttdoc">Representa uma senha de 5 caracteres.</div><div class="ttdef"><b>Definição</b> dominios.hpp:241</div></div>
+<div class="ttc" id="aclass_t_u_atividade_html"><div class="ttname"><a href="class_t_u_atividade.html">TUAtividade</a></div><div class="ttdoc">Classe de teste para a classe Atividade.</div><div class="ttdef"><b>Definição</b> testes.hpp:824</div></div>
+<div class="ttc" id="aclass_t_u_atividade_html_a3344c60790acca727ca199423613fe44"><div class="ttname"><a href="class_t_u_atividade.html#a3344c60790acca727ca199423613fe44">TUAtividade::SUCESSO</a></div><div class="ttdeci">static const int SUCESSO</div><div class="ttdoc">Constante que representa o estado de sucesso do teste.</div><div class="ttdef"><b>Definição</b> testes.hpp:877</div></div>
+<div class="ttc" id="aclass_t_u_atividade_html_a394ed4cfdffb7354f57ff8911a0b7d41"><div class="ttname"><a href="class_t_u_atividade.html#a394ed4cfdffb7354f57ff8911a0b7d41">TUAtividade::run</a></div><div class="ttdeci">int run()</div><div class="ttdoc">Executa todos os testes da classe TUAtividade.</div><div class="ttdef"><b>Definição</b> testes.cpp:1234</div></div>
+<div class="ttc" id="aclass_t_u_atividade_html_aee31cbe940905e68111c70e56700b346"><div class="ttname"><a href="class_t_u_atividade.html#aee31cbe940905e68111c70e56700b346">TUAtividade::FALHA</a></div><div class="ttdeci">static const int FALHA</div><div class="ttdoc">Constante que representa o estado de falha do teste.</div><div class="ttdef"><b>Definição</b> testes.hpp:880</div></div>
+<div class="ttc" id="aclass_t_u_avaliacao_html"><div class="ttname"><a href="class_t_u_avaliacao.html">TUAvaliacao</a></div><div class="ttdoc">Classe de teste para a classe Avaliacao.</div><div class="ttdef"><b>Definição</b> testes.hpp:326</div></div>
+<div class="ttc" id="aclass_t_u_avaliacao_html_a697dce874d58847a37766795210fc360"><div class="ttname"><a href="class_t_u_avaliacao.html#a697dce874d58847a37766795210fc360">TUAvaliacao::SUCESSO</a></div><div class="ttdeci">static const int SUCESSO</div><div class="ttdoc">Constante que representa o estado de sucesso do teste.</div><div class="ttdef"><b>Definição</b> testes.hpp:372</div></div>
+<div class="ttc" id="aclass_t_u_avaliacao_html_ae55d06cff56296d44ca12e76fd82ca1b"><div class="ttname"><a href="class_t_u_avaliacao.html#ae55d06cff56296d44ca12e76fd82ca1b">TUAvaliacao::FALHA</a></div><div class="ttdeci">static const int FALHA</div><div class="ttdoc">Constante que representa o estado de falha do teste.</div><div class="ttdef"><b>Definição</b> testes.hpp:375</div></div>
+<div class="ttc" id="aclass_t_u_avaliacao_html_aed2383c33ca301a41c3c364af6e5a4af"><div class="ttname"><a href="class_t_u_avaliacao.html#aed2383c33ca301a41c3c364af6e5a4af">TUAvaliacao::run</a></div><div class="ttdeci">int run()</div><div class="ttdoc">Executa todos os testes da classe TUAvaliacao.</div><div class="ttdef"><b>Definição</b> testes.cpp:538</div></div>
+<div class="ttc" id="aclass_t_u_codigo_html"><div class="ttname"><a href="class_t_u_codigo.html">TUCodigo</a></div><div class="ttdoc">Classe de teste para a classe Codigo.</div><div class="ttdef"><b>Definição</b> testes.hpp:540</div></div>
+<div class="ttc" id="aclass_t_u_codigo_html_a4e6994bcde0011cdf0b0bb7a2c4d94d9"><div class="ttname"><a href="class_t_u_codigo.html#a4e6994bcde0011cdf0b0bb7a2c4d94d9">TUCodigo::run</a></div><div class="ttdeci">int run()</div><div class="ttdoc">Executa todos os testes da classe TUCodigo.</div><div class="ttdef"><b>Definição</b> testes.cpp:803</div></div>
+<div class="ttc" id="aclass_t_u_codigo_html_abff6dd7b04006df40462c76f8b769123"><div class="ttname"><a href="class_t_u_codigo.html#abff6dd7b04006df40462c76f8b769123">TUCodigo::FALHA</a></div><div class="ttdeci">static const int FALHA</div><div class="ttdoc">Constante que representa o estado de falha do teste.</div><div class="ttdef"><b>Definição</b> testes.hpp:589</div></div>
+<div class="ttc" id="aclass_t_u_codigo_html_ae74fd939ebced94047b47878406f53d1"><div class="ttname"><a href="class_t_u_codigo.html#ae74fd939ebced94047b47878406f53d1">TUCodigo::SUCESSO</a></div><div class="ttdeci">static const int SUCESSO</div><div class="ttdoc">Constante que representa o estado de sucesso do teste.</div><div class="ttdef"><b>Definição</b> testes.hpp:586</div></div>
+<div class="ttc" id="aclass_t_u_conta_html"><div class="ttname"><a href="class_t_u_conta.html">TUConta</a></div><div class="ttdoc">Classe de teste para a classe Conta.</div><div class="ttdef"><b>Definição</b> testes.hpp:617</div></div>
+<div class="ttc" id="aclass_t_u_conta_html_a110e82cb68cc1c544201cad1f2f61d16"><div class="ttname"><a href="class_t_u_conta.html#a110e82cb68cc1c544201cad1f2f61d16">TUConta::FALHA</a></div><div class="ttdeci">static const int FALHA</div><div class="ttdoc">Constante que representa o estado de falha do teste.</div><div class="ttdef"><b>Definição</b> testes.hpp:658</div></div>
+<div class="ttc" id="aclass_t_u_conta_html_a409f6d0a34c7104162a2faad61716341"><div class="ttname"><a href="class_t_u_conta.html#a409f6d0a34c7104162a2faad61716341">TUConta::run</a></div><div class="ttdeci">int run()</div><div class="ttdoc">Executa todos os testes da classe TUConta.</div><div class="ttdef"><b>Definição</b> testes.cpp:879</div></div>
+<div class="ttc" id="aclass_t_u_conta_html_aa38dbaa02b6c6225fceea459f4f7be0e"><div class="ttname"><a href="class_t_u_conta.html#aa38dbaa02b6c6225fceea459f4f7be0e">TUConta::SUCESSO</a></div><div class="ttdeci">static const int SUCESSO</div><div class="ttdoc">Constante que representa o estado de sucesso do teste.</div><div class="ttdef"><b>Definição</b> testes.hpp:655</div></div>
+<div class="ttc" id="aclass_t_u_data_html"><div class="ttname"><a href="class_t_u_data.html">TUData</a></div><div class="ttdoc">Classe de teste para a classe Data.</div><div class="ttdef"><b>Definição</b> testes.hpp:397</div></div>
+<div class="ttc" id="aclass_t_u_data_html_a4fd95b821fa6d55bdc82be6f3a3cbef2"><div class="ttname"><a href="class_t_u_data.html#a4fd95b821fa6d55bdc82be6f3a3cbef2">TUData::run</a></div><div class="ttdeci">int run()</div><div class="ttdoc">Executa todos os testes da classe TUData.</div><div class="ttdef"><b>Definição</b> testes.cpp:626</div></div>
+<div class="ttc" id="aclass_t_u_data_html_a59be2c38007b733030111a5aadfb4517"><div class="ttname"><a href="class_t_u_data.html#a59be2c38007b733030111a5aadfb4517">TUData::SUCESSO</a></div><div class="ttdeci">static const int SUCESSO</div><div class="ttdoc">Constante que representa o estado de sucesso do teste.</div><div class="ttdef"><b>Definição</b> testes.hpp:443</div></div>
+<div class="ttc" id="aclass_t_u_data_html_a691cfac8c7fc4b3da149ef868de44f35"><div class="ttname"><a href="class_t_u_data.html#a691cfac8c7fc4b3da149ef868de44f35">TUData::FALHA</a></div><div class="ttdeci">static const int FALHA</div><div class="ttdoc">Constante que representa o estado de falha do teste.</div><div class="ttdef"><b>Definição</b> testes.hpp:446</div></div>
+<div class="ttc" id="aclass_t_u_destino_html"><div class="ttname"><a href="class_t_u_destino.html">TUDestino</a></div><div class="ttdoc">Classe de teste para a classe Destino.</div><div class="ttdef"><b>Definição</b> testes.hpp:750</div></div>
+<div class="ttc" id="aclass_t_u_destino_html_a4db9aed2d327ed5fa11ab9a565dd8f9f"><div class="ttname"><a href="class_t_u_destino.html#a4db9aed2d327ed5fa11ab9a565dd8f9f">TUDestino::SUCESSO</a></div><div class="ttdeci">static const int SUCESSO</div><div class="ttdoc">Constante que representa o estado de sucesso do teste.</div><div class="ttdef"><b>Definição</b> testes.hpp:797</div></div>
+<div class="ttc" id="aclass_t_u_destino_html_a63dbbb7174693567c01109c179ac0019"><div class="ttname"><a href="class_t_u_destino.html#a63dbbb7174693567c01109c179ac0019">TUDestino::FALHA</a></div><div class="ttdeci">static const int FALHA</div><div class="ttdoc">Constante que representa o estado de falha do teste.</div><div class="ttdef"><b>Definição</b> testes.hpp:800</div></div>
+<div class="ttc" id="aclass_t_u_destino_html_ad5c9a725772f0526f0e63714718c4256"><div class="ttname"><a href="class_t_u_destino.html#ad5c9a725772f0526f0e63714718c4256">TUDestino::run</a></div><div class="ttdeci">int run()</div><div class="ttdoc">Executa todos os testes da classe TUDestino.</div><div class="ttdef"><b>Definição</b> testes.cpp:1042</div></div>
+<div class="ttc" id="aclass_t_u_dinheiro_html"><div class="ttname"><a href="class_t_u_dinheiro.html">TUDinheiro</a></div><div class="ttdoc">Classe de teste para a classe Dinheiro.</div><div class="ttdef"><b>Definição</b> testes.hpp:113</div></div>
+<div class="ttc" id="aclass_t_u_dinheiro_html_a061cd8b5cd51de4ed726a2d0fedffbb6"><div class="ttname"><a href="class_t_u_dinheiro.html#a061cd8b5cd51de4ed726a2d0fedffbb6">TUDinheiro::SUCESSO</a></div><div class="ttdeci">static const int SUCESSO</div><div class="ttdoc">Constante que representa o estado de sucesso do teste.</div><div class="ttdef"><b>Definição</b> testes.hpp:159</div></div>
+<div class="ttc" id="aclass_t_u_dinheiro_html_a2fd6908de3aafae2b88c2932483a43b4"><div class="ttname"><a href="class_t_u_dinheiro.html#a2fd6908de3aafae2b88c2932483a43b4">TUDinheiro::FALHA</a></div><div class="ttdeci">static const int FALHA</div><div class="ttdoc">Constante que representa o estado de falha do teste.</div><div class="ttdef"><b>Definição</b> testes.hpp:162</div></div>
+<div class="ttc" id="aclass_t_u_dinheiro_html_a65c84d31615a16535c72157dc172d1df"><div class="ttname"><a href="class_t_u_dinheiro.html#a65c84d31615a16535c72157dc172d1df">TUDinheiro::run</a></div><div class="ttdeci">int run()</div><div class="ttdoc">Executa todos os testes da classe TUDinheiro.</div><div class="ttdef"><b>Definição</b> testes.cpp:272</div></div>
+<div class="ttc" id="aclass_t_u_duracao_html"><div class="ttname"><a href="class_t_u_duracao.html">TUDuracao</a></div><div class="ttdoc">Classe de teste para a classe Duracao.</div><div class="ttdef"><b>Definição</b> testes.hpp:255</div></div>
+<div class="ttc" id="aclass_t_u_duracao_html_a4a2c5d2f7449bb017266148c97b9fc13"><div class="ttname"><a href="class_t_u_duracao.html#a4a2c5d2f7449bb017266148c97b9fc13">TUDuracao::FALHA</a></div><div class="ttdeci">static const int FALHA</div><div class="ttdoc">Constante que representa o estado de falha do teste.</div><div class="ttdef"><b>Definição</b> testes.hpp:304</div></div>
+<div class="ttc" id="aclass_t_u_duracao_html_a6a0754cf3ffd57cb7fddea9217018cc7"><div class="ttname"><a href="class_t_u_duracao.html#a6a0754cf3ffd57cb7fddea9217018cc7">TUDuracao::SUCESSO</a></div><div class="ttdeci">static const int SUCESSO</div><div class="ttdoc">Constante que representa o estado de sucesso do teste.</div><div class="ttdef"><b>Definição</b> testes.hpp:301</div></div>
+<div class="ttc" id="aclass_t_u_duracao_html_ae1b82a9f2b93befc6a64601b6d051517"><div class="ttname"><a href="class_t_u_duracao.html#ae1b82a9f2b93befc6a64601b6d051517">TUDuracao::run</a></div><div class="ttdeci">int run()</div><div class="ttdoc">Executa todos os testes da classe TUDuracao.</div><div class="ttdef"><b>Definição</b> testes.cpp:449</div></div>
+<div class="ttc" id="aclass_t_u_horario_html"><div class="ttname"><a href="class_t_u_horario.html">TUHorario</a></div><div class="ttdoc">Classe de teste para a classe Horario.</div><div class="ttdef"><b>Definição</b> testes.hpp:43</div></div>
+<div class="ttc" id="aclass_t_u_horario_html_a58974951411c48a2ef16b505b65ee991"><div class="ttname"><a href="class_t_u_horario.html#a58974951411c48a2ef16b505b65ee991">TUHorario::SUCESSO</a></div><div class="ttdeci">static const int SUCESSO</div><div class="ttdoc">Constante que representa o estado de sucesso do teste.</div><div class="ttdef"><b>Definição</b> testes.hpp:88</div></div>
+<div class="ttc" id="aclass_t_u_horario_html_a93d6fabcab04d0ac3bc695bbf2e4cf1b"><div class="ttname"><a href="class_t_u_horario.html#a93d6fabcab04d0ac3bc695bbf2e4cf1b">TUHorario::FALHA</a></div><div class="ttdeci">static const int FALHA</div><div class="ttdoc">Constante que representa o estado de falha do teste.</div><div class="ttdef"><b>Definição</b> testes.hpp:91</div></div>
+<div class="ttc" id="aclass_t_u_horario_html_ac6e790d002f6854f57a6a85f9a3c9eeb"><div class="ttname"><a href="class_t_u_horario.html#ac6e790d002f6854f57a6a85f9a3c9eeb">TUHorario::run</a></div><div class="ttdeci">int run()</div><div class="ttdoc">Executa todos os testes da classe TUHorario.</div><div class="ttdef"><b>Definição</b> testes.cpp:180</div></div>
+<div class="ttc" id="aclass_t_u_hospedagem_html"><div class="ttname"><a href="class_t_u_hospedagem.html">TUHospedagem</a></div><div class="ttdoc">Classe de teste para a classe Hospedagem.</div><div class="ttdef"><b>Definição</b> testes.hpp:904</div></div>
+<div class="ttc" id="aclass_t_u_hospedagem_html_a4c512dbebcee1d05730a951c2d26416c"><div class="ttname"><a href="class_t_u_hospedagem.html#a4c512dbebcee1d05730a951c2d26416c">TUHospedagem::FALHA</a></div><div class="ttdeci">static const int FALHA</div><div class="ttdoc">Constante que representa o estado de falha do teste.</div><div class="ttdef"><b>Definição</b> testes.hpp:951</div></div>
+<div class="ttc" id="aclass_t_u_hospedagem_html_a9c74d0a970d89f5c547257f646b7ecc7"><div class="ttname"><a href="class_t_u_hospedagem.html#a9c74d0a970d89f5c547257f646b7ecc7">TUHospedagem::run</a></div><div class="ttdeci">int run()</div><div class="ttdoc">Executa todos os testes da classe TUHospedagem.</div><div class="ttdef"><b>Definição</b> testes.cpp:1128</div></div>
+<div class="ttc" id="aclass_t_u_hospedagem_html_abd707e2f4bdc96075e363a05c3438ccf"><div class="ttname"><a href="class_t_u_hospedagem.html#abd707e2f4bdc96075e363a05c3438ccf">TUHospedagem::SUCESSO</a></div><div class="ttdeci">static const int SUCESSO</div><div class="ttdoc">Constante que representa o estado de sucesso do teste.</div><div class="ttdef"><b>Definição</b> testes.hpp:948</div></div>
+<div class="ttc" id="aclass_t_u_nome_html"><div class="ttname"><a href="class_t_u_nome.html">TUNome</a></div><div class="ttdoc">Classe de teste para a classe Nome.</div><div class="ttdef"><b>Definição</b> testes.hpp:184</div></div>
+<div class="ttc" id="aclass_t_u_nome_html_a50bf8928bc5e773eaf15a2fb5eb2f065"><div class="ttname"><a href="class_t_u_nome.html#a50bf8928bc5e773eaf15a2fb5eb2f065">TUNome::FALHA</a></div><div class="ttdeci">static const int FALHA</div><div class="ttdoc">Constante que representa o estado de falha do teste.</div><div class="ttdef"><b>Definição</b> testes.hpp:233</div></div>
+<div class="ttc" id="aclass_t_u_nome_html_ae20734cb15f71890e57aff02a00f6313"><div class="ttname"><a href="class_t_u_nome.html#ae20734cb15f71890e57aff02a00f6313">TUNome::run</a></div><div class="ttdeci">int run()</div><div class="ttdoc">Executa todos os testes da classe TUNome.</div><div class="ttdef"><b>Definição</b> testes.cpp:361</div></div>
+<div class="ttc" id="aclass_t_u_nome_html_af1d3faa5a4f6a302f96d193478f3013b"><div class="ttname"><a href="class_t_u_nome.html#af1d3faa5a4f6a302f96d193478f3013b">TUNome::SUCESSO</a></div><div class="ttdeci">static const int SUCESSO</div><div class="ttdoc">Constante que representa o estado de sucesso do teste.</div><div class="ttdef"><b>Definição</b> testes.hpp:230</div></div>
+<div class="ttc" id="aclass_t_u_senha_html"><div class="ttname"><a href="class_t_u_senha.html">TUSenha</a></div><div class="ttdoc">Classe de teste para a classe Senha.</div><div class="ttdef"><b>Definição</b> testes.hpp:468</div></div>
+<div class="ttc" id="aclass_t_u_senha_html_a1a1dabe034b25a899150c95acbc0684c"><div class="ttname"><a href="class_t_u_senha.html#a1a1dabe034b25a899150c95acbc0684c">TUSenha::SUCESSO</a></div><div class="ttdeci">static const int SUCESSO</div><div class="ttdoc">Constante que representa o estado de sucesso do teste.</div><div class="ttdef"><b>Definição</b> testes.hpp:514</div></div>
+<div class="ttc" id="aclass_t_u_senha_html_a71eb0d9005b2d36da6a8530c0dd31842"><div class="ttname"><a href="class_t_u_senha.html#a71eb0d9005b2d36da6a8530c0dd31842">TUSenha::FALHA</a></div><div class="ttdeci">static const int FALHA</div><div class="ttdoc">Constante que representa o estado de falha do teste.</div><div class="ttdef"><b>Definição</b> testes.hpp:517</div></div>
+<div class="ttc" id="aclass_t_u_senha_html_ac5ddea52ed42b828961f343b82074125"><div class="ttname"><a href="class_t_u_senha.html#ac5ddea52ed42b828961f343b82074125">TUSenha::run</a></div><div class="ttdeci">int run()</div><div class="ttdoc">Executa todos os testes da classe TUSenha.</div><div class="ttdef"><b>Definição</b> testes.cpp:715</div></div>
+<div class="ttc" id="aclass_t_u_viagem_html"><div class="ttname"><a href="class_t_u_viagem.html">TUViagem</a></div><div class="ttdoc">Classe de teste para a classe Viagem.</div><div class="ttdef"><b>Definição</b> testes.hpp:682</div></div>
+<div class="ttc" id="aclass_t_u_viagem_html_a3809ca3010c4af0308b32011c7a3aefd"><div class="ttname"><a href="class_t_u_viagem.html#a3809ca3010c4af0308b32011c7a3aefd">TUViagem::SUCESSO</a></div><div class="ttdeci">static const int SUCESSO</div><div class="ttdoc">Constante que representa o estado de sucesso do teste.</div><div class="ttdef"><b>Definição</b> testes.hpp:723</div></div>
+<div class="ttc" id="aclass_t_u_viagem_html_a7ed6d70d59cd761a930bef1651bf7c2e"><div class="ttname"><a href="class_t_u_viagem.html#a7ed6d70d59cd761a930bef1651bf7c2e">TUViagem::FALHA</a></div><div class="ttdeci">static const int FALHA</div><div class="ttdoc">Constante que representa o estado de falha do teste.</div><div class="ttdef"><b>Definição</b> testes.hpp:726</div></div>
+<div class="ttc" id="aclass_t_u_viagem_html_aff5ad610253c0c70bb7230e25924a4ff"><div class="ttname"><a href="class_t_u_viagem.html#aff5ad610253c0c70bb7230e25924a4ff">TUViagem::run</a></div><div class="ttdeci">int run()</div><div class="ttdoc">Executa todos os testes da classe TUViagem.</div><div class="ttdef"><b>Definição</b> testes.cpp:959</div></div>
+<div class="ttc" id="aclass_viagem_html"><div class="ttname"><a href="class_viagem.html">Viagem</a></div><div class="ttdoc">Classe que representa uma Viagem.</div><div class="ttdef"><b>Definição</b> entidades.hpp:59</div></div>
+<div class="ttc" id="adominios_8hpp_html"><div class="ttname"><a href="dominios_8hpp.html">dominios.hpp</a></div><div class="ttdoc">Implementação de métodos dos domínios do sistema.</div></div>
+<div class="ttc" id="aentidades_8hpp_html"><div class="ttname"><a href="entidades_8hpp.html">entidades.hpp</a></div><div class="ttdoc">Implementação de métodos das entidades do sistema.</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>
