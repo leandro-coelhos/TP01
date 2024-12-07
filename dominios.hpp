@@ -5,7 +5,7 @@
 
 using namespace std;
 
-class Horario {
+class Horario { //Leandro Coelho da Silva, MAT:232011396
     private:
         unsigned short hora;
         unsigned short minuto;
@@ -17,7 +17,7 @@ class Horario {
 
 };
 
-class Dinheiro {
+class Dinheiro { //Leandro Coelho da Silva, MAT:232011396
     private:
         float dinheiro; //dinheiro em centavos (CALCULOS INTERNOS SERAO FEITOS TODOS EM CENTAVOS usando esse atributo)
         string dinheiroView; //dinheiro em "R$reais,centavos" (A EXIBICAO DO DINHEIRO SERA COMO USUAL)
@@ -29,7 +29,7 @@ class Dinheiro {
         string getDinheiroView() const;
 };
 
-class Nome {
+class Nome { //Lucas Santana Camilo Alves, MAT:211060666
     private:
         string nome;
         void validateNome(string nome);
@@ -39,7 +39,7 @@ class Nome {
         string getNome() const;
 };
 
-class Duracao {
+class Duracao { //Leandro Coelho da Silva, MAT:232011396
      private:
           int duracao;
           void validateDuracao(int duracao);
@@ -48,7 +48,7 @@ class Duracao {
           string getDuracao() const;
 };
 
-class Avaliacao {
+class Avaliacao { //Leandro Coelho da Silva, MAT:232011396
     private:
         int avaliacao;
         void validateAvaliacao(int avaliacao);
@@ -57,7 +57,7 @@ class Avaliacao {
         string getAvaliacao() const;
 };
 
-class Data {
+class Data { //Leandro Coelho da Silva, MAT:232011396
     private:
         unsigned short dia;
         unsigned short mes;
@@ -68,25 +68,16 @@ class Data {
         string getData() const;
 };
 
-class Senha {
+class Senha { //Leandro Coelho da Silva, MAT:232011396
     private:
         string senha;
         void validateSenha(string senha);
     public:
-        //Senha() = default;
         void setSenha(string senha);
         string getSenha() const;
-        // Senha(const string& senha){
-        //     try {
-        //         setSenha(senha);
-        //     }
-        //     catch(invalid_argument &exp){
-        //         throw invalid_argument("Argumento invalido");
-        //     }
-        // }
 };
 
-class Codigo {
+class Codigo { //Lucas Santana Camilo Alves, MAT:211060666
     private:
         string codigo;
         void validateCodigo(string codigo);

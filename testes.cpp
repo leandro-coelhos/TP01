@@ -5,8 +5,6 @@
 #include "testes.hpp"
 #include "dominios.hpp"
 
-//DINHERIO E CODIGO FALHARAM NOS TESTES
-
 using namespace std;
 
 const string TUHorario::horario_valido = "12:35";
@@ -58,6 +56,10 @@ const string TUHospedagem::codigo_valido = "215678";
 const string TUHospedagem::nome_valido = "joao";
 const string TUHospedagem::dinheiro_valido = "13,00";
 const string TUHospedagem::avaliacao_valida = "3";
+
+//-------------------------TestesDomínio-----------------------------------
+
+//FEITO POR EDUARDO LUNA SCALASSARA, MAT:232011289
 
 //*****************HORARIO*****************
 void TUHorario::setUp() {
@@ -397,6 +399,10 @@ int TUCodigo::run() {
   tearDown();
   return estado;
 }
+
+//-------------------------TestesEntidades-----------------------------------
+
+//FEITO POR LUCAS SANTANA CAMILO ALVES, MAT:211060666
 
 // ********************CONTA********************
 

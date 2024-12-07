@@ -9,6 +9,12 @@
 
 using namespace std;
 
+//-------------------------TestesDomínio-----------------------------------
+
+//FEITO POR EDUARDO LUNA SCALASSARA, MAT:232011289
+
+//********************HORARIO********************
+
 class TUHorario {
     private:
         const static string horario_valido;
@@ -24,6 +30,8 @@ class TUHorario {
         const static int FALHA = -1;
         int run();
 };
+
+//********************DINHEIRO********************
 
 class TUDinheiro {
     private:
@@ -41,6 +49,7 @@ class TUDinheiro {
         int run();
 };
 
+//********************NOME********************
 
 class TUNome {
     private:
@@ -58,6 +67,8 @@ class TUNome {
         int run();
 };
 
+//********************DURACAO********************
+
 class TUDuracao {
     private:
         const static string duracao_valida;
@@ -74,6 +85,8 @@ class TUDuracao {
         int run();
 };
 
+//********************AVALIACAO********************
+
 class TUAvaliacao {
     private:
         const static string avaliacao_valida;
@@ -89,6 +102,8 @@ class TUAvaliacao {
         const static int FALHA = -1;
         int run();
 };
+
+//********************DATA********************
 
 class TUData {
     private:
@@ -108,6 +123,8 @@ class TUData {
         int run();
 };
 
+//********************SENHA********************
+
 class TUSenha {
     private:
         const static string senha_valida;
@@ -123,6 +140,8 @@ class TUSenha {
         const static int FALHA = -1;
         int run();
 };
+
+//********************CÓDIGO********************
 
 class TUCodigo {
     private:
@@ -140,9 +159,11 @@ class TUCodigo {
         int run();
 };
 
+//-------------------------TestesEntidades-----------------------------------
 
+//FEITO POR LUCAS SANTANA CAMILO ALVES, MAT:211060666
 
-//Entidades Teste
+// ********************CONTA********************
 
 class TUConta {
     private:
@@ -159,6 +180,8 @@ class TUConta {
         int run();
 };
 
+//********************VIAGEM********************
+
 class TUViagem {
     private:
         const static string codigo_valido;
@@ -174,6 +197,8 @@ class TUViagem {
         const static int FALHA = -1; // Defini��o de constante para reportar resultado.
         int run();
 };
+
+//***************************Destino************************
 
 class TUDestino {
     private:
@@ -192,6 +217,8 @@ class TUDestino {
         const static int FALHA = -1; // Defini��o de constante para reportar resultado.
         int run();
 };
+
+//***************************Atividade************************
 
 class TUAtividade {
     private:
@@ -212,6 +239,8 @@ class TUAtividade {
         const static int FALHA = -1; // Defini��o de constante para reportar resultado.
         int run();
 };
+
+//***************************Hospedagem************************
 
 class TUHospedagem {
     private:

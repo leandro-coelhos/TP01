@@ -2,9 +2,9 @@
 #include "dominios.hpp"
 
 //Sistema básico, onde entidades recebem domínios como atributos, 
-//pelo metodo set e são retornadas .elo get
+//pelo metodo set e são retornadas pelo get
 
-//Conta
+//CONTA - FEITO POR LEANDRO COELHO DA SILVA, MAT:232011396
 void Conta::setCodigo(const Codigo& codigo){
     this->codigo = codigo;
 };
@@ -21,7 +21,7 @@ Senha Conta::getSenha() const {
     return this->senha;
 }
 
-//Viagem
+//VIAGEM - FEITO POR LEANDRO COELHO DA SILVA, MAT:232011396
 
 void Viagem::setCodigo(const Codigo& codigo){
     this->codigo = codigo;
@@ -46,7 +46,7 @@ Nome Viagem::getNome() const {
     return this->nome;
 }
 
-//Hospedagem
+//HOSPEDAGEM - FEITO POR LEANDRO COELHO DA SILVA, MAT:232011396
 
 void Hospedagem::setCodigo(const Codigo& codigo){
     this->codigo = codigo;
@@ -80,7 +80,7 @@ Dinheiro Hospedagem::getDiaria() const {
     return this->diaria;
 }
 
-//
+//DESTINO - FEITO POR LEANDRO COELHO DA SILVA, MAT:232011396
 
 void Destino::setCodigo(const Codigo& codigo){
     this->codigo = codigo;
@@ -122,7 +122,7 @@ Data Destino::getDataFim() const {
     return this->data_fim;
 }
 
-//Atividade
+//ATIVIDADE - FEITO POR LEANDRO COELHO DA SILVA, MAT:232011396
 
 
 void Atividade::setCodigo(const Codigo& codigo){

@@ -7,11 +7,12 @@
 #include <string>
 #include <iostream>
 
-// HORARIO
+//HORARIO - FEITO POR LEANDRO COELHO DA SILVA, MAT:232011396
 using namespace std;
 
-void Horario::validateHora(unsigned short hora, unsigned short minuto){
-    //Valida se as horas e minutos estão dentro do padrão
+
+
+void Horario::validateHora(unsigned short hora, unsigned short minuto){ //Valida se as horas e minutos estão dentro do padrão
     if (hora > 23 || hora < 0){
         throw invalid_argument("Argumento invalido");
     }
@@ -53,7 +54,7 @@ string Horario::getHora() const { //Formata a string para o padrão HH:MM
     return horario;
 }
 
-// DINHEIRO
+//DINHEIRO - FEITO POR LEANDRO COELHO DA SILVA, MAT:232011396
 
 void Dinheiro::validateDinheiro(string dinheiro){ //Valida se o dinheiro está no padrão correto
     for(int i=0; i<dinheiro.size(); i++){
@@ -94,7 +95,7 @@ string Dinheiro::getDinheiroView() const {
     return this->dinheiroView;
 }
 
-// NOME
+//NOME - FEITO POR LUCAS SANTANA CAMILO ALVES, MAT:211060666
 
 void Nome::validateNome(string nome) {
     for (char n: nome){
@@ -119,7 +120,7 @@ string Nome::getNome() const {
     return this->nome; // Retorna o nome armazenado
 }
 
-// AVALIAÇÃO
+//AVALIAÇÃO - FEITO POR LEANDRO COELHO DA SILVA, MAT:232011396
 
 void Avaliacao::validateAvaliacao(int avaliacao){
     if (avaliacao < 0 || avaliacao > 5){
@@ -138,7 +139,7 @@ string Avaliacao::getAvaliacao() const {
     return to_string(this->avaliacao);
 }
 
-// DURACAO
+//DURACAO - FEITO POR LEANDRO COELHO DA SILVA, MAT:232011396
 
 void Duracao::validateDuracao(int duracao){
     if (duracao < 0 || duracao > 360){
@@ -161,7 +162,7 @@ string Duracao::getDuracao() const {
     return to_string(this->duracao);
 }
 
-// DATA
+//DATA - FEITO POR LEANDRO COELHO DA SILVA, MAT:232011396
 
 void Data::validateData(unsigned short dia, unsigned short mes, unsigned short ano){
     if (ano >= 0 && ano <= 99){ //Analise para o padrão do ano
@@ -252,7 +253,7 @@ string Data::getData() const {
     return data;
 }
 
-// CODIGO
+//CODIGO - FEITO POR LUCAS SANTANA CAMILO ALVES, MAT:211060666
 
 void Codigo::validateCodigo(string codigo){
     if(codigo.size()!=6){
@@ -285,7 +286,7 @@ string Codigo::getCodigo() const {
     return this->codigo;
 }
 
-// SENHA
+//SENHA - FEITO POR LEANDRO COELHO DA SILVA, MAT:232011396
 
 void Senha::validateSenha(string senha){
     if (senha.size() != 5){

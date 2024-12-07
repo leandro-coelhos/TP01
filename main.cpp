@@ -8,6 +8,10 @@
 #include "entidades.hpp"
 #include "testes.hpp"
 
+//Feito por Eduardo Luna Scalassara, MAT:232011289
+//Feito por Leandro Coelho da Silva, MAT:232011396
+//Feito por Lucas Santana Camilo Alves, MAT:211060666 
+
 using namespace std;
 
 void inputConta();

@@ -4,7 +4,7 @@
 
 using namespace std;
 
-class Conta {
+class Conta { //LEANDRO COELHO DA SILVA, MAT:232011396
     private:
         Codigo codigo;
         Senha senha;
@@ -15,7 +15,7 @@ class Conta {
         Senha getSenha() const; 
 };
 
-class Viagem {
+class Viagem { //LEANDRO COELHO DA SILVA, MAT:232011396
     private:
         Codigo codigo;
         Avaliacao avaliacao;
@@ -29,7 +29,7 @@ class Viagem {
         Nome getNome() const;
 };
 
-class Hospedagem {
+class Hospedagem { //LEANDRO COELHO DA SILVA, MAT:232011396
     private:
         Codigo codigo;
         Avaliacao avaliacao;
@@ -46,7 +46,7 @@ class Hospedagem {
         Dinheiro getDiaria() const;
 };
 
-class Destino {
+class Destino { //LEANDRO COELHO DA SILVA, MAT:232011396
     private:
         Codigo codigo;
         Nome nome;
@@ -66,7 +66,7 @@ class Destino {
         Data getDataFim() const;
 };
 
-class Atividade {
+class Atividade { //LEANDRO COELHO DA SILVA, MAT:232011396
     private:
         Codigo codigo;
         Nome nome;
