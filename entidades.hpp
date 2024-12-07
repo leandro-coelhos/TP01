@@ -18,13 +18,13 @@ class Conta {
 class Viagem {
     private:
         Codigo codigo;
-        Avaliacao avalicao;
+        Avaliacao avaliacao;
         Nome nome;
     public:
         void setCodigo(const Codigo&);
         Codigo getCodigo() const;
         void setAvaliacao(const Avaliacao&);
-        Avaliacao getAvalicao() const;
+        Avaliacao getAvaliacao() const;
         void setNome(const Nome&);
         Nome getNome() const;
 };
@@ -32,14 +32,14 @@ class Viagem {
 class Hospedagem {
     private:
         Codigo codigo;
-        Avaliacao avalicao;
+        Avaliacao avaliacao;
         Nome nome;
         Dinheiro diaria;
     public:
         void setCodigo(const Codigo&);
         Codigo getCodigo() const;
         void setAvaliacao(const Avaliacao&);
-        Avaliacao getAvalicao() const;
+        Avaliacao getAvaliacao() const;
         void setNome(const Nome&);
         Nome getNome() const;
         void setDiaria(const Dinheiro&);
@@ -50,7 +50,7 @@ class Destino {
     private:
         Codigo codigo;
         Nome nome;
-        Avaliacao avalicao;
+        Avaliacao avaliacao;
         Data data_inicio;
         Data data_fim;
     public:
@@ -59,7 +59,7 @@ class Destino {
         void setNome(const Nome&);
         Nome getNome() const;
         void setAvaliacao(const Avaliacao&);
-        Avaliacao getAvalicao() const;
+        Avaliacao getAvaliacao() const;
         void setDataInicio(const Data&);
         Data getDataInicio() const;
         void setDataFim(const Data&);
@@ -74,14 +74,14 @@ class Atividade {
         Horario horario;
         Duracao duracao;
         Dinheiro preco;
-        Avaliacao avalicao;
+        Avaliacao avaliacao;
     public:
         void setCodigo(const Codigo&);
         Codigo getCodigo() const;
         void setNome(const Nome&);
         Nome getNome() const;
         void setAvaliacao(const Avaliacao&);
-        Avaliacao getAvalicao() const;
+        Avaliacao getAvaliacao() const;
         void setData(const Data&);
         Data getData() const;
         void setHorario(const Horario&);

@@ -12,20 +12,21 @@ class Horario {
         void validateHora(unsigned short h, unsigned short m);
 
     public:
-        bool setHora(string h);
+        void setHora(string h);
         string getHora() const;
 
 };
 
 class Dinheiro {
     private:
-        long long dinheiro; //dinheiro em centavos (CALCULOS INTERNOS SERAO FEITOS TODOS EM CENTAVOS usando esse atributo)
+        float dinheiro; //dinheiro em centavos (CALCULOS INTERNOS SERAO FEITOS TODOS EM CENTAVOS usando esse atributo)
         string dinheiroView; //dinheiro em "R$reais,centavos" (A EXIBICAO DO DINHEIRO SERA COMO USUAL)
         void validateDinheiro(string dinheiro);
 
     public:
-        bool setDinheiro(string dinheiro);//recebe o input do usuario na formatacao "R$reais,centavos" e converte para centavos
-        string getDinheiro() const; //retorna o dinheiro em reais (Valor visual)
+        void setDinheiro(string dinheiro);//recebe o input do usuario na formatacao "R$reais,centavos" e converte para centavos
+        double getDinheiro() const; //retorna o dinheiro em reais (Valor visual)
+        string getDinheiroView() const;
 };
 
 class Nome {
@@ -34,7 +35,7 @@ class Nome {
         void validateNome(string nome);
 
     public:
-        bool setNome(string nome);
+        void setNome(string nome);
         string getNome() const;
 };
 
@@ -43,7 +44,7 @@ class Duracao {
           int duracao;
           void validateDuracao(int duracao);
      public:
-          bool setDuracao(string duracao);
+          void setDuracao(string duracao);
           string getDuracao() const;
 };
 
@@ -63,7 +64,7 @@ class Data {
         unsigned short ano;
         void validateData(unsigned short d, unsigned short m, unsigned short a);
     public:
-        bool setData(string data);
+        void setData(string data);
         string getData() const;
 };
 
@@ -72,8 +73,17 @@ class Senha {
         string senha;
         void validateSenha(string senha);
     public:
-        bool setSenha(string senha);
+        //Senha() = default;
+        void setSenha(string senha);
         string getSenha() const;
+        // Senha(const string& senha){
+        //     try {
+        //         setSenha(senha);
+        //     }
+        //     catch(invalid_argument &exp){
+        //         throw invalid_argument("Argumento invalido");
+        //     }
+        // }
 };
 
 class Codigo {
@@ -81,7 +91,7 @@ class Codigo {
         string codigo;
         void validateCodigo(string codigo);
     public:
-        bool setCodigo(string codigo);
+        void setCodigo(string codigo);
         string getCodigo() const;
 };
 

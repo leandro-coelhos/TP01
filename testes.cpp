@@ -1,8 +1,13 @@
+#include <string>
+#include <iostream>
+#include <stdexcept>
 #include "entidades.hpp"
 #include "testes.hpp"
 #include "dominios.hpp"
 
 //DINHERIO E CODIGO FALHARAM NOS TESTES
+
+using namespace std;
 
 const string TUHorario::horario_valido = "12:35";
 const string TUHorario::horario_invalido = "99:99";
@@ -11,7 +16,7 @@ const string TUDinheiro::dinheiro_valido = "13,00";
 const string TUDinheiro::dinheiro_invalido = "999.999,99";
 
 const string TUNome::nome_valido = "joao";
-const string TUNome::nome_invalido = "hjkhiguhgihunijnjinjijkhjkhkhkj";
+const string TUNome::nome_invalido = "hjkhiguhgihunijnjinjijkhjkhkhkjjajja";
 
 const string TUDuracao::duracao_valida = "99";
 const string TUDuracao::duracao_invalida = "999";
@@ -111,7 +116,7 @@ void TUDinheiro::tearDown() {
 void TUDinheiro::testarCenarioValorValido() {
   try {
       dinheiro->setDinheiro(dinheiro_valido);
-      if (dinheiro->getDinheiro() != dinheiro_valido)
+      if (dinheiro->getDinheiroView() != dinheiro_valido)
           estado = FALHA;
   }
   catch(invalid_argument &excecao){
@@ -125,8 +130,7 @@ void TUDinheiro::testarCenarioValorInvalido() {
     estado = FALHA;
   }
   catch(invalid_argument &excecao) {
-      if (dinheiro->getDinheiro() == dinheiro_invalido)
-          estado = FALHA;
+      if (dinheiro->getDinheiroView() == dinheiro_invalido) estado = FALHA;
   }
 }
 
@@ -397,7 +401,7 @@ int TUCodigo::run() {
 // ********************CONTA********************
 
 void TUConta::setUp(){
-    Conta * conta = new Conta();
+    conta = new Conta();
     estado = SUCESSO;
     }
 
@@ -428,7 +432,7 @@ int TUConta::run() {
 //***************************VIAGEM************************
 
 void TUViagem::setUp(){
-    Viagem * viagem = new Viagem();
+    viagem = new Viagem();
     estado = SUCESSO;
     }
 
@@ -446,7 +450,7 @@ void TUViagem::testarCenario(){
     Avaliacao avaliacao;
     avaliacao.setAvaliacao(avaliacao_valida);
     viagem->setAvaliacao(avaliacao);
-    if(viagem->getAvalicao().getAvaliacao() != avaliacao_valida ) estado = FALHA;
+    if(viagem->getAvaliacao().getAvaliacao() != avaliacao_valida ) estado = FALHA;
     //Nome
     Nome nome;
     nome.setNome(nome_valido);
@@ -464,7 +468,7 @@ int TUViagem::run() {
 //***************************Destino************************
 
 void TUDestino::setUp(){
-    Destino * destino = new Destino();
+    destino = new Destino();
     estado = SUCESSO;
     }
 
@@ -488,7 +492,7 @@ void TUDestino::testarCenario(){
     Avaliacao avaliacao;
     avaliacao.setAvaliacao(avaliacao_valida);
     destino->setAvaliacao(avaliacao);
-    if(destino->getAvalicao().getAvaliacao() != avaliacao_valida) estado = FALHA;
+    if(destino->getAvaliacao().getAvaliacao() != avaliacao_valida) estado = FALHA;
     // Teste de data valida
     Data data_fim;
     data_fim.setData(data_fim_valida);
@@ -511,7 +515,7 @@ int TUDestino::run() {
 //***************************Hospedagem************************
 
 void TUHospedagem::setUp(){
-    Hospedagem * hospedagem = new Hospedagem();
+    hospedagem = new Hospedagem();
     estado = SUCESSO;
     }
 
@@ -533,12 +537,12 @@ void TUHospedagem::testarCenario(){
     Avaliacao avaliacao;
     avaliacao.setAvaliacao(avaliacao_valida);
     hospedagem->setAvaliacao(avaliacao);
-    if(hospedagem->getAvalicao().getAvaliacao() != avaliacao_valida ) estado = FALHA;
+    if(hospedagem->getAvaliacao().getAvaliacao() != avaliacao_valida ) estado = FALHA;
     // Teste de dinheiro valido
     Dinheiro dinheiro;
     dinheiro.setDinheiro(dinheiro_valido);
     hospedagem->setDiaria(dinheiro);
-    if(hospedagem->getDiaria().getDinheiro() != dinheiro_valido ) estado = FALHA;
+    if(hospedagem->getDiaria().getDinheiroView() != dinheiro_valido ) estado = FALHA;
 }
 
 int TUHospedagem::run() {
@@ -551,7 +555,7 @@ int TUHospedagem::run() {
 //***************************Atividade************************
 
 void TUAtividade::setUp(){
-    Atividade * atividade = new Atividade();
+    atividade = new Atividade();
     estado = SUCESSO;
     }
 
@@ -573,12 +577,12 @@ void TUAtividade::testarCenario(){
     Avaliacao avaliacao;
     avaliacao.setAvaliacao(avaliacao_valida);
     atividade->setAvaliacao(avaliacao);
-    if(atividade->getAvalicao().getAvaliacao() != avaliacao_valida) estado = FALHA;
+    if(atividade->getAvaliacao().getAvaliacao() != avaliacao_valida) estado = FALHA;
     // Teste de dinheiro valido
     Dinheiro dinheiro;
     dinheiro.setDinheiro(dinheiro_valido);
     atividade->setPreco(dinheiro);
-    if(atividade->getPreco().getDinheiro() != dinheiro_valido) estado = FALHA;
+    if(atividade->getPreco().getDinheiroView() != dinheiro_valido) estado = FALHA;
     // Teste de duracao valida
     Duracao duracao;
     duracao.setDuracao(duracao_valida);

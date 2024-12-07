@@ -32,11 +32,11 @@ Codigo Viagem::getCodigo() const {
 }
 
 void Viagem::setAvaliacao(const Avaliacao& avaliacao){
-    this->avalicao = avaliacao;
+    this->avaliacao = avaliacao;
 }
 
-Avaliacao Viagem::getAvalicao() const {
-    return this->avalicao;
+Avaliacao Viagem::getAvaliacao() const {
+    return this->avaliacao;
 }
 void Viagem::setNome(const Nome& nome){
     this->nome = nome;
@@ -57,11 +57,11 @@ Codigo Hospedagem::getCodigo() const {
 }
 
 void Hospedagem::setAvaliacao(const Avaliacao& avaliacao){
-    this->avalicao = avaliacao;
+    this->avaliacao = avaliacao;
 }
 
-Avaliacao Hospedagem::getAvalicao() const {
-    return this->avalicao;
+Avaliacao Hospedagem::getAvaliacao() const {
+    return this->avaliacao;
 }
 
 void Hospedagem::setNome(const Nome& nome){
@@ -99,11 +99,11 @@ Nome Destino::getNome() const {
 }
 
 void Destino::setAvaliacao(const Avaliacao& avaliacao){
-    this->avalicao = avaliacao;
+    this->avaliacao = avaliacao;
 }
 
-Avaliacao Destino::getAvalicao() const {
-    return this->avalicao;
+Avaliacao Destino::getAvaliacao() const {
+    return this->avaliacao;
 }
 
 void Destino::setDataInicio(const Data& data_inicio){
@@ -142,11 +142,11 @@ Nome Atividade::getNome() const {
 }
 
 void Atividade::setAvaliacao(const Avaliacao& avaliacao){
-    this->avalicao = avaliacao;
+    this->avaliacao = avaliacao;
 }
 
-Avaliacao Atividade::getAvalicao() const {
-    return this->avalicao;
+Avaliacao Atividade::getAvaliacao() const {
+    return this->avaliacao;
 }
 
 void Atividade::setData(const Data& data){

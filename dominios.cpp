@@ -7,9 +7,8 @@
 #include <string>
 #include <iostream>
 
-using namespace std;
-
 // HORARIO
+using namespace std;
 
 void Horario::validateHora(unsigned short hora, unsigned short minuto){
     //Valida se as horas e minutos estão dentro do padrão
@@ -21,8 +20,8 @@ void Horario::validateHora(unsigned short hora, unsigned short minuto){
     }
 }
 
-bool Horario::setHora(string horario){
-    if (horario[2] != ':'){
+void Horario::setHora(string horario){
+    if (horario.length() < 5 || horario[2] != ':'){
         throw invalid_argument("Argumento invalido"); //Se o horário não separar o valor corretamente será inválido
     }
     unsigned short HH = stoi(horario.substr(0,2)); //Converte horas string para inteiro
@@ -35,7 +34,6 @@ bool Horario::setHora(string horario){
     catch(invalid_argument &exp) {
         throw invalid_argument("Argumento invalido");
     }
-    return true;
 }
 
 string Horario::getHora() const { //Formata a string para o padrão HH:MM
@@ -58,45 +56,42 @@ string Horario::getHora() const { //Formata a string para o padrão HH:MM
 // DINHEIRO
 
 void Dinheiro::validateDinheiro(string dinheiro){ //Valida se o dinheiro está no padrão correto
-    double dinheiro_float = stod(dinheiro);
-    if (dinheiro_float < 0){
-        throw invalid_argument("Argumento invalido");
-    }
-    else if (dinheiro_float > 20000000){
-        throw invalid_argument("Argumento invalido");
-    }
-    this->dinheiro = dinheiro_float;
-}
-
-bool Dinheiro::setDinheiro(string dinheiro){ //Coloca no padrão de calculo da linguagem
-    if (dinheiro[dinheiro.size()-3] != ','){ //verifica se a virgula esta na posicao certa
-        throw invalid_argument("Argumento Invalido");
-    }
-    int virgula_unica = 0;
-    string dinheiro_formatado = "";
-    for (char caractere : dinheiro){
-        if (caractere == ','){
-            virgula_unica++;
-            continue;
-        } else if (caractere == '.') {
-            continue;
-        } else if (isdigit(caractere)) {
-            dinheiro_formatado += caractere;   
-        } else {
-            throw invalid_argument("Argumento Invalido");
+    for(int i=0; i<dinheiro.size(); i++){
+        if (dinheiro[i] == '.'){
+            dinheiro.erase(i, 1); //Tira os pontos
+        }
+        else if (dinheiro[i] == ','){
+            dinheiro.replace(i, 1, "."); //Troca os virgulas por pontos
         }
     }
-    if (virgula_unica > 1) //retorna erro quando o usuario coloca mais de uma virgula no valor
-        throw invalid_argument("Argumento Invalido");
-    
-    
-    validateDinheiro(dinheiro_formatado);
-    this->dinheiroView = dinheiro; //Salva o valor escrito pelo usuário para ser mostrado depois
-    return true;
+    try {
+        this->dinheiro = stod(dinheiro); //Converte para float
+    }
+    catch (invalid_argument &exp){
+        throw invalid_argument("Argumento invalido");
+    }
+    if (this->dinheiro < 0 || this->dinheiro > 200000){
+        throw invalid_argument("Argumento invalido");
+    }
 }
 
-string Dinheiro::getDinheiro() const {
-    return this->dinheiroView; //Retorna o valor em centavos
+void Dinheiro::setDinheiro(string dinheiro){ //Coloca no padrão de calculo da linguagem
+    this->dinheiroView = dinheiro; //Salva o valor escrito pelo usuário para ser mostrado depois
+    try {
+        validateDinheiro(dinheiro);
+    }
+    catch(invalid_argument &exp) {
+        this->dinheiroView = ""; //Se não for um número, o valor é inválido
+        throw invalid_argument("Argumento invalido");
+    }
+}
+
+double Dinheiro::getDinheiro() const {
+    return this->dinheiro; //Retorna o valor em centavos
+}
+
+string Dinheiro::getDinheiroView() const {
+    return this->dinheiroView;
 }
 
 // NOME
@@ -110,10 +105,14 @@ void Nome::validateNome(string nome) {
     if(nome.length() < 1 || nome.length() > 30) throw invalid_argument("Argumento invalido"); // Valida se o nome tem entre 1 e 30 caracteres
 }
 
-bool Nome::setNome(string nome) {
-    validateNome(nome);
-    this->nome = nome;
-    return true;
+void Nome::setNome(string nome) {
+    try{
+        validateNome(nome);
+        this->nome = nome;
+    }
+    catch(invalid_argument &exp){
+        throw invalid_argument("Argumento invalido");
+    }
 }
 
 string Nome::getNome() const {
@@ -147,12 +146,15 @@ void Duracao::validateDuracao(int duracao){
     }
 }
 
-bool Duracao::setDuracao(string duracao){
-    int duracao_int = std::stoi(duracao);
-    validateDuracao(duracao_int);
-    this->duracao = duracao_int;
-    return true;
-    
+void Duracao::setDuracao(string duracao){
+    int duracao_int = stoi(duracao);
+    try{
+        validateDuracao(duracao_int);
+        this->duracao = duracao_int;
+    }
+    catch(invalid_argument &exp){
+        throw invalid_argument("Argumento invalido");
+    }
 }
 
 string Duracao::getDuracao() const {
@@ -205,19 +207,22 @@ void Data::validateData(unsigned short dia, unsigned short mes, unsigned short a
     }
 }
 
-bool Data::setData(string data){
+void Data::setData(string data){
     if (data[2] != '-' || data[5] != '-'){
         throw invalid_argument("Argumento invalido");
-        return false;//Se a data não for escrita corretamente
     }
     unsigned short DD = stoi(data.substr(0,2));
     unsigned short MM = stoi(data.substr(3,2));
     unsigned short AA = stoi(data.substr(6,3));
-    validateData(DD, MM, AA); 
-    this->dia = DD;
-    this->mes = MM;
-    this->ano = AA;
-    return true;
+    try{
+        validateData(DD, MM, AA);
+        this->dia = DD;
+        this->mes = MM;
+        this->ano = AA;
+    }
+    catch(invalid_argument &exp){
+        throw invalid_argument("Argumento invalido");
+    }
 }
 
 string Data::getData() const {
@@ -266,10 +271,14 @@ void Codigo::validateCodigo(string codigo){
     }
 }
 
-bool Codigo::setCodigo(string codigo){
-    validateCodigo(codigo);
+void Codigo::setCodigo(string codigo){
+    try{
+        validateCodigo(codigo);
         this->codigo = codigo;
-        return true;
+    }
+    catch(invalid_argument &exp){
+        throw invalid_argument("Argumento invalido");
+    }
 }
 
 string Codigo::getCodigo() const {
@@ -314,10 +323,14 @@ void Senha::validateSenha(string senha){
     }
 }
 
-bool Senha::setSenha(string senha){
-    validateSenha(senha);
-    this->senha = senha;
-    return true;
+void Senha::setSenha(string senha){
+    try{
+        validateSenha(senha);
+        this->senha = senha;
+    }
+    catch(invalid_argument &exp){
+        throw invalid_argument("Argumento invalido");
+    }
 }
 
 string Senha::getSenha() const {
