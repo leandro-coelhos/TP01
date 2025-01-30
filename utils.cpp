@@ -24,3 +24,6 @@ void limpaTela(){
     #endif
 }
 
+void espera(){
+    this_thread::sleep_for(chrono::seconds(3));
+}

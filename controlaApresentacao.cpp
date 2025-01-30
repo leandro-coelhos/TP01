@@ -28,7 +28,7 @@ void CntrApresentacaoCardapio:: menu(){
     }
     else{
         cout << "Opcao invalida\nEspere 3 segundos para voltar ao menu\n";
-        this_thread::sleep_for(chrono::seconds(3));
+        espera();
         menu();
     }
 }
@@ -43,9 +43,17 @@ void CntrApresentacaoCardapio:: createConta(){
     cout << "Digite a senha: ";
     cin >> senha;
     limpaBuffer();
-    CntrServicoAutenticacaoCriarConta criaConta;
-    criaConta.createConta(codigo, senha);
-    menu();
+    CntrServicoAutenticacaoConta criaConta;
+    if(criaConta.createConta(codigo, senha)){
+        cout << "Conta criada\nEspere 3 segundos...\n";
+        espera();
+        menu();
+    }
+    else {
+        cout << "Voltando para o menu\nEspere 3 segundos..\n";
+        espera();
+        menu();
+    }
 }
 
 void CntrApresentacaoCardapio:: accessConta(){
@@ -58,17 +66,21 @@ void CntrApresentacaoCardapio:: accessConta(){
     cout << "Digite a senha: ";
     cin >> senha;
     limpaBuffer();
-    CntrServicoAutenticacaoLogarConta logaConta;
-    if(logaConta.hasConta(codigo, senha)){
+    CntrServicoAutenticacaoConta logaConta;
+    if(logaConta.loginConta(codigo, senha)){
         cout << "Conta logada com sucesso\n";
+        espera();
+        //cardapioConta()
     }
     else{
-        cout << "Conta nao encontrada\n";
+        cout << "Conta nao encontrada\nEspere 3 segundos...\n";
+        espera();
+        menu();
     }
-    menu();
 }
 
 void CntrApresentacaoCardapio:: exitCardapio(){
     cout << "Finalizando a aplicacao\n";
+    espera();
     exit(0);
 }

@@ -16,4 +16,14 @@ class CntrApresentacaoCardapio{
         void exitCardapio();
 };
 
+class CntrApresentacaoCardapioConta{
+    public:
+        void menu();
+        void viagem();
+        void hospedagem();
+        void destino();
+        void atividade();
+        void exitCardapioConta();
+};
+
 #endif // CONTROLAAPRESENTACAO_HPP_INCLUDED

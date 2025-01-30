@@ -6,16 +6,10 @@
 
 using namespace std;
 
-class CntrServicoAutenticacaoCriarConta{
+class CntrServicoAutenticacaoConta{
     public:
-        bool hasConta(string codigo, string senha);
+        int loginConta(string codigo, string senha);
         bool createConta(string codigo, string senha);
-};
-
-class CntrServicoAutenticacaoLogarConta{
-    public:
-        bool hasConta(string codigo, string senha);
-        int logarConta(string codigo, string senha);
 };
 
 #endif // CONTROLESERVICOS_HPP_INCLUDED
