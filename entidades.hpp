@@ -49,6 +49,23 @@ class Conta { //LEANDRO COELHO DA SILVA, MAT:232011396
          * @return Senha atual da conta.
          */
         Senha getSenha() const;
+
+        /**
+         * @brief Cria uma conta.
+         *
+         * @param codigo Código que será associado à conta.
+         * @param senha Senha que será associada à conta.
+         */
+        void setConta(const Codigo&, const Senha&);
+
+
+        /**
+         * @brief Loga em uma conta.
+         *
+         * @param codigo Código atual da conta.
+         * @param senha Senha atual da conta.
+         */
+        void getConta(Codigo&, Senha&) const;
 };
 
 /**
