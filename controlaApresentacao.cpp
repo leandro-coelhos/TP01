@@ -10,7 +10,7 @@
 
 using namespace std;
 
-void CntrApresentacaoCardapio:: menu(){
+void CntrApresentacaoControle::executar(){
     limpaTela();
     int opcao;
     cout << "1: Criar conta\n2: Acessar conta\n3: Fechar\n\n";
@@ -18,10 +18,10 @@ void CntrApresentacaoCardapio:: menu(){
     limpaBuffer();
     cout << "\n";
     if(opcao==1){
-        createConta();
+        cntrApresentacaoConta->criarConta();
     }
     else if(opcao==2){
-        accessConta();
+        cntrApresentacaoConta->acessarConta();
     }
     else if(opcao==3){
         exitCardapio();
@@ -29,11 +29,11 @@ void CntrApresentacaoCardapio:: menu(){
     else{
         cout << "Opcao invalida\nEspere 3 segundos para voltar ao menu\n";
         espera();
-        menu();
+        executar();
     }
 }
 
-void CntrApresentacaoCardapio:: createConta(){
+void CntrApresentacaoConta::criarConta(){
     limpaTela();
     cout << "Criando conta\n-----------------\n\n";
     string codigo, senha;
@@ -43,20 +43,19 @@ void CntrApresentacaoCardapio:: createConta(){
     cout << "Digite a senha: ";
     cin >> senha;
     limpaBuffer();
-    CntrServicoAutenticacaoConta criaConta;
-    if(criaConta.createConta(codigo, senha)){
+    if(cntrServicoConta->createConta(codigo, senha)){
         cout << "Conta criada\nEspere 3 segundos...\n";
         espera();
-        menu();
+        cntrApresentacaoControle->executar();
     }
     else {
         cout << "Voltando para o menu\nEspere 3 segundos..\n";
         espera();
-        menu();
+        cntrApresentacaoControle->executar();
     }
 }
 
-void CntrApresentacaoCardapio:: accessConta(){
+void CntrApresentacaoConta:: acessarConta(){
     limpaTela();
     cout << "Acessando conta\n-----------------\n\n";
     string codigo, senha;
@@ -66,8 +65,7 @@ void CntrApresentacaoCardapio:: accessConta(){
     cout << "Digite a senha: ";
     cin >> senha;
     limpaBuffer();
-    CntrServicoAutenticacaoConta logaConta;
-    if(logaConta.loginConta(codigo, senha)){
+    if(cntrServicoConta->logarConta(codigo, senha)){
         cout << "Conta logada com sucesso\n";
         espera();
         //cardapioConta()
@@ -75,7 +73,7 @@ void CntrApresentacaoCardapio:: accessConta(){
     else{
         cout << "Conta nao encontrada\nEspere 3 segundos...\n";
         espera();
-        menu();
+        cntrApresentacaoControle->executar();
     }
 }
 

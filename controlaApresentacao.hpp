@@ -5,8 +5,42 @@
 #include <string> 
 
 #include "utils.cpp"
+#include "interfaces.hpp"
 
 using namespace std;
+
+class CntrApresentacaoControle {
+    private:
+        IApresentacaoConta *cntrApresentacaoConta;
+        IApresentacaoViagem *cntrApresentacaoViagem;
+    public:
+        void executar();
+        void exitCardapio();
+        void setCntrApresentacaoConta(IApresentacaoConta*);
+        void setCntrApresentacaoViagem(IApresentacaoViagem*);
+};
+
+inline void CntrApresentacaoControle::setCntrApresentacaoConta(IApresentacaoConta *cntr){
+    cntrApresentacaoConta = cntr;
+}
+
+inline void CntrApresentacaoControle::setCntrApresentacaoViagem(IApresentacaoViagem *cntr){
+    cntrApresentacaoViagem = cntr;
+}
+
+class CntrApresentacaoConta: public IApresentacaoConta {
+    private:
+        IServicoConta *cntrServicoConta;
+        CntrApresentacaoControle *cntrApresentacaoControle;
+    public:
+        void criarConta();
+        void acessarConta();
+        void setCntrServicoConta(IServicoConta*);
+};
+
+inline void CntrApresentacaoConta::setCntrServicoConta(IServicoConta *cntr){
+    cntrServicoConta = cntr;
+}
 
 class CntrApresentacaoCardapio{
     public:

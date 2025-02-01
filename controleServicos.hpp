@@ -4,12 +4,14 @@
 #include <iostream>
 #include <string>
 
+#include "interfaces.hpp"
+
 using namespace std;
 
-class CntrServicoAutenticacaoConta{
+class CntrServicoAutenticacaoConta: public IServicoConta {
     public:
-        int loginConta(string codigo, string senha);
-        bool createConta(string codigo, string senha);
+        int loginConta(string, string);
+        bool createConta(string, string);
 };
 
 #endif // CONTROLESERVICOS_HPP_INCLUDED
