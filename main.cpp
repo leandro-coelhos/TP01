@@ -7,6 +7,11 @@
 #include "dominios.hpp"
 #include "entidades.hpp"
 #include "testes.hpp"
+#include "controlaApresentacao.hpp"
+#include "controleServicos.hpp"
+#include "utils.hpp"
+#include "builder.hpp"
+#include "interfaces.hpp"
 
 //Feito por Eduardo Luna Scalassara, MAT:232011289
 //Feito por Leandro Coelho da Silva, MAT:232011396
@@ -14,6 +19,19 @@
 
 using namespace std;
 
+int main(){
+    Builder *builder = new Builder();
+    
+    CntrApresentacaoControle *CntrApresentacaoControle = builder->construir();
+
+    CntrApresentacaoControle->executar();
+
+    delete builder;
+
+    return 0;
+}
+
+/*
 void inputConta();
 void inputViagem();
 void inputHospedagem();
@@ -805,3 +823,4 @@ void limpabuffer(){
     cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Descartar a entrada inválida
 }
 }
+*/

@@ -10,7 +10,7 @@ using namespace std;
 
 class CntrServicoAutenticacaoConta: public IServicoConta {
     public:
-        int loginConta(string, string);
+        int logarConta(string, string);
         bool createConta(string, string);
 };
 

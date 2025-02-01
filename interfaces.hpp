@@ -12,7 +12,7 @@ class IApresentacaoConta {
      public:
           virtual void criarConta() = 0;
           virtual void acessarConta() = 0;
-          virtual void setServicoConta(IServicoConta*) = 0;
+          virtual void setCntrServicoConta(IServicoConta*) = 0;
           virtual ~IApresentacaoConta(){};
 };
 
@@ -28,7 +28,7 @@ class IApresentacaoViagem {
 class IServicoConta {
      public:
           virtual bool createConta(string, string) = 0;
-          virtual bool logarConta(string, string) = 0;
+          virtual int logarConta(string, string) = 0;
           virtual ~IServicoConta(){};
 };
 

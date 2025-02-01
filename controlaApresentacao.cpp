@@ -4,7 +4,7 @@
 #include <chrono>
 
 #include "controlaApresentacao.hpp"
-#include "utils.cpp"
+#include "utils.hpp"
 #include "entidades.hpp"
 #include "controleServicos.hpp"
 
@@ -77,7 +77,7 @@ void CntrApresentacaoConta:: acessarConta(){
     }
 }
 
-void CntrApresentacaoCardapio:: exitCardapio(){
+void CntrApresentacaoControle:: exitCardapio(){
     cout << "Finalizando a aplicacao\n";
     espera();
     exit(0);
