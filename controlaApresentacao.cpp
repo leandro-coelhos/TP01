@@ -1,3 +1,8 @@
+/**
+ * @file controlaApresentacao.cpp
+ * @brief Implementação das classes de controle de apresentação.
+ */
+
 #include <iostream>
 #include <string>
 #include <thread>
@@ -10,6 +15,19 @@
 
 using namespace std;
 
+/**
+ * @class CntrApresentacaoControle
+ * @brief Classe responsável por controlar o fluxo principal da aplicação.
+ * 
+ * Gerencia o menu inicial e direciona para as funcionalidades de criação e acesso à conta.
+ */
+
+/**
+ * @brief Executa o menu principal da aplicação.
+ * 
+ * Apresenta as opções para criar conta, acessar conta ou fechar o programa.
+ * Chama os métodos correspondentes conforme a escolha do usuário.
+ */
 void CntrApresentacaoControle::executar(){
     limpaTela();
     int opcao;
@@ -33,6 +51,18 @@ void CntrApresentacaoControle::executar(){
     }
 }
 
+/**
+ * @class CntrApresentacaoConta
+ * @brief Classe responsável por controlar a apresentação relacionada a contas de usuário.
+ * 
+ * Gerencia a interface para criação e acesso de contas.
+ */
+
+/**
+ * @brief Cria uma nova conta de usuário.
+ * 
+ * Solicita código e senha ao usuário e utiliza o serviço de conta para realizar o cadastro.
+ */
 void CntrApresentacaoConta::criarConta(){
     limpaTela();
     cout << "Criando conta\n-----------------\n\n";
@@ -55,7 +85,12 @@ void CntrApresentacaoConta::criarConta(){
     }
 }
 
-void CntrApresentacaoConta:: acessarConta(){
+/**
+ * @brief Realiza o acesso a uma conta existente.
+ * 
+ * Solicita código e senha ao usuário e utiliza o serviço de conta para validar o login.
+ */
+void CntrApresentacaoConta::acessarConta(){
     limpaTela();
     cout << "Acessando conta\n-----------------\n\n";
     string codigo, senha;
@@ -77,7 +112,12 @@ void CntrApresentacaoConta:: acessarConta(){
     }
 }
 
-void CntrApresentacaoControle:: exitCardapio(){
+/**
+ * @brief Finaliza a execução da aplicação.
+ * 
+ * Exibe mensagem de encerramento e termina o programa após uma breve espera.
+ */
+void CntrApresentacaoControle::exitCardapio(){
     cout << "Finalizando a aplicacao\n";
     espera();
     exit(0);
