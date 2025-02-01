@@ -7,6 +7,7 @@
 #include <limits>
 #include <unistd.h>
 #include <windows.h>
+
 /**
 * @brief Limpa o buffer de entrada do std::cin.
 *
