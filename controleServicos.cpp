@@ -12,7 +12,7 @@ using namespace std;
 
 /**
  * @class CntrServicoAutenticacaoConta
- * @brief Classe responsável por serviços de autenticação de conta.
+ * @brief Classe responsável pelos serviços de autenticação de conta.
  */
 
 /**
@@ -38,16 +38,32 @@ bool CntrServicoAutenticacaoConta::createConta(string codigo, string senha){
     ContainerConta* container = ContainerConta::getInstancia();
     return container->createConta(codigo, senha);
 }
-<<<<<<< HEAD
-=======
 
+/**
+ * @class CntrServicoViagem
+ * @brief Classe responsável pelos serviços de gerenciamento de viagens.
+ */
+
+/**
+ * @brief Cria uma nova viagem.
+ * 
+ * @param codigo Código da viagem.
+ * @param nome Nome da viagem.
+ * @param avaliacao Avaliação da viagem.
+ * @param codigoConta Código da conta do usuário.
+ * @return bool Retorna verdadeiro se a viagem foi criada com sucesso, falso caso contrário.
+ */
 bool CntrServicoViagem::createViagem(string codigo, string nome, string avaliacao, string codigoConta){
     ContainerViagem* container = ContainerViagem::getInstancia();
     return container->createViagem(codigo, nome, avaliacao, codigoConta);
 }
 
+/**
+ * @brief Lista todas as viagens associadas a uma conta.
+ * 
+ * @param codigoConta Código da conta do usuário.
+ */
 void CntrServicoViagem::listarViagens(string codigoConta){
     ContainerViagem* container = ContainerViagem::getInstancia();
     container->listarViagens(codigoConta);
 }
->>>>>>> 5c46bf8c9d24168f3830c0818652f5b2a5d2c87c
