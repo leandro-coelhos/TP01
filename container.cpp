@@ -4,12 +4,21 @@
 
 using namespace std;
 
+// Inicialização das instâncias estáticas dos containers
 ContainerConta* ContainerConta::instancia = nullptr;
 ContainerViagem* ContainerViagem::instancia = nullptr;
 ContainerDestino* ContainerDestino::instancia = nullptr;
 ContainerHospedagem* ContainerHospedagem::instancia = nullptr;
 ContainerAtividade* ContainerAtividade::instancia = nullptr;
 
+/**
+ * @brief Obtém a instância única do ContainerConta (Singleton).
+ *
+ * Este método garante que apenas uma instância do ContainerConta seja criada.
+ * Se a instância já existir, retorna a mesma; caso contrário, cria uma nova.
+ *
+ * @return Retorna um ponteiro para a instância única do ContainerConta.
+ */
 ContainerConta* ContainerConta::getInstancia(){
      if(instancia == nullptr){
           instancia = new ContainerConta();
@@ -17,10 +26,23 @@ ContainerConta* ContainerConta::getInstancia(){
      return instancia;
 }
 
+/**
+ * @brief Verifica se uma conta com o código fornecido já existe.
+ *
+ * @param codigo O código da conta a ser verificada.
+ * @return Retorna true se a conta existir, false caso contrário.
+ */
 bool ContainerConta::hasConta(string codigo){
     return contas.find(codigo) != contas.end();
 }
 
+/**
+ * @brief Cria uma nova conta no sistema.
+ *
+ * @param codigo O código da nova conta.
+ * @param senha A senha da nova conta.
+ * @return Retorna true se a conta foi criada com sucesso, false caso contrário.
+ */
 bool ContainerConta::createConta(string codigo, string senha){
     if(hasConta(codigo)){
         cout << "\nConta ja existe\n\n";
@@ -49,6 +71,13 @@ bool ContainerConta::createConta(string codigo, string senha){
     return true;
 }
 
+/**
+ * @brief Realiza o login de uma conta.
+ *
+ * @param codigo O código da conta.
+ * @param senha A senha da conta.
+ * @return Retorna o código da conta convertido para inteiro se o login for bem-sucedido, 0 caso contrário.
+ */
 int ContainerConta::logarConta(string codigo, string senha){
     if(hasConta(codigo) && contas[codigo] == senha){
         return stoi(codigo);
@@ -59,6 +88,14 @@ int ContainerConta::logarConta(string codigo, string senha){
     }
 }
 
+/**
+ * @brief Obtém a instância única do ContainerViagem (Singleton).
+ *
+ * Este método garante que apenas uma instância do ContainerViagem seja criada.
+ * Se a instância já existir, retorna a mesma; caso contrário, cria uma nova.
+ *
+ * @return Retorna um ponteiro para a instância única do ContainerViagem.
+ */
 ContainerViagem* ContainerViagem::getInstancia(){
      if(instancia == nullptr){
           instancia = new ContainerViagem();
@@ -66,10 +103,25 @@ ContainerViagem* ContainerViagem::getInstancia(){
      return instancia;
 }
 
+/**
+ * @brief Verifica se uma viagem com o código fornecido já existe.
+ *
+ * @param codigo O código da viagem a ser verificada.
+ * @return Retorna true se a viagem existir, false caso contrário.
+ */
 bool ContainerViagem::hasViagem(string codigo){
     return viagens.find(codigo) != viagens.end();
 }
 
+/**
+ * @brief Cria uma nova viagem no sistema.
+ *
+ * @param codigo O código da nova viagem.
+ * @param nome O nome da nova viagem.
+ * @param avaliacao A avaliação da nova viagem.
+ * @param codigoConta O código da conta associada à viagem.
+ * @return Retorna true se a viagem foi criada com sucesso, false caso contrário.
+ */
 bool ContainerViagem::createViagem(string codigo, string nome, string avaliacao, string codigoConta){
     if(hasViagem(codigo)){
         cout << "\nViagem ja existe\n\n";
@@ -101,6 +153,11 @@ bool ContainerViagem::createViagem(string codigo, string nome, string avaliacao,
     return true;
 }   
 
+/**
+ * @brief Lista todas as viagens associadas a uma conta.
+ *
+ * @param codigoConta O código da conta para a qual as viagens serão listadas.
+ */
 void ContainerViagem::listarViagens(string codigoConta){
     cout << '\n';
 
@@ -114,6 +171,12 @@ void ContainerViagem::listarViagens(string codigoConta){
     }
 }
 
+/**
+ * @brief Obtém o código da conta associada a uma viagem.
+ *
+ * @param codigoViagem O código da viagem.
+ * @return Retorna o código da conta associada à viagem.
+ */
 string ContainerViagem::getConta(string codigoViagem){
     for(const auto& viagem: viagens){
         if(viagem.first == codigoViagem){
@@ -122,6 +185,14 @@ string ContainerViagem::getConta(string codigoViagem){
     }
 }
 
+/**
+ * @brief Obtém a instância única do ContainerDestino (Singleton).
+ *
+ * Este método garante que apenas uma instância do ContainerDestino seja criada.
+ * Se a instância já existir, retorna a mesma; caso contrário, cria uma nova.
+ *
+ * @return Retorna um ponteiro para a instância única do ContainerDestino.
+ */
 ContainerDestino* ContainerDestino::getInstancia(){
      if(instancia == nullptr){
           instancia = new ContainerDestino();
@@ -129,10 +200,27 @@ ContainerDestino* ContainerDestino::getInstancia(){
      return instancia;
 }
 
+/**
+ * @brief Verifica se um destino com o código fornecido já existe.
+ *
+ * @param codigo O código do destino a ser verificado.
+ * @return Retorna true se o destino existir, false caso contrário.
+ */
 bool ContainerDestino::hasDestino(string codigo){
     return destinos.find(codigo) != destinos.end();
 }
 
+/**
+ * @brief Cria um novo destino no sistema.
+ *
+ * @param codigo O código do novo destino.
+ * @param nome O nome do novo destino.
+ * @param data_inicio A data de início do destino.
+ * @param data_final A data final do destino.
+ * @param avaliacao A avaliação do destino.
+ * @param codigoViagem O código da viagem associada ao destino.
+ * @return Retorna true se o destino foi criado com sucesso, false caso contrário.
+ */
 bool ContainerDestino::createDestino(string codigo, string nome, string data_inicio, string data_final, string avaliacao, string codigoViagem){
     if(hasDestino(codigo)){
         cout << "\nDestino ja existe\n\n";
@@ -170,6 +258,11 @@ bool ContainerDestino::createDestino(string codigo, string nome, string data_ini
     return true;
 }
 
+/**
+ * @brief Lista todos os destinos associados a uma viagem.
+ *
+ * @param codigoViagem O código da viagem para a qual os destinos serão listados.
+ */
 void ContainerDestino::listarDestinos(string codigoViagem){
     cout << '\n';
 
@@ -185,6 +278,12 @@ void ContainerDestino::listarDestinos(string codigoViagem){
     }
 }
 
+/**
+ * @brief Obtém o código da viagem associada a um destino.
+ *
+ * @param codigoDestino O código do destino.
+ * @return Retorna o código da viagem associada ao destino.
+ */
 string ContainerDestino::getViagem(string codigoDestino){
     for(const auto& destino: destinos){
         if(destino.first == codigoDestino){
@@ -193,6 +292,14 @@ string ContainerDestino::getViagem(string codigoDestino){
     }
 }
 
+/**
+ * @brief Obtém a instância única do ContainerHospedagem (Singleton).
+ *
+ * Este método garante que apenas uma instância do ContainerHospedagem seja criada.
+ * Se a instância já existir, retorna a mesma; caso contrário, cria uma nova.
+ *
+ * @return Retorna um ponteiro para a instância única do ContainerHospedagem.
+ */
 ContainerHospedagem* ContainerHospedagem::getInstancia(){
      if(instancia == nullptr){
           instancia = new ContainerHospedagem();
@@ -200,10 +307,26 @@ ContainerHospedagem* ContainerHospedagem::getInstancia(){
      return instancia;
 }
 
+/**
+ * @brief Verifica se uma hospedagem com o código fornecido já existe.
+ *
+ * @param codigo O código da hospedagem a ser verificada.
+ * @return Retorna true se a hospedagem existir, false caso contrário.
+ */
 bool ContainerHospedagem::hasHospedagem(string codigo){
     return hospedagens.find(codigo) != hospedagens.end();
 }
 
+/**
+ * @brief Cria uma nova hospedagem no sistema.
+ *
+ * @param codigo O código da nova hospedagem.
+ * @param nome O nome da nova hospedagem.
+ * @param diaria O valor da diária da hospedagem.
+ * @param avaliacao A avaliação da hospedagem.
+ * @param codigoDestino O código do destino associado à hospedagem.
+ * @return Retorna true se a hospedagem foi criada com sucesso, false caso contrário.
+ */
 bool ContainerHospedagem::createHospedagem(string codigo, string nome, string diaria, string avaliacao, string codigoDestino){
     if(hasHospedagem(codigo)){
         cout << "\nHospedagem ja existe\n\n";
@@ -238,6 +361,11 @@ bool ContainerHospedagem::createHospedagem(string codigo, string nome, string di
     return true;
 }
 
+/**
+ * @brief Lista todas as hospedagens associadas a um destino.
+ *
+ * @param codigoDestino O código do destino para o qual as hospedagens serão listadas.
+ */
 void ContainerHospedagem::listarHospedagens(string codigoDestino){
     cout << '\n';
 
@@ -252,6 +380,14 @@ void ContainerHospedagem::listarHospedagens(string codigoDestino){
     }
 }
 
+/**
+ * @brief Obtém a instância única do ContainerAtividade (Singleton).
+ *
+ * Este método garante que apenas uma instância do ContainerAtividade seja criada.
+ * Se a instância já existir, retorna a mesma; caso contrário, cria uma nova.
+ *
+ * @return Retorna um ponteiro para a instância única do ContainerAtividade.
+ */
 ContainerAtividade* ContainerAtividade::getInstancia(){
      if(instancia == nullptr){
           instancia = new ContainerAtividade();
@@ -259,10 +395,29 @@ ContainerAtividade* ContainerAtividade::getInstancia(){
      return instancia;
 }
 
+/**
+ * @brief Verifica se uma atividade com o código fornecido já existe.
+ *
+ * @param codigo O código da atividade a ser verificada.
+ * @return Retorna true se a atividade existir, false caso contrário.
+ */
 bool ContainerAtividade::hasAtividade(string codigo){
     return atividades.find(codigo) != atividades.end();
 }
 
+/**
+ * @brief Cria uma nova atividade no sistema.
+ *
+ * @param codigo O código da nova atividade.
+ * @param nome O nome da nova atividade.
+ * @param data A data da atividade.
+ * @param horario O horário da atividade.
+ * @param duracao A duração da atividade.
+ * @param preco O preço da atividade.
+ * @param avaliacao A avaliação da atividade.
+ * @param codigoDestino O código do destino associado à atividade.
+ * @return Retorna true se a atividade foi criada com sucesso, false caso contrário.
+ */
 bool ContainerAtividade::createAtividade(string codigo, string nome, string data, string horario, string duracao, string preco, string avaliacao, string codigoDestino){
     if(hasAtividade(codigo)){
         cout << "\nAtividade ja existe\n\n";
@@ -306,6 +461,11 @@ bool ContainerAtividade::createAtividade(string codigo, string nome, string data
     return true;
 }
 
+/**
+ * @brief Lista todas as atividades associadas a um destino.
+ *
+ * @param codigoDestino O código do destino para o qual as atividades serão listadas.
+ */
 void ContainerAtividade::listarAtividades(string codigoDestino){
     cout << '\n';
 
