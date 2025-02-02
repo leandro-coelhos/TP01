@@ -9,55 +9,78 @@
 
 using namespace std;
 
+class CntrApresentacaoViagem;
+
 class CntrApresentacaoControle {
     private:
         IApresentacaoConta *cntrApresentacaoConta;
-        IApresentacaoViagem *cntrApresentacaoViagem;
     public:
         void executar();
         void exitCardapio();
         void setCntrApresentacaoConta(IApresentacaoConta*);
-        void setCntrApresentacaoViagem(IApresentacaoViagem*);
 };
 
 inline void CntrApresentacaoControle::setCntrApresentacaoConta(IApresentacaoConta *cntr){
     cntrApresentacaoConta = cntr;
 }
 
-inline void CntrApresentacaoControle::setCntrApresentacaoViagem(IApresentacaoViagem *cntr){
-    cntrApresentacaoViagem = cntr;
-}
 
 class CntrApresentacaoConta: public IApresentacaoConta {
     private:
         IServicoConta *cntrServicoConta;
         CntrApresentacaoControle *cntrApresentacaoControle;
+        IApresentacaoViagem *cntrApresentacaoViagem;
     public:
         void criarConta();
         void acessarConta();
+        void viagensConta(string codigo);
         void setCntrServicoConta(IServicoConta*);
+        void setCntrApresentacaoControle(CntrApresentacaoControle*);
+        void setCntrApresentacaoViagem(IApresentacaoViagem*);
 };
 
 inline void CntrApresentacaoConta::setCntrServicoConta(IServicoConta *cntr){
     cntrServicoConta = cntr;
 }
 
-class CntrApresentacaoCardapio{
+inline void CntrApresentacaoConta::setCntrApresentacaoControle(CntrApresentacaoControle *cntr){
+    cntrApresentacaoControle = cntr;
+}
+
+inline void CntrApresentacaoConta::setCntrApresentacaoViagem(IApresentacaoViagem *cntr){
+    cntrApresentacaoViagem = cntr;
+}
+
+class CntrApresentacaoViagem: public IApresentacaoViagem {
+    private:
+        IServicoViagem *cntrServicoViagem;
+        IApresentacaoConta *cntrApresentacaoConta;
+        //CntrApresentacaoHospedagem *cntrApresentacaoHospedagem;
     public:
-        void menu();
-        void createConta();
-        void accessConta();
-        void exitCardapio();
+        void executar(string codigo);
+        void criarViagem(string codigo);
+        void listarViagens(string codigo);
+        void setCntrServicoViagem(IServicoViagem*);
+        void setCntrApresentacaoConta(IApresentacaoConta*);
+        //void setCntrApresentacaoHospedagem(CntrApresentacaoHospedagem*);
 };
 
-class CntrApresentacaoCardapioConta{
-    public:
-        void menu();
-        void viagem();
-        void hospedagem();
-        void destino();
-        void atividade();
-        void exitCardapioConta();
-};
+inline void CntrApresentacaoViagem::setCntrServicoViagem(IServicoViagem *cntr) {
+    cntrServicoViagem = cntr;
+}
+
+inline void CntrApresentacaoViagem::setCntrApresentacaoConta(IApresentacaoConta *cntr){
+    cntrApresentacaoConta = cntr;
+}
+
+// inline void CntrApresentacaoViagem::setCntrApresentacaoHospedagem(CntrApresentacaoHospedagem *cntr){
+//     cntrApresentacaoHospedagem = cntr;
+// }
+
+// class CntrApresentacaoHospedagem{
+//     private:
+//         int teste = 0;
+// };
+
 
 #endif // CONTROLAAPRESENTACAO_HPP_INCLUDED

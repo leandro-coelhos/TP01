@@ -14,4 +14,10 @@ class CntrServicoAutenticacaoConta: public IServicoConta {
         bool createConta(string, string);
 };
 
+class CntrServicoViagem: public IServicoViagem {
+    public:
+        bool createViagem(string, string, string, string);
+        void listarViagens(string);
+};
+
 #endif // CONTROLESERVICOS_HPP_INCLUDED
