@@ -38,3 +38,16 @@ bool CntrServicoAutenticacaoConta::createConta(string codigo, string senha){
     ContainerConta* container = ContainerConta::getInstancia();
     return container->createConta(codigo, senha);
 }
+<<<<<<< HEAD
+=======
+
+bool CntrServicoViagem::createViagem(string codigo, string nome, string avaliacao, string codigoConta){
+    ContainerViagem* container = ContainerViagem::getInstancia();
+    return container->createViagem(codigo, nome, avaliacao, codigoConta);
+}
+
+void CntrServicoViagem::listarViagens(string codigoConta){
+    ContainerViagem* container = ContainerViagem::getInstancia();
+    container->listarViagens(codigoConta);
+}
+>>>>>>> 5c46bf8c9d24168f3830c0818652f5b2a5d2c87c

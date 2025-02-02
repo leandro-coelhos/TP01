@@ -13,6 +13,7 @@
 
 using namespace std;
 
+<<<<<<< HEAD
 /**
  * @class CntrApresentacaoControle
  * @brief Classe responsável pelo controle geral da apresentação.
@@ -24,6 +25,13 @@ class CntrApresentacaoControle {
         IApresentacaoConta *cntrApresentacaoConta;    ///< Interface para controle de contas.
         IApresentacaoViagem *cntrApresentacaoViagem;  ///< Interface para controle de viagens.
     
+=======
+class CntrApresentacaoViagem;
+
+class CntrApresentacaoControle {
+    private:
+        IApresentacaoConta *cntrApresentacaoConta;
+>>>>>>> 5c46bf8c9d24168f3830c0818652f5b2a5d2c87c
     public:
         /**
          * @brief Inicia a execução do menu principal.
@@ -34,6 +42,7 @@ class CntrApresentacaoControle {
          * @brief Finaliza a aplicação.
          */
         void exitCardapio();
+<<<<<<< HEAD
         
         /**
          * @brief Define o controlador de apresentação de contas.
@@ -46,6 +55,9 @@ class CntrApresentacaoControle {
          * @param cntr Ponteiro para a interface IApresentacaoViagem.
          */
         void setCntrApresentacaoViagem(IApresentacaoViagem* cntr);
+=======
+        void setCntrApresentacaoConta(IApresentacaoConta*);
+>>>>>>> 5c46bf8c9d24168f3830c0818652f5b2a5d2c87c
 };
 
 // Implementações inline
@@ -53,9 +65,6 @@ inline void CntrApresentacaoControle::setCntrApresentacaoConta(IApresentacaoCont
     cntrApresentacaoConta = cntr;
 }
 
-inline void CntrApresentacaoControle::setCntrApresentacaoViagem(IApresentacaoViagem *cntr){
-    cntrApresentacaoViagem = cntr;
-}
 
 /**
  * @class CntrApresentacaoConta
@@ -65,9 +74,15 @@ inline void CntrApresentacaoControle::setCntrApresentacaoViagem(IApresentacaoVia
  */
 class CntrApresentacaoConta: public IApresentacaoConta {
     private:
+<<<<<<< HEAD
         IServicoConta *cntrServicoConta;               ///< Interface para serviços de conta.
         CntrApresentacaoControle *cntrApresentacaoControle; ///< Referência ao controlador principal.
     
+=======
+        IServicoConta *cntrServicoConta;
+        CntrApresentacaoControle *cntrApresentacaoControle;
+        IApresentacaoViagem *cntrApresentacaoViagem;
+>>>>>>> 5c46bf8c9d24168f3830c0818652f5b2a5d2c87c
     public:
         /**
          * @brief Cria uma nova conta de usuário.
@@ -78,18 +93,26 @@ class CntrApresentacaoConta: public IApresentacaoConta {
          * @brief Permite o acesso a uma conta existente.
          */
         void acessarConta();
+<<<<<<< HEAD
         
         /**
          * @brief Define o controlador de serviço de contas.
          * @param cntr Ponteiro para a interface IServicoConta.
          */
         void setCntrServicoConta(IServicoConta* cntr);
+=======
+        void viagensConta(string codigo);
+        void setCntrServicoConta(IServicoConta*);
+        void setCntrApresentacaoControle(CntrApresentacaoControle*);
+        void setCntrApresentacaoViagem(IApresentacaoViagem*);
+>>>>>>> 5c46bf8c9d24168f3830c0818652f5b2a5d2c87c
 };
 
 inline void CntrApresentacaoConta::setCntrServicoConta(IServicoConta *cntr){
     cntrServicoConta = cntr;
 }
 
+<<<<<<< HEAD
 /**
  * @class CntrApresentacaoCardapio
  * @brief Classe para controle do menu principal.
@@ -157,5 +180,46 @@ class CntrApresentacaoCardapioConta{
          */
         void exitCardapioConta();
 };
+=======
+inline void CntrApresentacaoConta::setCntrApresentacaoControle(CntrApresentacaoControle *cntr){
+    cntrApresentacaoControle = cntr;
+}
+
+inline void CntrApresentacaoConta::setCntrApresentacaoViagem(IApresentacaoViagem *cntr){
+    cntrApresentacaoViagem = cntr;
+}
+
+class CntrApresentacaoViagem: public IApresentacaoViagem {
+    private:
+        IServicoViagem *cntrServicoViagem;
+        IApresentacaoConta *cntrApresentacaoConta;
+        //CntrApresentacaoHospedagem *cntrApresentacaoHospedagem;
+    public:
+        void executar(string codigo);
+        void criarViagem(string codigo);
+        void listarViagens(string codigo);
+        void setCntrServicoViagem(IServicoViagem*);
+        void setCntrApresentacaoConta(IApresentacaoConta*);
+        //void setCntrApresentacaoHospedagem(CntrApresentacaoHospedagem*);
+};
+
+inline void CntrApresentacaoViagem::setCntrServicoViagem(IServicoViagem *cntr) {
+    cntrServicoViagem = cntr;
+}
+
+inline void CntrApresentacaoViagem::setCntrApresentacaoConta(IApresentacaoConta *cntr){
+    cntrApresentacaoConta = cntr;
+}
+
+// inline void CntrApresentacaoViagem::setCntrApresentacaoHospedagem(CntrApresentacaoHospedagem *cntr){
+//     cntrApresentacaoHospedagem = cntr;
+// }
+
+// class CntrApresentacaoHospedagem{
+//     private:
+//         int teste = 0;
+// };
+
+>>>>>>> 5c46bf8c9d24168f3830c0818652f5b2a5d2c87c
 
 #endif // CONTROLAAPRESENTACAO_HPP_INCLUDED

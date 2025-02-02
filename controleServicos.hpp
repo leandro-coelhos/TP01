@@ -33,4 +33,29 @@ class CntrServicoAutenticacaoConta: public IServicoConta {
         bool createConta(string, string);
 };
 
+/**
+ * @class CntrServicoViagem
+ * @brief Classe responsável pelos serviços de gerenciamento de viagens.
+ */
+class CntrServicoViagem: public IServicoViagem {
+    public:
+        /**
+         * @brief Cria uma nova viagem.
+         * 
+         * @param codigo Código da viagem.
+         * @param nome Nome da viagem.
+         * @param avaliacao Avaliação da viagem.
+         * @param codigoConta Código da conta do usuário.
+         * @return bool Retorna verdadeiro se a viagem foi criada com sucesso, falso caso contrário.
+         */
+        bool createViagem(string, string, string, string);
+
+        /**
+         * @brief Lista todas as viagens associadas a uma conta.
+         * 
+         * @param codigoConta Código da conta do usuário.
+         */
+        void listarViagens(string);
+};
+
 #endif // CONTROLESERVICOS_HPP_INCLUDED
