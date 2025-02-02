@@ -29,3 +29,43 @@ void CntrServicoViagem::listarViagens(string codigoConta){
     ContainerViagem* container = ContainerViagem::getInstancia();
     container->listarViagens(codigoConta);
 }
+
+string CntrServicoDestino::getConta(string codigoViagem){
+    ContainerViagem* container = ContainerViagem::getInstancia();
+    return container->getConta(codigoViagem);
+}
+
+string CntrServicoDestino::getViagem(string codigoDestino){
+    ContainerDestino* container = ContainerDestino::getInstancia();
+    return container->getViagem(codigoDestino);
+}
+
+bool CntrServicoDestino::createDestino(string codigo, string nome, string data_inicio, string data_final, string avaliacao, string codigoViagem){
+    ContainerDestino* container = ContainerDestino::getInstancia();
+    return container->createDestino(codigo, nome, data_inicio, data_final, avaliacao, codigoViagem);
+}
+
+void CntrServicoDestino::listarDestinos(string codigoViagem){
+    ContainerDestino* container = ContainerDestino::getInstancia();
+    container->listarDestinos(codigoViagem);
+}
+
+bool CntrServicoHospedagem::createHospedagem(string codigo, string nome, string diaria, string avaliacao, string codigoDestino){
+    ContainerHospedagem* container = ContainerHospedagem::getInstancia();
+    return container->createHospedagem(codigo, nome, diaria, avaliacao, codigoDestino);
+}
+
+void CntrServicoHospedagem::listarHospedagens(string codigoDestino){
+    ContainerHospedagem* container = ContainerHospedagem::getInstancia();
+    container->listarHospedagens(codigoDestino);
+}
+
+bool CntrServicoAtividade::createAtividade(string codigo, string nome, string data, string horario, string duracao, string preco, string avaliacao, string codigoDestino){
+    ContainerAtividade* container = ContainerAtividade::getInstancia();
+    return container->createAtividade(codigo, nome, data, horario, duracao, preco, avaliacao, codigoDestino);
+}
+
+void CntrServicoAtividade::listarAtividades(string codigoDestino){
+    ContainerAtividade* container = ContainerAtividade::getInstancia();
+    container->listarAtividades(codigoDestino);
+}

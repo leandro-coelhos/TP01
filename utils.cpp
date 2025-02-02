@@ -4,7 +4,6 @@
 #include <unistd.h>
 #include <windows.h>
 
-
 void limpaBuffer() {
     if (std::cin.fail()) {
         std::cout << "Erro de entrada. Tente novamente.\n";

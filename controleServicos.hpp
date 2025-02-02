@@ -20,4 +20,24 @@ class CntrServicoViagem: public IServicoViagem {
         void listarViagens(string);
 };
 
+class CntrServicoDestino: public IServicoDestino {
+    public:
+        bool createDestino(string, string, string, string, string, string);
+        void listarDestinos(string);
+        string getConta(string);
+        string getViagem(string);
+};
+
+class CntrServicoHospedagem: public IServicoHospedagem {
+    public:
+        bool createHospedagem(string, string, string, string, string);
+        void listarHospedagens(string);
+};
+
+class CntrServicoAtividade: public IServicoAtividade {
+    public:
+        bool createAtividade(string, string, string, string, string, string, string, string);
+        void listarAtividades(string);
+};
+
 #endif // CONTROLESERVICOS_HPP_INCLUDED
