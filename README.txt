@@ -41,4 +41,4 @@ Para acesso aos diagramas, acesse:
 /Diagramas/ArquiteturaDeSoftware.drawio.pdf
 
 Vídeo explicativo do projeto:
-https://www.youtube.com/watch?v=D5ZunTBYa9Q
+https://youtu.be/R38EpEwMcDM?si=P0WPLXnzVJqQQ91d
