@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['nome_0',['Nome',['../class_nome.html',1,'']]]
+  ['horario_0',['Horario',['../class_horario.html',1,'']]],
+  ['hospedagem_1',['Hospedagem',['../class_hospedagem.html',1,'']]]
 ];

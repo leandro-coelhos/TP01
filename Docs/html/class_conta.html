@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ViajaMaisUNB: Referência à classe Conta</title>
+<title>ViajaUNB: Referência à classe Conta</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,9 +26,9 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="unb-universidade-de-brasilia-logo-2F07D677C6-seeklogo.com.png"/></td>
   <td id="projectalign">
-   <div id="projectname">ViajaMaisUNB<span id="projectnumber">&#160;2.5</span>
+   <div id="projectname">ViajaUNB<span id="projectnumber">&#160;3.0</span>
    </div>
-   <div id="projectbrief">Projeto orientado objeto para simular viagens.</div>
+   <div id="projectbrief">Sistema de viaja da UNB</div>
   </td>
  </tr>
  </tbody>
@@ -112,6 +112,12 @@ Membros públicos</h2></td></tr>
 <tr class="memitem:aa36f37646e006dc200f82bc9f384d79b" id="r_aa36f37646e006dc200f82bc9f384d79b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_senha.html">Senha</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa36f37646e006dc200f82bc9f384d79b">getSenha</a> () const</td></tr>
 <tr class="memdesc:aa36f37646e006dc200f82bc9f384d79b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recupera a senha da conta.  <br /></td></tr>
 <tr class="separator:aa36f37646e006dc200f82bc9f384d79b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6dea1b6af7ecd5534788da42c1c53d59" id="r_a6dea1b6af7ecd5534788da42c1c53d59"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6dea1b6af7ecd5534788da42c1c53d59">setConta</a> (const <a class="el" href="class_codigo.html">Codigo</a> &amp;, const <a class="el" href="class_senha.html">Senha</a> &amp;)</td></tr>
+<tr class="memdesc:a6dea1b6af7ecd5534788da42c1c53d59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cria uma conta.  <br /></td></tr>
+<tr class="separator:a6dea1b6af7ecd5534788da42c1c53d59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8efceb61b7547b7ea2a4d0746ce8f51c" id="r_a8efceb61b7547b7ea2a4d0746ce8f51c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8efceb61b7547b7ea2a4d0746ce8f51c">getConta</a> (<a class="el" href="class_codigo.html">Codigo</a> &amp;, <a class="el" href="class_senha.html">Senha</a> &amp;) const</td></tr>
+<tr class="memdesc:a8efceb61b7547b7ea2a4d0746ce8f51c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loga em uma conta.  <br /></td></tr>
+<tr class="separator:a8efceb61b7547b7ea2a4d0746ce8f51c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
 <div class="textblock"><p>Classe que representa uma <a class="el" href="class_conta.html" title="Classe que representa uma Conta no sistema.">Conta</a> no sistema. </p>
@@ -143,6 +149,36 @@ Objeto do tipo <a class="el" href="class_codigo.html" title="Representa um códi
 <div class="line"><span class="lineno">   44</span>    <span class="keywordflow">return</span> this-&gt;codigo;</div>
 <div class="line"><span class="lineno">   45</span>}</div>
 </div><!-- fragment -->
+</div>
+</div>
+<a id="a8efceb61b7547b7ea2a4d0746ce8f51c" name="a8efceb61b7547b7ea2a4d0746ce8f51c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8efceb61b7547b7ea2a4d0746ce8f51c">&#9670;&#160;</a></span>getConta()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Conta::getConta </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_codigo.html">Codigo</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_senha.html">Senha</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Loga em uma conta. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">codigo</td><td>Código atual da conta. </td></tr>
+    <tr><td class="paramname">senha</td><td><a class="el" href="class_senha.html" title="Representa uma senha de 5 caracteres.">Senha</a> atual da conta. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="aa36f37646e006dc200f82bc9f384d79b" name="aa36f37646e006dc200f82bc9f384d79b"></a>
@@ -198,6 +234,36 @@ Objeto do tipo <a class="el" href="class_senha.html" title="Representa uma senha
 <div class="line"><span class="lineno">   36</span>    this-&gt;codigo = codigo;</div>
 <div class="line"><span class="lineno">   37</span>};</div>
 </div><!-- fragment -->
+</div>
+</div>
+<a id="a6dea1b6af7ecd5534788da42c1c53d59" name="a6dea1b6af7ecd5534788da42c1c53d59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6dea1b6af7ecd5534788da42c1c53d59">&#9670;&#160;</a></span>setConta()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Conta::setConta </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_codigo.html">Codigo</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_senha.html">Senha</a> &amp;</td>          <td class="paramname"><span class="paramname"><em></em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cria uma conta. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">codigo</td><td>Código que será associado à conta. </td></tr>
+    <tr><td class="paramname">senha</td><td><a class="el" href="class_senha.html" title="Representa uma senha de 5 caracteres.">Senha</a> que será associada à conta. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a16585ba03471ca5fc626332025e558cf" name="a16585ba03471ca5fc626332025e558cf"></a>

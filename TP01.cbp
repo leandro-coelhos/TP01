@@ -32,6 +32,30 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="builder.cpp">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="builder.hpp">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="container.cpp">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="container.hpp">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="controlaApresentacao.cpp">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="controlaApresentacao.hpp">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="controleServicos.cpp">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="controleServicos.hpp">
+			<Option target="Debug" />
+		</Unit>
 		<Unit filename="dominios.cpp">
 			<Option target="Debug" />
 		</Unit>
@@ -44,11 +68,20 @@
 		<Unit filename="entidades.hpp">
 			<Option target="Debug" />
 		</Unit>
+		<Unit filename="interfaces.hpp">
+			<Option target="Debug" />
+		</Unit>
 		<Unit filename="main.cpp" />
 		<Unit filename="testes.cpp">
 			<Option target="Debug" />
 		</Unit>
 		<Unit filename="testes.hpp">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="utils.cpp">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="utils.hpp">
 			<Option target="Debug" />
 		</Unit>
 		<Extensions />

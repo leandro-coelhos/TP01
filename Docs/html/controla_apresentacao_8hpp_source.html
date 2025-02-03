@@ -1,0 +1,379 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ViajaUNB: Código-Fonte de C:/Users/willi/Desktop/TP01_T1/controlaApresentacao.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="unb-universidade-de-brasilia-logo-2F07D677C6-seeklogo.com.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">ViajaUNB<span id="projectnumber">&#160;3.0</span>
+   </div>
+   <div id="projectbrief">Sistema de viaja da UNB</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Localizar',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrada</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_e04ae2849dfa520b4ee2c9f7e9ff15de.html">Desktop</a></li><li class="navelem"><a class="el" href="dir_a21f22b7d5709ef5ec7d16c15f358b43.html">TP01_T1</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">controlaApresentacao.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="controla_apresentacao_8hpp.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef CONTROLAAPRESENTACAO_HPP_INCLUDED</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define CONTROLAAPRESENTACAO_HPP_INCLUDED</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="utils_8hpp.html">utils.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="interfaces_8hpp.html">interfaces.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">using namespace </span>std;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">class </span><a class="code hl_class" href="class_cntr_apresentacao_viagem.html">CntrApresentacaoViagem</a>;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="foldopen" id="foldopen00020" data-start="{" data-end="};">
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="class_cntr_apresentacao_controle.html">   20</a></span><span class="keyword">class </span><a class="code hl_class" href="class_cntr_apresentacao_controle.html">CntrApresentacaoControle</a> {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <a class="code hl_class" href="class_i_apresentacao_conta.html">IApresentacaoConta</a> *cntrApresentacaoConta; </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_cntr_apresentacao_controle.html#a64342a5ad4beacb5cde9c37c73176bb5">executar</a>();</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_cntr_apresentacao_controle.html#ac1235cc13179dcde7651c2cc162bb5cd">exitCardapio</a>();</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_cntr_apresentacao_controle.html#ac9807bba41964f2804aaac76daefcb93">setCntrApresentacaoConta</a>(<a class="code hl_class" href="class_i_apresentacao_conta.html">IApresentacaoConta</a>*);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>};</div>
+</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="foldopen" id="foldopen00041" data-start="{" data-end="}">
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="class_cntr_apresentacao_controle.html#ac9807bba41964f2804aaac76daefcb93">   41</a></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_cntr_apresentacao_controle.html#ac9807bba41964f2804aaac76daefcb93">CntrApresentacaoControle::setCntrApresentacaoConta</a>(<a class="code hl_class" href="class_i_apresentacao_conta.html">IApresentacaoConta</a> *cntr){</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    cntrApresentacaoConta = cntr;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>}</div>
+</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="foldopen" id="foldopen00051" data-start="{" data-end="};">
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="class_cntr_apresentacao_conta.html">   51</a></span><span class="keyword">class </span><a class="code hl_class" href="class_cntr_apresentacao_conta.html">CntrApresentacaoConta</a>: <span class="keyword">public</span> <a class="code hl_class" href="class_i_apresentacao_conta.html">IApresentacaoConta</a> {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <a class="code hl_class" href="class_i_servico_conta.html">IServicoConta</a> *cntrServicoConta; </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <a class="code hl_class" href="class_cntr_apresentacao_controle.html">CntrApresentacaoControle</a> *cntrApresentacaoControle; </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <a class="code hl_class" href="class_i_apresentacao_viagem.html">IApresentacaoViagem</a> *cntrApresentacaoViagem; </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_cntr_apresentacao_conta.html#adcf4d029c98890c7346b66b87b7e16b8">criarConta</a>();</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_cntr_apresentacao_conta.html#a843aa8dbad623dc3e8fceaf705f5c140">acessarConta</a>();</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_cntr_apresentacao_conta.html#a177e9148d2a8c5b192dc3f30d24454f4">viagensConta</a>(<span class="keywordtype">string</span> codigo);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_cntr_apresentacao_conta.html#ac96a6b374f7fa1aa820f41754a58ad79">setCntrServicoConta</a>(<a class="code hl_class" href="class_i_servico_conta.html">IServicoConta</a>*);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_cntr_apresentacao_conta.html#a27cace349aab1e13384209d0d9802de6">setCntrApresentacaoControle</a>(<a class="code hl_class" href="class_cntr_apresentacao_controle.html">CntrApresentacaoControle</a>*);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_cntr_apresentacao_conta.html#a14d41a13908977cefdcc2a44eaa40a8f">setCntrApresentacaoViagem</a>(<a class="code hl_class" href="class_i_apresentacao_viagem.html">IApresentacaoViagem</a>*);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>};</div>
+</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="foldopen" id="foldopen00092" data-start="{" data-end="}">
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="class_cntr_apresentacao_conta.html#ac96a6b374f7fa1aa820f41754a58ad79">   92</a></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_cntr_apresentacao_conta.html#ac96a6b374f7fa1aa820f41754a58ad79">CntrApresentacaoConta::setCntrServicoConta</a>(<a class="code hl_class" href="class_i_servico_conta.html">IServicoConta</a> *cntr){</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    cntrServicoConta = cntr;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>}</div>
+</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="foldopen" id="foldopen00096" data-start="{" data-end="}">
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="class_cntr_apresentacao_conta.html#a27cace349aab1e13384209d0d9802de6">   96</a></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_cntr_apresentacao_conta.html#a27cace349aab1e13384209d0d9802de6">CntrApresentacaoConta::setCntrApresentacaoControle</a>(<a class="code hl_class" href="class_cntr_apresentacao_controle.html">CntrApresentacaoControle</a> *cntr){</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    cntrApresentacaoControle = cntr;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>}</div>
+</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="foldopen" id="foldopen00100" data-start="{" data-end="}">
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="class_cntr_apresentacao_conta.html#a14d41a13908977cefdcc2a44eaa40a8f">  100</a></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_cntr_apresentacao_conta.html#a14d41a13908977cefdcc2a44eaa40a8f">CntrApresentacaoConta::setCntrApresentacaoViagem</a>(<a class="code hl_class" href="class_i_apresentacao_viagem.html">IApresentacaoViagem</a> *cntr){</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    cntrApresentacaoViagem = cntr;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>}</div>
+</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="foldopen" id="foldopen00110" data-start="{" data-end="};">
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="class_cntr_apresentacao_viagem.html">  110</a></span><span class="keyword">class </span><a class="code hl_class" href="class_cntr_apresentacao_viagem.html">CntrApresentacaoViagem</a>: <span class="keyword">public</span> <a class="code hl_class" href="class_i_apresentacao_viagem.html">IApresentacaoViagem</a> {</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        <a class="code hl_class" href="class_i_servico_viagem.html">IServicoViagem</a> *cntrServicoViagem; </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        <a class="code hl_class" href="class_i_apresentacao_conta.html">IApresentacaoConta</a> *cntrApresentacaoConta; </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        <a class="code hl_class" href="class_i_apresentacao_destino.html">IApresentacaoDestino</a> *cntrApresentacaoDestino; </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_cntr_apresentacao_viagem.html#a288e00d9fd0c2eccfbf8fee77784c58c">executar</a>(<span class="keywordtype">string</span> codigo);</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_cntr_apresentacao_viagem.html#af1db7a1d9493e073dfd122d2494dcad3">criarViagem</a>(<span class="keywordtype">string</span> codigo);</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_cntr_apresentacao_viagem.html#ad54ba4b389fd3188b68fbf4d8fc7ee4f">listarViagens</a>(<span class="keywordtype">string</span> codigo);</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_cntr_apresentacao_viagem.html#a9a041e672f361a4e533fe9434114cae9">setCntrServicoViagem</a>(<a class="code hl_class" href="class_i_servico_viagem.html">IServicoViagem</a>*);</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_cntr_apresentacao_viagem.html#abfc1d0b83fa870dbf4446836eb0b0861">setCntrApresentacaoConta</a>(<a class="code hl_class" href="class_i_apresentacao_conta.html">IApresentacaoConta</a>*);</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_cntr_apresentacao_viagem.html#a20b548b2fc92aa58532449b4ee80cf91">setCntrApresentacaoDestino</a>(<a class="code hl_class" href="class_i_apresentacao_destino.html">IApresentacaoDestino</a>*);</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>};</div>
+</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
+<div class="foldopen" id="foldopen00153" data-start="{" data-end="}">
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno"><a class="line" href="class_cntr_apresentacao_viagem.html#a9a041e672f361a4e533fe9434114cae9">  153</a></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_cntr_apresentacao_viagem.html#a9a041e672f361a4e533fe9434114cae9">CntrApresentacaoViagem::setCntrServicoViagem</a>(<a class="code hl_class" href="class_i_servico_viagem.html">IServicoViagem</a> *cntr) {</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    cntrServicoViagem = cntr;</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>}</div>
+</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
+<div class="foldopen" id="foldopen00157" data-start="{" data-end="}">
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno"><a class="line" href="class_cntr_apresentacao_viagem.html#abfc1d0b83fa870dbf4446836eb0b0861">  157</a></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_cntr_apresentacao_viagem.html#abfc1d0b83fa870dbf4446836eb0b0861">CntrApresentacaoViagem::setCntrApresentacaoConta</a>(<a class="code hl_class" href="class_i_apresentacao_conta.html">IApresentacaoConta</a> *cntr){</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    cntrApresentacaoConta = cntr;</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>}</div>
+</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
+<div class="foldopen" id="foldopen00161" data-start="{" data-end="}">
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno"><a class="line" href="class_cntr_apresentacao_viagem.html#a20b548b2fc92aa58532449b4ee80cf91">  161</a></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_cntr_apresentacao_viagem.html#a20b548b2fc92aa58532449b4ee80cf91">CntrApresentacaoViagem::setCntrApresentacaoDestino</a>(<a class="code hl_class" href="class_i_apresentacao_destino.html">IApresentacaoDestino</a> *cntr){</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    cntrApresentacaoDestino = cntr;</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>}</div>
+</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span> </div>
+<div class="foldopen" id="foldopen00171" data-start="{" data-end="};">
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno"><a class="line" href="class_cntr_apresentacao_destino.html">  171</a></span><span class="keyword">class </span><a class="code hl_class" href="class_cntr_apresentacao_destino.html">CntrApresentacaoDestino</a>: <span class="keyword">public</span> <a class="code hl_class" href="class_i_apresentacao_destino.html">IApresentacaoDestino</a> {</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>        <a class="code hl_class" href="class_i_servico_destino.html">IServicoDestino</a> *cntrServicoDestino; </div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>        <a class="code hl_class" href="class_i_servico_viagem.html">IServicoViagem</a> *cntrServicoViagem; </div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>        <a class="code hl_class" href="class_i_apresentacao_viagem.html">IApresentacaoViagem</a> *cntrApresentacaoViagem; </div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>        <a class="code hl_class" href="class_i_apresentacao_hospedagem.html">IApresentacaoHospedagem</a> *cntrApresentacaoHospedagem; </div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>        <a class="code hl_class" href="class_i_apresentacao_atividade.html">IApresentacaoAtividade</a> *cntrApresentacaoAtividade; </div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_cntr_apresentacao_destino.html#acadbea1a1f19afac56cb71f8af251f11">executar</a>(<span class="keywordtype">string</span> codigo);</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span> </div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_cntr_apresentacao_destino.html#a9ebd23fb15f313a69775b6aae0f25fcb">criarDestino</a>(<span class="keywordtype">string</span> codigo);</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span> </div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_cntr_apresentacao_destino.html#a71b61f8f5f5d2aa59a9b769d6a1880bc">listarDestinos</a>(<span class="keywordtype">string</span> codigo);</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span> </div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_cntr_apresentacao_destino.html#a9691d59bbcadcaf9cc49cdc9920ff2d2">showDestino</a>(<span class="keywordtype">string</span> codigo);</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span> </div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_cntr_apresentacao_destino.html#a5dfeee1086892509da88cfee8266e6a8">setCntrServicoDestino</a>(<a class="code hl_class" href="class_i_servico_destino.html">IServicoDestino</a>*);</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span> </div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_cntr_apresentacao_destino.html#ae65331603fb38d29a7457c1d95f3979a">setCntrApresentacaoViagem</a>(<a class="code hl_class" href="class_i_apresentacao_viagem.html">IApresentacaoViagem</a>*);</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span> </div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_cntr_apresentacao_destino.html#a3e847682051ed8e92417c4e2966d1310">setCntrApresentacaoHospedagem</a>(<a class="code hl_class" href="class_i_apresentacao_hospedagem.html">IApresentacaoHospedagem</a>*);</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span> </div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_cntr_apresentacao_destino.html#a91d42dfad2b0b6f3f9966407abda10e6">setCntrApresentacaoAtividade</a>(<a class="code hl_class" href="class_i_apresentacao_atividade.html">IApresentacaoAtividade</a>*);</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span> </div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_cntr_apresentacao_destino.html#a0d185aaf1502af4da74431c4d67d1359">setCntrServicoViagem</a>(<a class="code hl_class" href="class_i_servico_viagem.html">IServicoViagem</a>*);</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>};</div>
+</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span> </div>
+<div class="foldopen" id="foldopen00234" data-start="{" data-end="}">
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno"><a class="line" href="class_cntr_apresentacao_destino.html#a5dfeee1086892509da88cfee8266e6a8">  234</a></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_cntr_apresentacao_destino.html#a5dfeee1086892509da88cfee8266e6a8">CntrApresentacaoDestino::setCntrServicoDestino</a>(<a class="code hl_class" href="class_i_servico_destino.html">IServicoDestino</a> *cntr){</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>    cntrServicoDestino = cntr;</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>}</div>
+</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span> </div>
+<div class="foldopen" id="foldopen00238" data-start="{" data-end="}">
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno"><a class="line" href="class_cntr_apresentacao_destino.html#ae65331603fb38d29a7457c1d95f3979a">  238</a></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_cntr_apresentacao_destino.html#ae65331603fb38d29a7457c1d95f3979a">CntrApresentacaoDestino::setCntrApresentacaoViagem</a>(<a class="code hl_class" href="class_i_apresentacao_viagem.html">IApresentacaoViagem</a> *cntr){</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>    cntrApresentacaoViagem = cntr;</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>}</div>
+</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span> </div>
+<div class="foldopen" id="foldopen00242" data-start="{" data-end="}">
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno"><a class="line" href="class_cntr_apresentacao_destino.html#a3e847682051ed8e92417c4e2966d1310">  242</a></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_cntr_apresentacao_destino.html#a3e847682051ed8e92417c4e2966d1310">CntrApresentacaoDestino::setCntrApresentacaoHospedagem</a>(<a class="code hl_class" href="class_i_apresentacao_hospedagem.html">IApresentacaoHospedagem</a> *cntr){</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>    cntrApresentacaoHospedagem = cntr;</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>}</div>
+</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span> </div>
+<div class="foldopen" id="foldopen00246" data-start="{" data-end="}">
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno"><a class="line" href="class_cntr_apresentacao_destino.html#a91d42dfad2b0b6f3f9966407abda10e6">  246</a></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_cntr_apresentacao_destino.html#a91d42dfad2b0b6f3f9966407abda10e6">CntrApresentacaoDestino::setCntrApresentacaoAtividade</a>(<a class="code hl_class" href="class_i_apresentacao_atividade.html">IApresentacaoAtividade</a> *cntr){</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>    cntrApresentacaoAtividade = cntr;</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>}</div>
+</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span> </div>
+<div class="foldopen" id="foldopen00250" data-start="{" data-end="}">
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno"><a class="line" href="class_cntr_apresentacao_destino.html#a0d185aaf1502af4da74431c4d67d1359">  250</a></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_cntr_apresentacao_destino.html#a0d185aaf1502af4da74431c4d67d1359">CntrApresentacaoDestino::setCntrServicoViagem</a>(<a class="code hl_class" href="class_i_servico_viagem.html">IServicoViagem</a> *cntr){</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>    cntrServicoViagem = cntr;</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>}</div>
+</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span> </div>
+<div class="foldopen" id="foldopen00260" data-start="{" data-end="};">
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno"><a class="line" href="class_cntr_apresentacao_hospedagem.html">  260</a></span><span class="keyword">class </span><a class="code hl_class" href="class_cntr_apresentacao_hospedagem.html">CntrApresentacaoHospedagem</a>: <span class="keyword">public</span> <a class="code hl_class" href="class_i_apresentacao_hospedagem.html">IApresentacaoHospedagem</a> {</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>        <a class="code hl_class" href="class_i_servico_hospedagem.html">IServicoHospedagem</a> *cntrServicoHospedagem; </div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>        <a class="code hl_class" href="class_i_apresentacao_destino.html">IApresentacaoDestino</a> *cntrApresentacaoDestino; </div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_cntr_apresentacao_hospedagem.html#a67c254224a60504bdd3122a72a79a21f">criarHospedagem</a>(<span class="keywordtype">string</span> codigo);</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span> </div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_cntr_apresentacao_hospedagem.html#a840c182f23778edc3b629d907351f1d5">listarHospedagens</a>(<span class="keywordtype">string</span> codigo);</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span> </div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_cntr_apresentacao_hospedagem.html#aea9757370d7eff0ce18f3be7e10cd087">setCntrServicoHospedagem</a>(<a class="code hl_class" href="class_i_servico_hospedagem.html">IServicoHospedagem</a>*);</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span> </div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_cntr_apresentacao_hospedagem.html#a726888632f629eb31faa7d40a442b4e3">setCntrApresentacaoDestino</a>(<a class="code hl_class" href="class_i_apresentacao_destino.html">IApresentacaoDestino</a>*);</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>};</div>
+</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span> </div>
+<div class="foldopen" id="foldopen00290" data-start="{" data-end="}">
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno"><a class="line" href="class_cntr_apresentacao_hospedagem.html#aea9757370d7eff0ce18f3be7e10cd087">  290</a></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_cntr_apresentacao_hospedagem.html#aea9757370d7eff0ce18f3be7e10cd087">CntrApresentacaoHospedagem::setCntrServicoHospedagem</a>(<a class="code hl_class" href="class_i_servico_hospedagem.html">IServicoHospedagem</a> *cntr){</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>    cntrServicoHospedagem = cntr;</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>}</div>
+</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span> </div>
+<div class="foldopen" id="foldopen00294" data-start="{" data-end="}">
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno"><a class="line" href="class_cntr_apresentacao_hospedagem.html#a726888632f629eb31faa7d40a442b4e3">  294</a></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_cntr_apresentacao_hospedagem.html#a726888632f629eb31faa7d40a442b4e3">CntrApresentacaoHospedagem::setCntrApresentacaoDestino</a>(<a class="code hl_class" href="class_i_apresentacao_destino.html">IApresentacaoDestino</a> *cntr){</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>    cntrApresentacaoDestino = cntr;</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>}</div>
+</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span> </div>
+<div class="foldopen" id="foldopen00304" data-start="{" data-end="};">
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno"><a class="line" href="class_cntr_apresentacao_atividade.html">  304</a></span><span class="keyword">class </span><a class="code hl_class" href="class_cntr_apresentacao_atividade.html">CntrApresentacaoAtividade</a>: <span class="keyword">public</span> <a class="code hl_class" href="class_i_apresentacao_atividade.html">IApresentacaoAtividade</a> {</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>        <a class="code hl_class" href="class_i_servico_atividade.html">IServicoAtividade</a> *cntrServicoAtividade; </div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>        <a class="code hl_class" href="class_i_apresentacao_destino.html">IApresentacaoDestino</a> *cntrApresentacaoDestino; </div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_cntr_apresentacao_atividade.html#a22104aaf9b42bf06a98aade559872992">criarAtividade</a>(<span class="keywordtype">string</span> codigo);</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span> </div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_cntr_apresentacao_atividade.html#a6e22bc58e806c3094a7d2f0e1e02f648">listarAtividades</a>(<span class="keywordtype">string</span> codigo);</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span> </div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_cntr_apresentacao_atividade.html#a8d19970235f8af8be4f945224c48ab46">setCntrServicoAtividade</a>(<a class="code hl_class" href="class_i_servico_atividade.html">IServicoAtividade</a>*);</div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span> </div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_cntr_apresentacao_atividade.html#a937b8a96a1f815e7ec5289c82b44d3c1">setCntrApresentacaoDestino</a>(<a class="code hl_class" href="class_i_apresentacao_destino.html">IApresentacaoDestino</a>*);</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>};</div>
+</div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span> </div>
+<div class="foldopen" id="foldopen00334" data-start="{" data-end="}">
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno"><a class="line" href="class_cntr_apresentacao_atividade.html#a8d19970235f8af8be4f945224c48ab46">  334</a></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_cntr_apresentacao_atividade.html#a8d19970235f8af8be4f945224c48ab46">CntrApresentacaoAtividade::setCntrServicoAtividade</a>(<a class="code hl_class" href="class_i_servico_atividade.html">IServicoAtividade</a> *cntr){</div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>    cntrServicoAtividade = cntr;</div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>}</div>
+</div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span> </div>
+<div class="foldopen" id="foldopen00338" data-start="{" data-end="}">
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno"><a class="line" href="class_cntr_apresentacao_atividade.html#a937b8a96a1f815e7ec5289c82b44d3c1">  338</a></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_cntr_apresentacao_atividade.html#a937b8a96a1f815e7ec5289c82b44d3c1">CntrApresentacaoAtividade::setCntrApresentacaoDestino</a>(<a class="code hl_class" href="class_i_apresentacao_destino.html">IApresentacaoDestino</a> *cntr){</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>    cntrApresentacaoDestino = cntr;</div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>}</div>
+</div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span> </div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span><span class="preprocessor">#endif </span><span class="comment">// CONTROLAAPRESENTACAO_HPP_INCLUDED</span></div>
+<div class="ttc" id="aclass_cntr_apresentacao_atividade_html"><div class="ttname"><a href="class_cntr_apresentacao_atividade.html">CntrApresentacaoAtividade</a></div><div class="ttdoc">Controlador de apresentação para operações relacionadas a atividades.</div><div class="ttdef"><b>Definição</b> controlaApresentacao.hpp:304</div></div>
+<div class="ttc" id="aclass_cntr_apresentacao_atividade_html_a22104aaf9b42bf06a98aade559872992"><div class="ttname"><a href="class_cntr_apresentacao_atividade.html#a22104aaf9b42bf06a98aade559872992">CntrApresentacaoAtividade::criarAtividade</a></div><div class="ttdeci">void criarAtividade(string codigo)</div><div class="ttdoc">Cria uma nova atividade.</div><div class="ttdef"><b>Definição</b> controlaApresentacao.cpp:423</div></div>
+<div class="ttc" id="aclass_cntr_apresentacao_atividade_html_a6e22bc58e806c3094a7d2f0e1e02f648"><div class="ttname"><a href="class_cntr_apresentacao_atividade.html#a6e22bc58e806c3094a7d2f0e1e02f648">CntrApresentacaoAtividade::listarAtividades</a></div><div class="ttdeci">void listarAtividades(string codigo)</div><div class="ttdoc">Lista as atividades associadas a um destino.</div><div class="ttdef"><b>Definição</b> controlaApresentacao.cpp:465</div></div>
+<div class="ttc" id="aclass_cntr_apresentacao_atividade_html_a8d19970235f8af8be4f945224c48ab46"><div class="ttname"><a href="class_cntr_apresentacao_atividade.html#a8d19970235f8af8be4f945224c48ab46">CntrApresentacaoAtividade::setCntrServicoAtividade</a></div><div class="ttdeci">void setCntrServicoAtividade(IServicoAtividade *)</div><div class="ttdoc">Define o serviço de atividades.</div><div class="ttdef"><b>Definição</b> controlaApresentacao.hpp:334</div></div>
+<div class="ttc" id="aclass_cntr_apresentacao_atividade_html_a937b8a96a1f815e7ec5289c82b44d3c1"><div class="ttname"><a href="class_cntr_apresentacao_atividade.html#a937b8a96a1f815e7ec5289c82b44d3c1">CntrApresentacaoAtividade::setCntrApresentacaoDestino</a></div><div class="ttdeci">void setCntrApresentacaoDestino(IApresentacaoDestino *)</div><div class="ttdoc">Define o controlador de apresentação de destinos.</div><div class="ttdef"><b>Definição</b> controlaApresentacao.hpp:338</div></div>
+<div class="ttc" id="aclass_cntr_apresentacao_conta_html"><div class="ttname"><a href="class_cntr_apresentacao_conta.html">CntrApresentacaoConta</a></div><div class="ttdoc">Controlador de apresentação para operações relacionadas a contas.</div><div class="ttdef"><b>Definição</b> controlaApresentacao.hpp:51</div></div>
+<div class="ttc" id="aclass_cntr_apresentacao_conta_html_a14d41a13908977cefdcc2a44eaa40a8f"><div class="ttname"><a href="class_cntr_apresentacao_conta.html#a14d41a13908977cefdcc2a44eaa40a8f">CntrApresentacaoConta::setCntrApresentacaoViagem</a></div><div class="ttdeci">void setCntrApresentacaoViagem(IApresentacaoViagem *)</div><div class="ttdoc">Define o controlador de apresentação de viagens.</div><div class="ttdef"><b>Definição</b> controlaApresentacao.hpp:100</div></div>
+<div class="ttc" id="aclass_cntr_apresentacao_conta_html_a177e9148d2a8c5b192dc3f30d24454f4"><div class="ttname"><a href="class_cntr_apresentacao_conta.html#a177e9148d2a8c5b192dc3f30d24454f4">CntrApresentacaoConta::viagensConta</a></div><div class="ttdeci">void viagensConta(string codigo)</div><div class="ttdoc">Exibe as viagens associadas a uma conta.</div><div class="ttdef"><b>Definição</b> controlaApresentacao.cpp:115</div></div>
+<div class="ttc" id="aclass_cntr_apresentacao_conta_html_a27cace349aab1e13384209d0d9802de6"><div class="ttname"><a href="class_cntr_apresentacao_conta.html#a27cace349aab1e13384209d0d9802de6">CntrApresentacaoConta::setCntrApresentacaoControle</a></div><div class="ttdeci">void setCntrApresentacaoControle(CntrApresentacaoControle *)</div><div class="ttdoc">Define o controlador de apresentação principal.</div><div class="ttdef"><b>Definição</b> controlaApresentacao.hpp:96</div></div>
+<div class="ttc" id="aclass_cntr_apresentacao_conta_html_a843aa8dbad623dc3e8fceaf705f5c140"><div class="ttname"><a href="class_cntr_apresentacao_conta.html#a843aa8dbad623dc3e8fceaf705f5c140">CntrApresentacaoConta::acessarConta</a></div><div class="ttdeci">void acessarConta()</div><div class="ttdoc">Acessa uma conta existente.</div><div class="ttdef"><b>Definição</b> controlaApresentacao.cpp:77</div></div>
+<div class="ttc" id="aclass_cntr_apresentacao_conta_html_ac96a6b374f7fa1aa820f41754a58ad79"><div class="ttname"><a href="class_cntr_apresentacao_conta.html#ac96a6b374f7fa1aa820f41754a58ad79">CntrApresentacaoConta::setCntrServicoConta</a></div><div class="ttdeci">void setCntrServicoConta(IServicoConta *)</div><div class="ttdoc">Define o serviço de contas.</div><div class="ttdef"><b>Definição</b> controlaApresentacao.hpp:92</div></div>
+<div class="ttc" id="aclass_cntr_apresentacao_conta_html_adcf4d029c98890c7346b66b87b7e16b8"><div class="ttname"><a href="class_cntr_apresentacao_conta.html#adcf4d029c98890c7346b66b87b7e16b8">CntrApresentacaoConta::criarConta</a></div><div class="ttdeci">void criarConta()</div><div class="ttdoc">Cria uma nova conta.</div><div class="ttdef"><b>Definição</b> controlaApresentacao.cpp:49</div></div>
+<div class="ttc" id="aclass_cntr_apresentacao_controle_html"><div class="ttname"><a href="class_cntr_apresentacao_controle.html">CntrApresentacaoControle</a></div><div class="ttdoc">Controlador principal da apresentação do sistema.</div><div class="ttdef"><b>Definição</b> controlaApresentacao.hpp:20</div></div>
+<div class="ttc" id="aclass_cntr_apresentacao_controle_html_a64342a5ad4beacb5cde9c37c73176bb5"><div class="ttname"><a href="class_cntr_apresentacao_controle.html#a64342a5ad4beacb5cde9c37c73176bb5">CntrApresentacaoControle::executar</a></div><div class="ttdeci">void executar()</div><div class="ttdoc">Executa o fluxo principal da aplicação.</div><div class="ttdef"><b>Definição</b> controlaApresentacao.cpp:19</div></div>
+<div class="ttc" id="aclass_cntr_apresentacao_controle_html_ac1235cc13179dcde7651c2cc162bb5cd"><div class="ttname"><a href="class_cntr_apresentacao_controle.html#ac1235cc13179dcde7651c2cc162bb5cd">CntrApresentacaoControle::exitCardapio</a></div><div class="ttdeci">void exitCardapio()</div><div class="ttdoc">Finaliza o cardápio ou menu atual.</div><div class="ttdef"><b>Definição</b> controlaApresentacao.cpp:104</div></div>
+<div class="ttc" id="aclass_cntr_apresentacao_controle_html_ac9807bba41964f2804aaac76daefcb93"><div class="ttname"><a href="class_cntr_apresentacao_controle.html#ac9807bba41964f2804aaac76daefcb93">CntrApresentacaoControle::setCntrApresentacaoConta</a></div><div class="ttdeci">void setCntrApresentacaoConta(IApresentacaoConta *)</div><div class="ttdoc">Define o controlador de apresentação de contas.</div><div class="ttdef"><b>Definição</b> controlaApresentacao.hpp:41</div></div>
+<div class="ttc" id="aclass_cntr_apresentacao_destino_html"><div class="ttname"><a href="class_cntr_apresentacao_destino.html">CntrApresentacaoDestino</a></div><div class="ttdoc">Controlador de apresentação para operações relacionadas a destinos.</div><div class="ttdef"><b>Definição</b> controlaApresentacao.hpp:171</div></div>
+<div class="ttc" id="aclass_cntr_apresentacao_destino_html_a0d185aaf1502af4da74431c4d67d1359"><div class="ttname"><a href="class_cntr_apresentacao_destino.html#a0d185aaf1502af4da74431c4d67d1359">CntrApresentacaoDestino::setCntrServicoViagem</a></div><div class="ttdeci">void setCntrServicoViagem(IServicoViagem *)</div><div class="ttdoc">Define o serviço de viagens.</div><div class="ttdef"><b>Definição</b> controlaApresentacao.hpp:250</div></div>
+<div class="ttc" id="aclass_cntr_apresentacao_destino_html_a3e847682051ed8e92417c4e2966d1310"><div class="ttname"><a href="class_cntr_apresentacao_destino.html#a3e847682051ed8e92417c4e2966d1310">CntrApresentacaoDestino::setCntrApresentacaoHospedagem</a></div><div class="ttdeci">void setCntrApresentacaoHospedagem(IApresentacaoHospedagem *)</div><div class="ttdoc">Define o controlador de apresentação de hospedagens.</div><div class="ttdef"><b>Definição</b> controlaApresentacao.hpp:242</div></div>
+<div class="ttc" id="aclass_cntr_apresentacao_destino_html_a5dfeee1086892509da88cfee8266e6a8"><div class="ttname"><a href="class_cntr_apresentacao_destino.html#a5dfeee1086892509da88cfee8266e6a8">CntrApresentacaoDestino::setCntrServicoDestino</a></div><div class="ttdeci">void setCntrServicoDestino(IServicoDestino *)</div><div class="ttdoc">Define o serviço de destinos.</div><div class="ttdef"><b>Definição</b> controlaApresentacao.hpp:234</div></div>
+<div class="ttc" id="aclass_cntr_apresentacao_destino_html_a71b61f8f5f5d2aa59a9b769d6a1880bc"><div class="ttname"><a href="class_cntr_apresentacao_destino.html#a71b61f8f5f5d2aa59a9b769d6a1880bc">CntrApresentacaoDestino::listarDestinos</a></div><div class="ttdeci">void listarDestinos(string codigo)</div><div class="ttdoc">Lista os destinos associados a uma viagem.</div><div class="ttdef"><b>Definição</b> controlaApresentacao.cpp:300</div></div>
+<div class="ttc" id="aclass_cntr_apresentacao_destino_html_a91d42dfad2b0b6f3f9966407abda10e6"><div class="ttname"><a href="class_cntr_apresentacao_destino.html#a91d42dfad2b0b6f3f9966407abda10e6">CntrApresentacaoDestino::setCntrApresentacaoAtividade</a></div><div class="ttdeci">void setCntrApresentacaoAtividade(IApresentacaoAtividade *)</div><div class="ttdoc">Define o controlador de apresentação de atividades.</div><div class="ttdef"><b>Definição</b> controlaApresentacao.hpp:246</div></div>
+<div class="ttc" id="aclass_cntr_apresentacao_destino_html_a9691d59bbcadcaf9cc49cdc9920ff2d2"><div class="ttname"><a href="class_cntr_apresentacao_destino.html#a9691d59bbcadcaf9cc49cdc9920ff2d2">CntrApresentacaoDestino::showDestino</a></div><div class="ttdeci">void showDestino(string codigo)</div><div class="ttdoc">Exibe detalhes de um destino.</div><div class="ttdef"><b>Definição</b> controlaApresentacao.cpp:329</div></div>
+<div class="ttc" id="aclass_cntr_apresentacao_destino_html_a9ebd23fb15f313a69775b6aae0f25fcb"><div class="ttname"><a href="class_cntr_apresentacao_destino.html#a9ebd23fb15f313a69775b6aae0f25fcb">CntrApresentacaoDestino::criarDestino</a></div><div class="ttdeci">void criarDestino(string codigo)</div><div class="ttdoc">Cria um novo destino.</div><div class="ttdef"><b>Definição</b> controlaApresentacao.cpp:264</div></div>
+<div class="ttc" id="aclass_cntr_apresentacao_destino_html_acadbea1a1f19afac56cb71f8af251f11"><div class="ttname"><a href="class_cntr_apresentacao_destino.html#acadbea1a1f19afac56cb71f8af251f11">CntrApresentacaoDestino::executar</a></div><div class="ttdeci">void executar(string codigo)</div><div class="ttdoc">Executa o fluxo de operações de destinos.</div><div class="ttdef"><b>Definição</b> controlaApresentacao.cpp:233</div></div>
+<div class="ttc" id="aclass_cntr_apresentacao_destino_html_ae65331603fb38d29a7457c1d95f3979a"><div class="ttname"><a href="class_cntr_apresentacao_destino.html#ae65331603fb38d29a7457c1d95f3979a">CntrApresentacaoDestino::setCntrApresentacaoViagem</a></div><div class="ttdeci">void setCntrApresentacaoViagem(IApresentacaoViagem *)</div><div class="ttdoc">Define o controlador de apresentação de viagens.</div><div class="ttdef"><b>Definição</b> controlaApresentacao.hpp:238</div></div>
+<div class="ttc" id="aclass_cntr_apresentacao_hospedagem_html"><div class="ttname"><a href="class_cntr_apresentacao_hospedagem.html">CntrApresentacaoHospedagem</a></div><div class="ttdoc">Controlador de apresentação para operações relacionadas a hospedagens.</div><div class="ttdef"><b>Definição</b> controlaApresentacao.hpp:260</div></div>
+<div class="ttc" id="aclass_cntr_apresentacao_hospedagem_html_a67c254224a60504bdd3122a72a79a21f"><div class="ttname"><a href="class_cntr_apresentacao_hospedagem.html#a67c254224a60504bdd3122a72a79a21f">CntrApresentacaoHospedagem::criarHospedagem</a></div><div class="ttdeci">void criarHospedagem(string codigo)</div><div class="ttdoc">Cria uma nova hospedagem.</div><div class="ttdef"><b>Definição</b> controlaApresentacao.cpp:366</div></div>
+<div class="ttc" id="aclass_cntr_apresentacao_hospedagem_html_a726888632f629eb31faa7d40a442b4e3"><div class="ttname"><a href="class_cntr_apresentacao_hospedagem.html#a726888632f629eb31faa7d40a442b4e3">CntrApresentacaoHospedagem::setCntrApresentacaoDestino</a></div><div class="ttdeci">void setCntrApresentacaoDestino(IApresentacaoDestino *)</div><div class="ttdoc">Define o controlador de apresentação de destinos.</div><div class="ttdef"><b>Definição</b> controlaApresentacao.hpp:294</div></div>
+<div class="ttc" id="aclass_cntr_apresentacao_hospedagem_html_a840c182f23778edc3b629d907351f1d5"><div class="ttname"><a href="class_cntr_apresentacao_hospedagem.html#a840c182f23778edc3b629d907351f1d5">CntrApresentacaoHospedagem::listarHospedagens</a></div><div class="ttdeci">void listarHospedagens(string codigo)</div><div class="ttdoc">Lista as hospedagens associadas a um destino.</div><div class="ttdef"><b>Definição</b> controlaApresentacao.cpp:399</div></div>
+<div class="ttc" id="aclass_cntr_apresentacao_hospedagem_html_aea9757370d7eff0ce18f3be7e10cd087"><div class="ttname"><a href="class_cntr_apresentacao_hospedagem.html#aea9757370d7eff0ce18f3be7e10cd087">CntrApresentacaoHospedagem::setCntrServicoHospedagem</a></div><div class="ttdeci">void setCntrServicoHospedagem(IServicoHospedagem *)</div><div class="ttdoc">Define o serviço de hospedagens.</div><div class="ttdef"><b>Definição</b> controlaApresentacao.hpp:290</div></div>
+<div class="ttc" id="aclass_cntr_apresentacao_viagem_html"><div class="ttname"><a href="class_cntr_apresentacao_viagem.html">CntrApresentacaoViagem</a></div><div class="ttdoc">Controlador de apresentação para operações relacionadas a viagens.</div><div class="ttdef"><b>Definição</b> controlaApresentacao.hpp:110</div></div>
+<div class="ttc" id="aclass_cntr_apresentacao_viagem_html_a20b548b2fc92aa58532449b4ee80cf91"><div class="ttname"><a href="class_cntr_apresentacao_viagem.html#a20b548b2fc92aa58532449b4ee80cf91">CntrApresentacaoViagem::setCntrApresentacaoDestino</a></div><div class="ttdeci">void setCntrApresentacaoDestino(IApresentacaoDestino *)</div><div class="ttdoc">Define o controlador de apresentação de destinos.</div><div class="ttdef"><b>Definição</b> controlaApresentacao.hpp:161</div></div>
+<div class="ttc" id="aclass_cntr_apresentacao_viagem_html_a288e00d9fd0c2eccfbf8fee77784c58c"><div class="ttname"><a href="class_cntr_apresentacao_viagem.html#a288e00d9fd0c2eccfbf8fee77784c58c">CntrApresentacaoViagem::executar</a></div><div class="ttdeci">void executar(string codigo)</div><div class="ttdoc">Executa o fluxo de operações de viagens.</div><div class="ttdef"><b>Definição</b> controlaApresentacao.cpp:143</div></div>
+<div class="ttc" id="aclass_cntr_apresentacao_viagem_html_a9a041e672f361a4e533fe9434114cae9"><div class="ttname"><a href="class_cntr_apresentacao_viagem.html#a9a041e672f361a4e533fe9434114cae9">CntrApresentacaoViagem::setCntrServicoViagem</a></div><div class="ttdeci">void setCntrServicoViagem(IServicoViagem *)</div><div class="ttdoc">Define o serviço de viagens.</div><div class="ttdef"><b>Definição</b> controlaApresentacao.hpp:153</div></div>
+<div class="ttc" id="aclass_cntr_apresentacao_viagem_html_abfc1d0b83fa870dbf4446836eb0b0861"><div class="ttname"><a href="class_cntr_apresentacao_viagem.html#abfc1d0b83fa870dbf4446836eb0b0861">CntrApresentacaoViagem::setCntrApresentacaoConta</a></div><div class="ttdeci">void setCntrApresentacaoConta(IApresentacaoConta *)</div><div class="ttdoc">Define o controlador de apresentação de contas.</div><div class="ttdef"><b>Definição</b> controlaApresentacao.hpp:157</div></div>
+<div class="ttc" id="aclass_cntr_apresentacao_viagem_html_ad54ba4b389fd3188b68fbf4d8fc7ee4f"><div class="ttname"><a href="class_cntr_apresentacao_viagem.html#ad54ba4b389fd3188b68fbf4d8fc7ee4f">CntrApresentacaoViagem::listarViagens</a></div><div class="ttdeci">void listarViagens(string codigo)</div><div class="ttdoc">Lista as viagens associadas a uma conta.</div><div class="ttdef"><b>Definição</b> controlaApresentacao.cpp:203</div></div>
+<div class="ttc" id="aclass_cntr_apresentacao_viagem_html_af1db7a1d9493e073dfd122d2494dcad3"><div class="ttname"><a href="class_cntr_apresentacao_viagem.html#af1db7a1d9493e073dfd122d2494dcad3">CntrApresentacaoViagem::criarViagem</a></div><div class="ttdeci">void criarViagem(string codigo)</div><div class="ttdoc">Cria uma nova viagem.</div><div class="ttdef"><b>Definição</b> controlaApresentacao.cpp:173</div></div>
+<div class="ttc" id="aclass_i_apresentacao_atividade_html"><div class="ttname"><a href="class_i_apresentacao_atividade.html">IApresentacaoAtividade</a></div><div class="ttdoc">Interface para a apresentação de atividades.</div><div class="ttdef"><b>Definição</b> interfaces.hpp:100</div></div>
+<div class="ttc" id="aclass_i_apresentacao_conta_html"><div class="ttname"><a href="class_i_apresentacao_conta.html">IApresentacaoConta</a></div><div class="ttdoc">Interface para a apresentação de conta.</div><div class="ttdef"><b>Definição</b> interfaces.hpp:39</div></div>
+<div class="ttc" id="aclass_i_apresentacao_destino_html"><div class="ttname"><a href="class_i_apresentacao_destino.html">IApresentacaoDestino</a></div><div class="ttdoc">Interface para a apresentação de destinos.</div><div class="ttdef"><b>Definição</b> interfaces.hpp:69</div></div>
+<div class="ttc" id="aclass_i_apresentacao_hospedagem_html"><div class="ttname"><a href="class_i_apresentacao_hospedagem.html">IApresentacaoHospedagem</a></div><div class="ttdoc">Interface para a apresentação de hospedagens.</div><div class="ttdef"><b>Definição</b> interfaces.hpp:87</div></div>
+<div class="ttc" id="aclass_i_apresentacao_viagem_html"><div class="ttname"><a href="class_i_apresentacao_viagem.html">IApresentacaoViagem</a></div><div class="ttdoc">Interface para a apresentação de viagens.</div><div class="ttdef"><b>Definição</b> interfaces.hpp:54</div></div>
+<div class="ttc" id="aclass_i_servico_atividade_html"><div class="ttname"><a href="class_i_servico_atividade.html">IServicoAtividade</a></div><div class="ttdoc">Interface para o serviço de atividade.</div><div class="ttdef"><b>Definição</b> interfaces.hpp:161</div></div>
+<div class="ttc" id="aclass_i_servico_conta_html"><div class="ttname"><a href="class_i_servico_conta.html">IServicoConta</a></div><div class="ttdoc">Interface para o serviço de conta.</div><div class="ttdef"><b>Definição</b> interfaces.hpp:115</div></div>
+<div class="ttc" id="aclass_i_servico_destino_html"><div class="ttname"><a href="class_i_servico_destino.html">IServicoDestino</a></div><div class="ttdoc">Interface para o serviço de destino.</div><div class="ttdef"><b>Definição</b> interfaces.hpp:137</div></div>
+<div class="ttc" id="aclass_i_servico_hospedagem_html"><div class="ttname"><a href="class_i_servico_hospedagem.html">IServicoHospedagem</a></div><div class="ttdoc">Interface para o serviço de hospedagem.</div><div class="ttdef"><b>Definição</b> interfaces.hpp:150</div></div>
+<div class="ttc" id="aclass_i_servico_viagem_html"><div class="ttname"><a href="class_i_servico_viagem.html">IServicoViagem</a></div><div class="ttdoc">Interface para o serviço de viagem.</div><div class="ttdef"><b>Definição</b> interfaces.hpp:126</div></div>
+<div class="ttc" id="ainterfaces_8hpp_html"><div class="ttname"><a href="interfaces_8hpp.html">interfaces.hpp</a></div><div class="ttdoc">Declaração das interfaces para os serviços e apresentações do sistema.</div></div>
+<div class="ttc" id="autils_8hpp_html"><div class="ttname"><a href="utils_8hpp.html">utils.hpp</a></div><div class="ttdoc">Declaração de funções utilitárias para manipulação de entrada, limpeza de tela e espera.</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

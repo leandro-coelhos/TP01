@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ViajaMaisUNB: Código-Fonte de C:/Users/willi/Desktop/TP01_T1/entidades.hpp</title>
+<title>ViajaUNB: Código-Fonte de C:/Users/willi/Desktop/TP01_T1/entidades.hpp</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -26,9 +26,9 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="unb-universidade-de-brasilia-logo-2F07D677C6-seeklogo.com.png"/></td>
   <td id="projectalign">
-   <div id="projectname">ViajaMaisUNB<span id="projectnumber">&#160;2.5</span>
+   <div id="projectname">ViajaUNB<span id="projectnumber">&#160;3.0</span>
    </div>
-   <div id="projectbrief">Projeto orientado objeto para simular viagens.</div>
+   <div id="projectbrief">Sistema de viaja da UNB</div>
   </td>
  </tr>
  </tbody>
@@ -57,8 +57,6 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="doc-content">
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function(){ initResizable(false); });
@@ -85,8 +83,14 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_e04ae2849dfa520b4ee2c9f7e9ff15de.html">Desktop</a></li><li class="navelem"><a class="el" href="dir_a21f22b7d5709ef5ec7d16c15f358b43.html">TP01_T1</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
 <div class="header">
-  <div class="headertitle"><div class="title">C:/Users/willi/Desktop/TP01_T1/entidades.hpp</div></div>
+  <div class="headertitle"><div class="title">entidades.hpp</div></div>
 </div><!--header-->
 <div class="contents">
 <a href="entidades_8hpp.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef ENTIDADES_HPP_INCLUDED</span></div>
@@ -109,145 +113,150 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_conta.html#a16585ba03471ca5fc626332025e558cf">setSenha</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_senha.html">Senha</a>&amp;);</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <a class="code hl_class" href="class_senha.html">Senha</a> <a class="code hl_function" href="class_conta.html#aa36f37646e006dc200f82bc9f384d79b">getSenha</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>};</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="class_conta.html#a6dea1b6af7ecd5534788da42c1c53d59">   59</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_conta.html#a6dea1b6af7ecd5534788da42c1c53d59">setConta</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_codigo.html">Codigo</a>&amp;, <span class="keyword">const</span> <a class="code hl_class" href="class_senha.html">Senha</a>&amp;);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="class_conta.html#a8efceb61b7547b7ea2a4d0746ce8f51c">   68</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_conta.html#a8efceb61b7547b7ea2a4d0746ce8f51c">getConta</a>(<a class="code hl_class" href="class_codigo.html">Codigo</a>&amp;, <a class="code hl_class" href="class_senha.html">Senha</a>&amp;) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>};</div>
 </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="foldopen" id="foldopen00059" data-start="{" data-end="};">
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="class_viagem.html">   59</a></span><span class="keyword">class </span><a class="code hl_class" href="class_viagem.html">Viagem</a> { <span class="comment">//LEANDRO COELHO DA SILVA, MAT:232011396</span></div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <a class="code hl_class" href="class_codigo.html">Codigo</a> codigo;</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <a class="code hl_class" href="class_avaliacao.html">Avaliacao</a> avaliacao;</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <a class="code hl_class" href="class_nome.html">Nome</a> nome;</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_viagem.html#a5a05f711662d043b598549ff511d47d1">setCodigo</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_codigo.html">Codigo</a>&amp;);</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        <a class="code hl_class" href="class_codigo.html">Codigo</a> <a class="code hl_function" href="class_viagem.html#aaf9cbace04be90c00e62d7b819abddd4">getCodigo</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_viagem.html#a9e28738038c2ef066ebc0f35901d1104">setAvaliacao</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_avaliacao.html">Avaliacao</a>&amp;);</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        <a class="code hl_class" href="class_avaliacao.html">Avaliacao</a> <a class="code hl_function" href="class_viagem.html#a42db61ac0f02f1a84d7ca399b808577c">getAvaliacao</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_viagem.html#a4b925d32bfa7f2df6a22b3ae96793b45">setNome</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_nome.html">Nome</a>&amp;);</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        <a class="code hl_class" href="class_nome.html">Nome</a> <a class="code hl_function" href="class_viagem.html#a94988065b6782f723dfed72bd287c934">getNome</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>};</div>
+<div class="foldopen" id="foldopen00076" data-start="{" data-end="};">
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="class_viagem.html">   76</a></span><span class="keyword">class </span><a class="code hl_class" href="class_viagem.html">Viagem</a> { <span class="comment">//LEANDRO COELHO DA SILVA, MAT:232011396</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <a class="code hl_class" href="class_codigo.html">Codigo</a> codigo;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        <a class="code hl_class" href="class_avaliacao.html">Avaliacao</a> avaliacao;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <a class="code hl_class" href="class_nome.html">Nome</a> nome;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_viagem.html#a5a05f711662d043b598549ff511d47d1">setCodigo</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_codigo.html">Codigo</a>&amp;);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        <a class="code hl_class" href="class_codigo.html">Codigo</a> <a class="code hl_function" href="class_viagem.html#aaf9cbace04be90c00e62d7b819abddd4">getCodigo</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_viagem.html#a9e28738038c2ef066ebc0f35901d1104">setAvaliacao</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_avaliacao.html">Avaliacao</a>&amp;);</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        <a class="code hl_class" href="class_avaliacao.html">Avaliacao</a> <a class="code hl_function" href="class_viagem.html#a42db61ac0f02f1a84d7ca399b808577c">getAvaliacao</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_viagem.html#a4b925d32bfa7f2df6a22b3ae96793b45">setNome</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_nome.html">Nome</a>&amp;);</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        <a class="code hl_class" href="class_nome.html">Nome</a> <a class="code hl_function" href="class_viagem.html#a94988065b6782f723dfed72bd287c934">getNome</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>};</div>
 </div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
-<div class="foldopen" id="foldopen00125" data-start="{" data-end="};">
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno"><a class="line" href="class_hospedagem.html">  125</a></span><span class="keyword">class </span><a class="code hl_class" href="class_hospedagem.html">Hospedagem</a> { <span class="comment">//LEANDRO COELHO DA SILVA, MAT:232011396</span></div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        <a class="code hl_class" href="class_codigo.html">Codigo</a> codigo;</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        <a class="code hl_class" href="class_avaliacao.html">Avaliacao</a> avaliacao;</div>
 <div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>        <a class="code hl_class" href="class_nome.html">Nome</a> nome;</div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>        <a class="code hl_class" href="class_dinheiro.html">Dinheiro</a> diaria;</div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_hospedagem.html#a6a26e1ec207fb7bccce543e9e044aa33">setCodigo</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_codigo.html">Codigo</a>&amp;);</div>
+<div class="foldopen" id="foldopen00142" data-start="{" data-end="};">
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno"><a class="line" href="class_hospedagem.html">  142</a></span><span class="keyword">class </span><a class="code hl_class" href="class_hospedagem.html">Hospedagem</a> { <span class="comment">//LEANDRO COELHO DA SILVA, MAT:232011396</span></div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>        <a class="code hl_class" href="class_codigo.html">Codigo</a> codigo;</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        <a class="code hl_class" href="class_avaliacao.html">Avaliacao</a> avaliacao;</div>
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        <a class="code hl_class" href="class_codigo.html">Codigo</a> <a class="code hl_function" href="class_hospedagem.html#a0bc571395f18c1c0a62409a0f7a0a7f1">getCodigo</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_hospedagem.html#a02ead6490956187fb6d58400426b0e49">setAvaliacao</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_avaliacao.html">Avaliacao</a>&amp;);</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>        <a class="code hl_class" href="class_avaliacao.html">Avaliacao</a> <a class="code hl_function" href="class_hospedagem.html#a25d434bffc9f888c7d138788a72e6304">getAvaliacao</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span> </div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_hospedagem.html#a1cd604eb42251029a565c6a40784cd3a">setNome</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_nome.html">Nome</a>&amp;);</div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span> </div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>        <a class="code hl_class" href="class_nome.html">Nome</a> <a class="code hl_function" href="class_hospedagem.html#acd15abdd2f7f04dcd5f93c466e9f9800">getNome</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span> </div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_hospedagem.html#a5467ac83d9cdc97480a40d5e9498c3eb">setDiaria</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_dinheiro.html">Dinheiro</a>&amp;);</div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span> </div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>        <a class="code hl_class" href="class_dinheiro.html">Dinheiro</a> <a class="code hl_function" href="class_hospedagem.html#a0b69b10783f7795dccef73dc2d27efb0">getDiaria</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>};</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        <a class="code hl_class" href="class_nome.html">Nome</a> nome;</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span> </div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>        <a class="code hl_class" href="class_dinheiro.html">Dinheiro</a> diaria;</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_hospedagem.html#a6a26e1ec207fb7bccce543e9e044aa33">setCodigo</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_codigo.html">Codigo</a>&amp;);</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>        <a class="code hl_class" href="class_codigo.html">Codigo</a> <a class="code hl_function" href="class_hospedagem.html#a0bc571395f18c1c0a62409a0f7a0a7f1">getCodigo</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span> </div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_hospedagem.html#a02ead6490956187fb6d58400426b0e49">setAvaliacao</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_avaliacao.html">Avaliacao</a>&amp;);</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span> </div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>        <a class="code hl_class" href="class_avaliacao.html">Avaliacao</a> <a class="code hl_function" href="class_hospedagem.html#a25d434bffc9f888c7d138788a72e6304">getAvaliacao</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span> </div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_hospedagem.html#a1cd604eb42251029a565c6a40784cd3a">setNome</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_nome.html">Nome</a>&amp;);</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span> </div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>        <a class="code hl_class" href="class_nome.html">Nome</a> <a class="code hl_function" href="class_hospedagem.html#acd15abdd2f7f04dcd5f93c466e9f9800">getNome</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span> </div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_hospedagem.html#a5467ac83d9cdc97480a40d5e9498c3eb">setDiaria</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_dinheiro.html">Dinheiro</a>&amp;);</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span> </div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>        <a class="code hl_class" href="class_dinheiro.html">Dinheiro</a> <a class="code hl_function" href="class_hospedagem.html#a0b69b10783f7795dccef73dc2d27efb0">getDiaria</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>};</div>
 </div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span> </div>
-<div class="foldopen" id="foldopen00210" data-start="{" data-end="};">
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno"><a class="line" href="class_destino.html">  210</a></span><span class="keyword">class </span><a class="code hl_class" href="class_destino.html">Destino</a> {</div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>        <a class="code hl_class" href="class_codigo.html">Codigo</a> codigo;</div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span> </div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>        <a class="code hl_class" href="class_nome.html">Nome</a> nome;</div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span> </div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>        <a class="code hl_class" href="class_avaliacao.html">Avaliacao</a> avaliacao;</div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span> </div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>        <a class="code hl_class" href="class_data.html">Data</a> data_inicio;</div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span> </div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>        <a class="code hl_class" href="class_data.html">Data</a> data_fim;</div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_destino.html#aaeb3c71aec3f593eda9415c03b4dcb5d">setCodigo</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_codigo.html">Codigo</a>&amp;);</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span> </div>
+<div class="foldopen" id="foldopen00227" data-start="{" data-end="};">
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno"><a class="line" href="class_destino.html">  227</a></span><span class="keyword">class </span><a class="code hl_class" href="class_destino.html">Destino</a> {</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>        <a class="code hl_class" href="class_codigo.html">Codigo</a> codigo;</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span> </div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>        <a class="code hl_class" href="class_nome.html">Nome</a> nome;</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span> </div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>        <a class="code hl_class" href="class_avaliacao.html">Avaliacao</a> avaliacao;</div>
 <div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span> </div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>        <a class="code hl_class" href="class_codigo.html">Codigo</a> <a class="code hl_function" href="class_destino.html#ad7fdd8c436e27d4f766f990cce8a4843">getCodigo</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span> </div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_destino.html#a99c20c3634b2765455e76f298e964338">setNome</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_nome.html">Nome</a>&amp;);</div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span> </div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>        <a class="code hl_class" href="class_nome.html">Nome</a> <a class="code hl_function" href="class_destino.html#a5a9dc21d18d4888b647ef24542d34325">getNome</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span> </div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_destino.html#a234b366798d56355aba81afb39cde3b2">setAvaliacao</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_avaliacao.html">Avaliacao</a>&amp;);</div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span> </div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>        <a class="code hl_class" href="class_avaliacao.html">Avaliacao</a> <a class="code hl_function" href="class_destino.html#af8fbd7aa316b735ba53efaac40e93e92">getAvaliacao</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span> </div>
-<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_destino.html#ab9e8e133ee78c3d983046d89590d4c67">setDataInicio</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_data.html">Data</a>&amp;);</div>
-<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span> </div>
-<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>        <a class="code hl_class" href="class_data.html">Data</a> <a class="code hl_function" href="class_destino.html#a07988464bd65aa9a4ae0953f46932977">getDataInicio</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span> </div>
-<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_destino.html#a8c271db1dec810d7ea2f6afb24adf6ee">setDataFim</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_data.html">Data</a>&amp;);</div>
-<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span> </div>
-<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>        <a class="code hl_class" href="class_data.html">Data</a> <a class="code hl_function" href="class_destino.html#a09b4f8debb9080ea6d064dab5ab7345f">getDataFim</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>};</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>        <a class="code hl_class" href="class_data.html">Data</a> data_inicio;</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span> </div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>        <a class="code hl_class" href="class_data.html">Data</a> data_fim;</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_destino.html#aaeb3c71aec3f593eda9415c03b4dcb5d">setCodigo</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_codigo.html">Codigo</a>&amp;);</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span> </div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>        <a class="code hl_class" href="class_codigo.html">Codigo</a> <a class="code hl_function" href="class_destino.html#ad7fdd8c436e27d4f766f990cce8a4843">getCodigo</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span> </div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_destino.html#a99c20c3634b2765455e76f298e964338">setNome</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_nome.html">Nome</a>&amp;);</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span> </div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>        <a class="code hl_class" href="class_nome.html">Nome</a> <a class="code hl_function" href="class_destino.html#a5a9dc21d18d4888b647ef24542d34325">getNome</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span> </div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_destino.html#a234b366798d56355aba81afb39cde3b2">setAvaliacao</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_avaliacao.html">Avaliacao</a>&amp;);</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span> </div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>        <a class="code hl_class" href="class_avaliacao.html">Avaliacao</a> <a class="code hl_function" href="class_destino.html#af8fbd7aa316b735ba53efaac40e93e92">getAvaliacao</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span> </div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_destino.html#ab9e8e133ee78c3d983046d89590d4c67">setDataInicio</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_data.html">Data</a>&amp;);</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span> </div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>        <a class="code hl_class" href="class_data.html">Data</a> <a class="code hl_function" href="class_destino.html#a07988464bd65aa9a4ae0953f46932977">getDataInicio</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span> </div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_destino.html#a8c271db1dec810d7ea2f6afb24adf6ee">setDataFim</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_data.html">Data</a>&amp;);</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span> </div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>        <a class="code hl_class" href="class_data.html">Data</a> <a class="code hl_function" href="class_destino.html#a09b4f8debb9080ea6d064dab5ab7345f">getDataFim</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>};</div>
 </div>
-<div class="foldopen" id="foldopen00313" data-start="{" data-end="};">
-<div class="line"><a id="l00313" name="l00313"></a><span class="lineno"><a class="line" href="class_atividade.html">  313</a></span><span class="keyword">class </span><a class="code hl_class" href="class_atividade.html">Atividade</a> { <span class="comment">//LEANDRO COELHO DA SILVA, MAT:232011396</span></div>
-<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>        <a class="code hl_class" href="class_codigo.html">Codigo</a> codigo;</div>
-<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span> </div>
-<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>        <a class="code hl_class" href="class_nome.html">Nome</a> nome;</div>
-<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span> </div>
-<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>        <a class="code hl_class" href="class_avaliacao.html">Avaliacao</a> avaliacao;</div>
-<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span> </div>
-<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>        <a class="code hl_class" href="class_data.html">Data</a> data;</div>
-<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span> </div>
-<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>        <a class="code hl_class" href="class_horario.html">Horario</a> horario;</div>
-<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span> </div>
-<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>        <a class="code hl_class" href="class_duracao.html">Duracao</a> duracao;</div>
-<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span> </div>
-<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>        <a class="code hl_class" href="class_dinheiro.html">Dinheiro</a> preco;</div>
-<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_atividade.html#a5f5f73325e91ed2bdd1ddd2e28b8c239">setCodigo</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_codigo.html">Codigo</a>&amp;);</div>
+<div class="foldopen" id="foldopen00330" data-start="{" data-end="};">
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno"><a class="line" href="class_atividade.html">  330</a></span><span class="keyword">class </span><a class="code hl_class" href="class_atividade.html">Atividade</a> { <span class="comment">//LEANDRO COELHO DA SILVA, MAT:232011396</span></div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>        <a class="code hl_class" href="class_codigo.html">Codigo</a> codigo;</div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span> </div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>        <a class="code hl_class" href="class_nome.html">Nome</a> nome;</div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span> </div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>        <a class="code hl_class" href="class_avaliacao.html">Avaliacao</a> avaliacao;</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span> </div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>        <a class="code hl_class" href="class_data.html">Data</a> data;</div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span> </div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>        <a class="code hl_class" href="class_horario.html">Horario</a> horario;</div>
 <div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span> </div>
-<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>        <a class="code hl_class" href="class_codigo.html">Codigo</a> <a class="code hl_function" href="class_atividade.html#a590f24fadd78101461a1f32d1c840405">getCodigo</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span> </div>
-<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_atividade.html#a76783d2ec850885c427bda8b718c5e3f">setNome</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_nome.html">Nome</a>&amp;);</div>
-<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span> </div>
-<div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span>        <a class="code hl_class" href="class_nome.html">Nome</a> <a class="code hl_function" href="class_atividade.html#ac0db6bd4d5dc41ce57cdabeb2ab01d19">getNome</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span> </div>
-<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_atividade.html#af216185d4ad835863ddf6075b15bd358">setAvaliacao</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_avaliacao.html">Avaliacao</a>&amp;);</div>
-<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span> </div>
-<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>        <a class="code hl_class" href="class_avaliacao.html">Avaliacao</a> <a class="code hl_function" href="class_atividade.html#ac43294dc6324715f518663999bd92e8b">getAvaliacao</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span> </div>
-<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_atividade.html#a2ffdbbeb65cf291268c80059e434626c">setData</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_data.html">Data</a>&amp;);</div>
-<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span> </div>
-<div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span>        <a class="code hl_class" href="class_data.html">Data</a> <a class="code hl_function" href="class_atividade.html#a370481028676c6ae02f7f5745b20fb70">getData</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span> </div>
-<div class="line"><a id="l00411" name="l00411"></a><span class="lineno">  411</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_atividade.html#a1773fbf49bd2d2ab43f53634c32517bd">setHorario</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_horario.html">Horario</a>&amp;);</div>
-<div class="line"><a id="l00412" name="l00412"></a><span class="lineno">  412</span> </div>
-<div class="line"><a id="l00418" name="l00418"></a><span class="lineno">  418</span>        <a class="code hl_class" href="class_horario.html">Horario</a> <a class="code hl_function" href="class_atividade.html#abc409d2348adfb1a14dc88e1b77f4705">getHorario</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00419" name="l00419"></a><span class="lineno">  419</span> </div>
-<div class="line"><a id="l00425" name="l00425"></a><span class="lineno">  425</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_atividade.html#a1644afd33242f61ffa9f6dd191c508cc">setDuracao</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_duracao.html">Duracao</a>&amp;);</div>
-<div class="line"><a id="l00426" name="l00426"></a><span class="lineno">  426</span> </div>
-<div class="line"><a id="l00432" name="l00432"></a><span class="lineno">  432</span>        <a class="code hl_class" href="class_duracao.html">Duracao</a> <a class="code hl_function" href="class_atividade.html#aa859235f26eb091970b68a6db2761ed0">getDuracao</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00433" name="l00433"></a><span class="lineno">  433</span> </div>
-<div class="line"><a id="l00439" name="l00439"></a><span class="lineno">  439</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_atividade.html#a0c2c1e9076ee89a79b2ef86d24466f95">setPreco</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_dinheiro.html">Dinheiro</a>&amp;);</div>
-<div class="line"><a id="l00440" name="l00440"></a><span class="lineno">  440</span> </div>
-<div class="line"><a id="l00446" name="l00446"></a><span class="lineno">  446</span>        <a class="code hl_class" href="class_dinheiro.html">Dinheiro</a> <a class="code hl_function" href="class_atividade.html#ad9ed78cdec1083d8e3bedd2ed50a0e35">getPreco</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00447" name="l00447"></a><span class="lineno">  447</span>};</div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>        <a class="code hl_class" href="class_duracao.html">Duracao</a> duracao;</div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span> </div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>        <a class="code hl_class" href="class_dinheiro.html">Dinheiro</a> preco;</div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_atividade.html#a5f5f73325e91ed2bdd1ddd2e28b8c239">setCodigo</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_codigo.html">Codigo</a>&amp;);</div>
+<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span> </div>
+<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>        <a class="code hl_class" href="class_codigo.html">Codigo</a> <a class="code hl_function" href="class_atividade.html#a590f24fadd78101461a1f32d1c840405">getCodigo</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span> </div>
+<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_atividade.html#a76783d2ec850885c427bda8b718c5e3f">setNome</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_nome.html">Nome</a>&amp;);</div>
+<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span> </div>
+<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span>        <a class="code hl_class" href="class_nome.html">Nome</a> <a class="code hl_function" href="class_atividade.html#ac0db6bd4d5dc41ce57cdabeb2ab01d19">getNome</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span> </div>
+<div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_atividade.html#af216185d4ad835863ddf6075b15bd358">setAvaliacao</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_avaliacao.html">Avaliacao</a>&amp;);</div>
+<div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span> </div>
+<div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span>        <a class="code hl_class" href="class_avaliacao.html">Avaliacao</a> <a class="code hl_function" href="class_atividade.html#ac43294dc6324715f518663999bd92e8b">getAvaliacao</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span> </div>
+<div class="line"><a id="l00414" name="l00414"></a><span class="lineno">  414</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_atividade.html#a2ffdbbeb65cf291268c80059e434626c">setData</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_data.html">Data</a>&amp;);</div>
+<div class="line"><a id="l00415" name="l00415"></a><span class="lineno">  415</span> </div>
+<div class="line"><a id="l00421" name="l00421"></a><span class="lineno">  421</span>        <a class="code hl_class" href="class_data.html">Data</a> <a class="code hl_function" href="class_atividade.html#a370481028676c6ae02f7f5745b20fb70">getData</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00422" name="l00422"></a><span class="lineno">  422</span> </div>
+<div class="line"><a id="l00428" name="l00428"></a><span class="lineno">  428</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_atividade.html#a1773fbf49bd2d2ab43f53634c32517bd">setHorario</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_horario.html">Horario</a>&amp;);</div>
+<div class="line"><a id="l00429" name="l00429"></a><span class="lineno">  429</span> </div>
+<div class="line"><a id="l00435" name="l00435"></a><span class="lineno">  435</span>        <a class="code hl_class" href="class_horario.html">Horario</a> <a class="code hl_function" href="class_atividade.html#abc409d2348adfb1a14dc88e1b77f4705">getHorario</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00436" name="l00436"></a><span class="lineno">  436</span> </div>
+<div class="line"><a id="l00442" name="l00442"></a><span class="lineno">  442</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_atividade.html#a1644afd33242f61ffa9f6dd191c508cc">setDuracao</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_duracao.html">Duracao</a>&amp;);</div>
+<div class="line"><a id="l00443" name="l00443"></a><span class="lineno">  443</span> </div>
+<div class="line"><a id="l00449" name="l00449"></a><span class="lineno">  449</span>        <a class="code hl_class" href="class_duracao.html">Duracao</a> <a class="code hl_function" href="class_atividade.html#aa859235f26eb091970b68a6db2761ed0">getDuracao</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00450" name="l00450"></a><span class="lineno">  450</span> </div>
+<div class="line"><a id="l00456" name="l00456"></a><span class="lineno">  456</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_atividade.html#a0c2c1e9076ee89a79b2ef86d24466f95">setPreco</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_dinheiro.html">Dinheiro</a>&amp;);</div>
+<div class="line"><a id="l00457" name="l00457"></a><span class="lineno">  457</span> </div>
+<div class="line"><a id="l00463" name="l00463"></a><span class="lineno">  463</span>        <a class="code hl_class" href="class_dinheiro.html">Dinheiro</a> <a class="code hl_function" href="class_atividade.html#ad9ed78cdec1083d8e3bedd2ed50a0e35">getPreco</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00464" name="l00464"></a><span class="lineno">  464</span>};</div>
 </div>
-<div class="line"><a id="l00448" name="l00448"></a><span class="lineno">  448</span> </div>
-<div class="line"><a id="l00449" name="l00449"></a><span class="lineno">  449</span><span class="preprocessor">#endif </span><span class="comment">// ENTIDADES_HPP_INCLUDED;</span></div>
-<div class="ttc" id="aclass_atividade_html"><div class="ttname"><a href="class_atividade.html">Atividade</a></div><div class="ttdoc">Classe que representa uma Atividade.</div><div class="ttdef"><b>Definição</b> entidades.hpp:313</div></div>
+<div class="line"><a id="l00465" name="l00465"></a><span class="lineno">  465</span> </div>
+<div class="line"><a id="l00466" name="l00466"></a><span class="lineno">  466</span><span class="preprocessor">#endif </span><span class="comment">// ENTIDADES_HPP_INCLUDED;</span></div>
+<div class="ttc" id="aclass_atividade_html"><div class="ttname"><a href="class_atividade.html">Atividade</a></div><div class="ttdoc">Classe que representa uma Atividade.</div><div class="ttdef"><b>Definição</b> entidades.hpp:330</div></div>
 <div class="ttc" id="aclass_atividade_html_a0c2c1e9076ee89a79b2ef86d24466f95"><div class="ttname"><a href="class_atividade.html#a0c2c1e9076ee89a79b2ef86d24466f95">Atividade::setPreco</a></div><div class="ttdeci">void setPreco(const Dinheiro &amp;)</div><div class="ttdoc">Define o valor da atividade.</div><div class="ttdef"><b>Definição</b> entidades.cpp:398</div></div>
 <div class="ttc" id="aclass_atividade_html_a1644afd33242f61ffa9f6dd191c508cc"><div class="ttname"><a href="class_atividade.html#a1644afd33242f61ffa9f6dd191c508cc">Atividade::setDuracao</a></div><div class="ttdeci">void setDuracao(const Duracao &amp;)</div><div class="ttdoc">Define a duração da atividade.</div><div class="ttdef"><b>Definição</b> entidades.cpp:382</div></div>
 <div class="ttc" id="aclass_atividade_html_a1773fbf49bd2d2ab43f53634c32517bd"><div class="ttname"><a href="class_atividade.html#a1773fbf49bd2d2ab43f53634c32517bd">Atividade::setHorario</a></div><div class="ttdeci">void setHorario(const Horario &amp;)</div><div class="ttdoc">Define o horário da atividade.</div><div class="ttdef"><b>Definição</b> entidades.cpp:366</div></div>
@@ -267,10 +276,12 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aclass_conta_html"><div class="ttname"><a href="class_conta.html">Conta</a></div><div class="ttdoc">Classe que representa uma Conta no sistema.</div><div class="ttdef"><b>Definição</b> entidades.hpp:13</div></div>
 <div class="ttc" id="aclass_conta_html_a16585ba03471ca5fc626332025e558cf"><div class="ttname"><a href="class_conta.html#a16585ba03471ca5fc626332025e558cf">Conta::setSenha</a></div><div class="ttdeci">void setSenha(const Senha &amp;)</div><div class="ttdoc">Define a senha da conta.</div><div class="ttdef"><b>Definição</b> entidades.cpp:51</div></div>
 <div class="ttc" id="aclass_conta_html_a19d0dba9e6c4632be9d7ad79e71edf10"><div class="ttname"><a href="class_conta.html#a19d0dba9e6c4632be9d7ad79e71edf10">Conta::setCodigo</a></div><div class="ttdeci">void setCodigo(const Codigo &amp;)</div><div class="ttdoc">Define o código da conta.</div><div class="ttdef"><b>Definição</b> entidades.cpp:35</div></div>
+<div class="ttc" id="aclass_conta_html_a6dea1b6af7ecd5534788da42c1c53d59"><div class="ttname"><a href="class_conta.html#a6dea1b6af7ecd5534788da42c1c53d59">Conta::setConta</a></div><div class="ttdeci">void setConta(const Codigo &amp;, const Senha &amp;)</div><div class="ttdoc">Cria uma conta.</div></div>
+<div class="ttc" id="aclass_conta_html_a8efceb61b7547b7ea2a4d0746ce8f51c"><div class="ttname"><a href="class_conta.html#a8efceb61b7547b7ea2a4d0746ce8f51c">Conta::getConta</a></div><div class="ttdeci">void getConta(Codigo &amp;, Senha &amp;) const</div><div class="ttdoc">Loga em uma conta.</div></div>
 <div class="ttc" id="aclass_conta_html_a9d3a61695cbe05fc5a0b25f710c0cd0a"><div class="ttname"><a href="class_conta.html#a9d3a61695cbe05fc5a0b25f710c0cd0a">Conta::getCodigo</a></div><div class="ttdeci">Codigo getCodigo() const</div><div class="ttdoc">Recupera o código da conta.</div><div class="ttdef"><b>Definição</b> entidades.cpp:43</div></div>
 <div class="ttc" id="aclass_conta_html_aa36f37646e006dc200f82bc9f384d79b"><div class="ttname"><a href="class_conta.html#aa36f37646e006dc200f82bc9f384d79b">Conta::getSenha</a></div><div class="ttdeci">Senha getSenha() const</div><div class="ttdoc">Recupera a senha da conta.</div><div class="ttdef"><b>Definição</b> entidades.cpp:59</div></div>
 <div class="ttc" id="aclass_data_html"><div class="ttname"><a href="class_data.html">Data</a></div><div class="ttdoc">Representa uma data no formato DD-MM-AA.</div><div class="ttdef"><b>Definição</b> dominios.hpp:196</div></div>
-<div class="ttc" id="aclass_destino_html"><div class="ttname"><a href="class_destino.html">Destino</a></div><div class="ttdoc">Classe que representa um Destino.</div><div class="ttdef"><b>Definição</b> entidades.hpp:210</div></div>
+<div class="ttc" id="aclass_destino_html"><div class="ttname"><a href="class_destino.html">Destino</a></div><div class="ttdoc">Classe que representa um Destino.</div><div class="ttdef"><b>Definição</b> entidades.hpp:227</div></div>
 <div class="ttc" id="aclass_destino_html_a07988464bd65aa9a4ae0953f46932977"><div class="ttname"><a href="class_destino.html#a07988464bd65aa9a4ae0953f46932977">Destino::getDataInicio</a></div><div class="ttdeci">Data getDataInicio() const</div><div class="ttdoc">Recupera a data de início da viagem ao destino.</div><div class="ttdef"><b>Definição</b> entidades.cpp:268</div></div>
 <div class="ttc" id="aclass_destino_html_a09b4f8debb9080ea6d064dab5ab7345f"><div class="ttname"><a href="class_destino.html#a09b4f8debb9080ea6d064dab5ab7345f">Destino::getDataFim</a></div><div class="ttdeci">Data getDataFim() const</div><div class="ttdoc">Recupera a data de término da viagem ao destino.</div><div class="ttdef"><b>Definição</b> entidades.cpp:284</div></div>
 <div class="ttc" id="aclass_destino_html_a234b366798d56355aba81afb39cde3b2"><div class="ttname"><a href="class_destino.html#a234b366798d56355aba81afb39cde3b2">Destino::setAvaliacao</a></div><div class="ttdeci">void setAvaliacao(const Avaliacao &amp;)</div><div class="ttdoc">Define a avaliação do destino.</div><div class="ttdef"><b>Definição</b> entidades.cpp:244</div></div>
@@ -284,7 +295,7 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aclass_dinheiro_html"><div class="ttname"><a href="class_dinheiro.html">Dinheiro</a></div><div class="ttdoc">Representa uma quantia em dinheiro.</div><div class="ttdef"><b>Definição</b> dominios.hpp:51</div></div>
 <div class="ttc" id="aclass_duracao_html"><div class="ttname"><a href="class_duracao.html">Duracao</a></div><div class="ttdoc">Representa uma duração em minutos.</div><div class="ttdef"><b>Definição</b> dominios.hpp:129</div></div>
 <div class="ttc" id="aclass_horario_html"><div class="ttname"><a href="class_horario.html">Horario</a></div><div class="ttdoc">Representa um horário no formato HH:MM.</div><div class="ttdef"><b>Definição</b> dominios.hpp:12</div></div>
-<div class="ttc" id="aclass_hospedagem_html"><div class="ttname"><a href="class_hospedagem.html">Hospedagem</a></div><div class="ttdoc">Classe que representa uma Hospedagem.</div><div class="ttdef"><b>Definição</b> entidades.hpp:125</div></div>
+<div class="ttc" id="aclass_hospedagem_html"><div class="ttname"><a href="class_hospedagem.html">Hospedagem</a></div><div class="ttdoc">Classe que representa uma Hospedagem.</div><div class="ttdef"><b>Definição</b> entidades.hpp:142</div></div>
 <div class="ttc" id="aclass_hospedagem_html_a02ead6490956187fb6d58400426b0e49"><div class="ttname"><a href="class_hospedagem.html#a02ead6490956187fb6d58400426b0e49">Hospedagem::setAvaliacao</a></div><div class="ttdeci">void setAvaliacao(const Avaliacao &amp;)</div><div class="ttdoc">Define a avaliação da hospedagem.</div><div class="ttdef"><b>Definição</b> entidades.cpp:152</div></div>
 <div class="ttc" id="aclass_hospedagem_html_a0b69b10783f7795dccef73dc2d27efb0"><div class="ttname"><a href="class_hospedagem.html#a0b69b10783f7795dccef73dc2d27efb0">Hospedagem::getDiaria</a></div><div class="ttdeci">Dinheiro getDiaria() const</div><div class="ttdoc">Recupera o valor da diária da hospedagem.</div><div class="ttdef"><b>Definição</b> entidades.cpp:192</div></div>
 <div class="ttc" id="aclass_hospedagem_html_a0bc571395f18c1c0a62409a0f7a0a7f1"><div class="ttname"><a href="class_hospedagem.html#a0bc571395f18c1c0a62409a0f7a0a7f1">Hospedagem::getCodigo</a></div><div class="ttdeci">Codigo getCodigo() const</div><div class="ttdoc">Recupera o código da hospedagem.</div><div class="ttdef"><b>Definição</b> entidades.cpp:144</div></div>
@@ -295,7 +306,7 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aclass_hospedagem_html_acd15abdd2f7f04dcd5f93c466e9f9800"><div class="ttname"><a href="class_hospedagem.html#acd15abdd2f7f04dcd5f93c466e9f9800">Hospedagem::getNome</a></div><div class="ttdeci">Nome getNome() const</div><div class="ttdoc">Recupera o nome da hospedagem.</div><div class="ttdef"><b>Definição</b> entidades.cpp:176</div></div>
 <div class="ttc" id="aclass_nome_html"><div class="ttname"><a href="class_nome.html">Nome</a></div><div class="ttdoc">Representa um nome.</div><div class="ttdef"><b>Definição</b> dominios.hpp:96</div></div>
 <div class="ttc" id="aclass_senha_html"><div class="ttname"><a href="class_senha.html">Senha</a></div><div class="ttdoc">Representa uma senha de 5 caracteres.</div><div class="ttdef"><b>Definição</b> dominios.hpp:241</div></div>
-<div class="ttc" id="aclass_viagem_html"><div class="ttname"><a href="class_viagem.html">Viagem</a></div><div class="ttdoc">Classe que representa uma Viagem.</div><div class="ttdef"><b>Definição</b> entidades.hpp:59</div></div>
+<div class="ttc" id="aclass_viagem_html"><div class="ttname"><a href="class_viagem.html">Viagem</a></div><div class="ttdoc">Classe que representa uma Viagem.</div><div class="ttdef"><b>Definição</b> entidades.hpp:76</div></div>
 <div class="ttc" id="aclass_viagem_html_a42db61ac0f02f1a84d7ca399b808577c"><div class="ttname"><a href="class_viagem.html#a42db61ac0f02f1a84d7ca399b808577c">Viagem::getAvaliacao</a></div><div class="ttdeci">Avaliacao getAvaliacao() const</div><div class="ttdoc">Recupera a avaliação da viagem.</div><div class="ttdef"><b>Definição</b> entidades.cpp:101</div></div>
 <div class="ttc" id="aclass_viagem_html_a4b925d32bfa7f2df6a22b3ae96793b45"><div class="ttname"><a href="class_viagem.html#a4b925d32bfa7f2df6a22b3ae96793b45">Viagem::setNome</a></div><div class="ttdeci">void setNome(const Nome &amp;)</div><div class="ttdoc">Define o nome da viagem.</div><div class="ttdef"><b>Definição</b> entidades.cpp:109</div></div>
 <div class="ttc" id="aclass_viagem_html_a5a05f711662d043b598549ff511d47d1"><div class="ttname"><a href="class_viagem.html#a5a05f711662d043b598549ff511d47d1">Viagem::setCodigo</a></div><div class="ttdeci">void setCodigo(const Codigo &amp;)</div><div class="ttdoc">Define o c�digo da viagem.</div><div class="ttdef"><b>Definição</b> entidades.cpp:77</div></div>

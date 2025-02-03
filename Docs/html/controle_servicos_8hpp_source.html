@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ViajaUNB: Código-Fonte de C:/Users/willi/Desktop/TP01_T1/controleServicos.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="unb-universidade-de-brasilia-logo-2F07D677C6-seeklogo.com.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">ViajaUNB<span id="projectnumber">&#160;3.0</span>
+   </div>
+   <div id="projectbrief">Sistema de viaja da UNB</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Localizar',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrada</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_e04ae2849dfa520b4ee2c9f7e9ff15de.html">Desktop</a></li><li class="navelem"><a class="el" href="dir_a21f22b7d5709ef5ec7d16c15f358b43.html">TP01_T1</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">controleServicos.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="controle_servicos_8hpp.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#ifndef CONTROLESERVICOS_HPP_INCLUDED</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#define CONTROLESERVICOS_HPP_INCLUDED</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="interfaces_8hpp.html">interfaces.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">using namespace </span>std;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="foldopen" id="foldopen00018" data-start="{" data-end="};">
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_cntr_servico_autenticacao_conta.html">   18</a></span><span class="keyword">class </span><a class="code hl_class" href="class_cntr_servico_autenticacao_conta.html">CntrServicoAutenticacaoConta</a>: <span class="keyword">public</span> <a class="code hl_class" href="class_i_servico_conta.html">IServicoConta</a> {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="keywordtype">int</span> <a class="code hl_function" href="class_cntr_servico_autenticacao_conta.html#afc5484b53db3e6dc5a99907b20a01359">logarConta</a>(<span class="keywordtype">string</span>, <span class="keywordtype">string</span>);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_cntr_servico_autenticacao_conta.html#a68789b169a94a155c54f1906760dd872">createConta</a>(<span class="keywordtype">string</span>, <span class="keywordtype">string</span>);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>};</div>
+</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="foldopen" id="foldopen00041" data-start="{" data-end="};">
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="class_cntr_servico_viagem.html">   41</a></span><span class="keyword">class </span><a class="code hl_class" href="class_cntr_servico_viagem.html">CntrServicoViagem</a>: <span class="keyword">public</span> <a class="code hl_class" href="class_i_servico_viagem.html">IServicoViagem</a> {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_cntr_servico_viagem.html#a485310bfffb7fa0a32719333af409b07">createViagem</a>(<span class="keywordtype">string</span>, <span class="keywordtype">string</span>, <span class="keywordtype">string</span>, <span class="keywordtype">string</span>);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_cntr_servico_viagem.html#a30b0e6d794160b7ae99c8660269c9c35">listarViagens</a>(<span class="keywordtype">string</span>);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>};</div>
+</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="foldopen" id="foldopen00064" data-start="{" data-end="};">
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="class_cntr_servico_destino.html">   64</a></span><span class="keyword">class </span><a class="code hl_class" href="class_cntr_servico_destino.html">CntrServicoDestino</a>: <span class="keyword">public</span> <a class="code hl_class" href="class_i_servico_destino.html">IServicoDestino</a> {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_cntr_servico_destino.html#a1e1f0a0e21c99955e5285ed9fa5c1f73">createDestino</a>(<span class="keywordtype">string</span>, <span class="keywordtype">string</span>, <span class="keywordtype">string</span>, <span class="keywordtype">string</span>, <span class="keywordtype">string</span>, <span class="keywordtype">string</span>);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_cntr_servico_destino.html#ae34a37a16cc95569ef72bf04078e5712">listarDestinos</a>(<span class="keywordtype">string</span>);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <span class="keywordtype">string</span> <a class="code hl_function" href="class_cntr_servico_destino.html#abb9260095b839d7541496a9df89e2d5d">getConta</a>(<span class="keywordtype">string</span>);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <span class="keywordtype">string</span> <a class="code hl_function" href="class_cntr_servico_destino.html#a0d71da95a250bfb62317a99eeac00120">getViagem</a>(<span class="keywordtype">string</span>);</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>};</div>
+</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="foldopen" id="foldopen00103" data-start="{" data-end="};">
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="class_cntr_servico_hospedagem.html">  103</a></span><span class="keyword">class </span><a class="code hl_class" href="class_cntr_servico_hospedagem.html">CntrServicoHospedagem</a>: <span class="keyword">public</span> <a class="code hl_class" href="class_i_servico_hospedagem.html">IServicoHospedagem</a> {</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_cntr_servico_hospedagem.html#a0039a67b0e30c67e23550c63d16c666e">createHospedagem</a>(<span class="keywordtype">string</span>, <span class="keywordtype">string</span>, <span class="keywordtype">string</span>, <span class="keywordtype">string</span>, <span class="keywordtype">string</span>);</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_cntr_servico_hospedagem.html#a43ebcdcef2e97c0c11113a311af3c99d">listarHospedagens</a>(<span class="keywordtype">string</span>);</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>};</div>
+</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
+<div class="foldopen" id="foldopen00127" data-start="{" data-end="};">
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno"><a class="line" href="class_cntr_servico_atividade.html">  127</a></span><span class="keyword">class </span><a class="code hl_class" href="class_cntr_servico_atividade.html">CntrServicoAtividade</a>: <span class="keyword">public</span> <a class="code hl_class" href="class_i_servico_atividade.html">IServicoAtividade</a> {</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_cntr_servico_atividade.html#abd0b118506b242fff57d20351e47ebee">createAtividade</a>(<span class="keywordtype">string</span>, <span class="keywordtype">string</span>, <span class="keywordtype">string</span>, <span class="keywordtype">string</span>, <span class="keywordtype">string</span>, <span class="keywordtype">string</span>, <span class="keywordtype">string</span>, <span class="keywordtype">string</span>);</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span> </div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_cntr_servico_atividade.html#a713c988763ba8a6849051e8be2bbacb7">listarAtividades</a>(<span class="keywordtype">string</span>);</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>};</div>
+</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span><span class="preprocessor">#endif </span><span class="comment">// CONTROLESERVICOS_HPP_INCLUDED</span></div>
+<div class="ttc" id="aclass_cntr_servico_atividade_html"><div class="ttname"><a href="class_cntr_servico_atividade.html">CntrServicoAtividade</a></div><div class="ttdoc">Classe responsável pela gestão de atividades dentro de destinos.</div><div class="ttdef"><b>Definição</b> controleServicos.hpp:127</div></div>
+<div class="ttc" id="aclass_cntr_servico_atividade_html_a713c988763ba8a6849051e8be2bbacb7"><div class="ttname"><a href="class_cntr_servico_atividade.html#a713c988763ba8a6849051e8be2bbacb7">CntrServicoAtividade::listarAtividades</a></div><div class="ttdeci">void listarAtividades(string)</div><div class="ttdoc">Lista todas as atividades dentro de um destino.</div><div class="ttdef"><b>Definição</b> controleServicos.cpp:167</div></div>
+<div class="ttc" id="aclass_cntr_servico_atividade_html_abd0b118506b242fff57d20351e47ebee"><div class="ttname"><a href="class_cntr_servico_atividade.html#abd0b118506b242fff57d20351e47ebee">CntrServicoAtividade::createAtividade</a></div><div class="ttdeci">bool createAtividade(string, string, string, string, string, string, string, string)</div><div class="ttdoc">Cria uma nova atividade dentro de um destino.</div><div class="ttdef"><b>Definição</b> controleServicos.cpp:157</div></div>
+<div class="ttc" id="aclass_cntr_servico_autenticacao_conta_html"><div class="ttname"><a href="class_cntr_servico_autenticacao_conta.html">CntrServicoAutenticacaoConta</a></div><div class="ttdoc">Classe responsável pela autenticação e gerenciamento de contas.</div><div class="ttdef"><b>Definição</b> controleServicos.hpp:18</div></div>
+<div class="ttc" id="aclass_cntr_servico_autenticacao_conta_html_a68789b169a94a155c54f1906760dd872"><div class="ttname"><a href="class_cntr_servico_autenticacao_conta.html#a68789b169a94a155c54f1906760dd872">CntrServicoAutenticacaoConta::createConta</a></div><div class="ttdeci">bool createConta(string, string)</div><div class="ttdoc">Cria uma nova conta no sistema.</div><div class="ttdef"><b>Definição</b> controleServicos.cpp:38</div></div>
+<div class="ttc" id="aclass_cntr_servico_autenticacao_conta_html_afc5484b53db3e6dc5a99907b20a01359"><div class="ttname"><a href="class_cntr_servico_autenticacao_conta.html#afc5484b53db3e6dc5a99907b20a01359">CntrServicoAutenticacaoConta::logarConta</a></div><div class="ttdeci">int logarConta(string, string)</div><div class="ttdoc">Realiza o login de uma conta.</div><div class="ttdef"><b>Definição</b> controleServicos.cpp:25</div></div>
+<div class="ttc" id="aclass_cntr_servico_destino_html"><div class="ttname"><a href="class_cntr_servico_destino.html">CntrServicoDestino</a></div><div class="ttdoc">Classe responsável pela gestão de destinos dentro de viagens.</div><div class="ttdef"><b>Definição</b> controleServicos.hpp:64</div></div>
+<div class="ttc" id="aclass_cntr_servico_destino_html_a0d71da95a250bfb62317a99eeac00120"><div class="ttname"><a href="class_cntr_servico_destino.html#a0d71da95a250bfb62317a99eeac00120">CntrServicoDestino::getViagem</a></div><div class="ttdeci">string getViagem(string)</div><div class="ttdoc">Obtém o código da viagem associada a um destino.</div><div class="ttdef"><b>Definição</b> controleServicos.cpp:85</div></div>
+<div class="ttc" id="aclass_cntr_servico_destino_html_a1e1f0a0e21c99955e5285ed9fa5c1f73"><div class="ttname"><a href="class_cntr_servico_destino.html#a1e1f0a0e21c99955e5285ed9fa5c1f73">CntrServicoDestino::createDestino</a></div><div class="ttdeci">bool createDestino(string, string, string, string, string, string)</div><div class="ttdoc">Cria um novo destino dentro de uma viagem.</div><div class="ttdef"><b>Definição</b> controleServicos.cpp:102</div></div>
+<div class="ttc" id="aclass_cntr_servico_destino_html_abb9260095b839d7541496a9df89e2d5d"><div class="ttname"><a href="class_cntr_servico_destino.html#abb9260095b839d7541496a9df89e2d5d">CntrServicoDestino::getConta</a></div><div class="ttdeci">string getConta(string)</div><div class="ttdoc">Obtém o código da conta associada a uma viagem.</div><div class="ttdef"><b>Definição</b> controleServicos.cpp:74</div></div>
+<div class="ttc" id="aclass_cntr_servico_destino_html_ae34a37a16cc95569ef72bf04078e5712"><div class="ttname"><a href="class_cntr_servico_destino.html#ae34a37a16cc95569ef72bf04078e5712">CntrServicoDestino::listarDestinos</a></div><div class="ttdeci">void listarDestinos(string)</div><div class="ttdoc">Lista todos os destinos dentro de uma viagem.</div><div class="ttdef"><b>Definição</b> controleServicos.cpp:112</div></div>
+<div class="ttc" id="aclass_cntr_servico_hospedagem_html"><div class="ttname"><a href="class_cntr_servico_hospedagem.html">CntrServicoHospedagem</a></div><div class="ttdoc">Classe responsável pela gestão de hospedagens dentro de destinos.</div><div class="ttdef"><b>Definição</b> controleServicos.hpp:103</div></div>
+<div class="ttc" id="aclass_cntr_servico_hospedagem_html_a0039a67b0e30c67e23550c63d16c666e"><div class="ttname"><a href="class_cntr_servico_hospedagem.html#a0039a67b0e30c67e23550c63d16c666e">CntrServicoHospedagem::createHospedagem</a></div><div class="ttdeci">bool createHospedagem(string, string, string, string, string)</div><div class="ttdoc">Cria uma nova hospedagem dentro de um destino.</div><div class="ttdef"><b>Definição</b> controleServicos.cpp:128</div></div>
+<div class="ttc" id="aclass_cntr_servico_hospedagem_html_a43ebcdcef2e97c0c11113a311af3c99d"><div class="ttname"><a href="class_cntr_servico_hospedagem.html#a43ebcdcef2e97c0c11113a311af3c99d">CntrServicoHospedagem::listarHospedagens</a></div><div class="ttdeci">void listarHospedagens(string)</div><div class="ttdoc">Lista todas as hospedagens dentro de um destino.</div><div class="ttdef"><b>Definição</b> controleServicos.cpp:138</div></div>
+<div class="ttc" id="aclass_cntr_servico_viagem_html"><div class="ttname"><a href="class_cntr_servico_viagem.html">CntrServicoViagem</a></div><div class="ttdoc">Classe responsável pela gestão de viagens.</div><div class="ttdef"><b>Definição</b> controleServicos.hpp:41</div></div>
+<div class="ttc" id="aclass_cntr_servico_viagem_html_a30b0e6d794160b7ae99c8660269c9c35"><div class="ttname"><a href="class_cntr_servico_viagem.html#a30b0e6d794160b7ae99c8660269c9c35">CntrServicoViagem::listarViagens</a></div><div class="ttdeci">void listarViagens(string)</div><div class="ttdoc">Lista todas as viagens associadas a uma conta.</div><div class="ttdef"><b>Definição</b> controleServicos.cpp:63</div></div>
+<div class="ttc" id="aclass_cntr_servico_viagem_html_a485310bfffb7fa0a32719333af409b07"><div class="ttname"><a href="class_cntr_servico_viagem.html#a485310bfffb7fa0a32719333af409b07">CntrServicoViagem::createViagem</a></div><div class="ttdeci">bool createViagem(string, string, string, string)</div><div class="ttdoc">Cria uma nova viagem associada a uma conta.</div><div class="ttdef"><b>Definição</b> controleServicos.cpp:53</div></div>
+<div class="ttc" id="aclass_i_servico_atividade_html"><div class="ttname"><a href="class_i_servico_atividade.html">IServicoAtividade</a></div><div class="ttdoc">Interface para o serviço de atividade.</div><div class="ttdef"><b>Definição</b> interfaces.hpp:161</div></div>
+<div class="ttc" id="aclass_i_servico_conta_html"><div class="ttname"><a href="class_i_servico_conta.html">IServicoConta</a></div><div class="ttdoc">Interface para o serviço de conta.</div><div class="ttdef"><b>Definição</b> interfaces.hpp:115</div></div>
+<div class="ttc" id="aclass_i_servico_destino_html"><div class="ttname"><a href="class_i_servico_destino.html">IServicoDestino</a></div><div class="ttdoc">Interface para o serviço de destino.</div><div class="ttdef"><b>Definição</b> interfaces.hpp:137</div></div>
+<div class="ttc" id="aclass_i_servico_hospedagem_html"><div class="ttname"><a href="class_i_servico_hospedagem.html">IServicoHospedagem</a></div><div class="ttdoc">Interface para o serviço de hospedagem.</div><div class="ttdef"><b>Definição</b> interfaces.hpp:150</div></div>
+<div class="ttc" id="aclass_i_servico_viagem_html"><div class="ttname"><a href="class_i_servico_viagem.html">IServicoViagem</a></div><div class="ttdoc">Interface para o serviço de viagem.</div><div class="ttdef"><b>Definição</b> interfaces.hpp:126</div></div>
+<div class="ttc" id="ainterfaces_8hpp_html"><div class="ttname"><a href="interfaces_8hpp.html">interfaces.hpp</a></div><div class="ttdoc">Declaração das interfaces para os serviços e apresentações do sistema.</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>
