@@ -10,6 +10,12 @@
 
 using namespace std;
 
+/**
+ * @brief Executa o menu principal do sistema.
+ *
+ * Este método exibe o menu principal e redireciona o usuário para as funcionalidades
+ * correspondentes, como criar conta, acessar conta ou fechar o sistema.
+ */
 void CntrApresentacaoControle::executar(){
     limpaTela();
     int opcao;
@@ -34,6 +40,12 @@ void CntrApresentacaoControle::executar(){
     }
 }
 
+/**
+ * @brief Cria uma nova conta no sistema.
+ *
+ * Este método solicita ao usuário o código e a senha da nova conta e tenta criá-la
+ * utilizando o serviço de conta.
+ */
 void CntrApresentacaoConta::criarConta(){
     limpaTela();
     cout << "Criando conta\n-----------------\n\n";
@@ -56,6 +68,12 @@ void CntrApresentacaoConta::criarConta(){
     }
 }
 
+/**
+ * @brief Permite o acesso a uma conta existente.
+ *
+ * Este método solicita ao usuário o código e a senha da conta e tenta realizar o login
+ * utilizando o serviço de conta.
+ */
 void CntrApresentacaoConta::acessarConta(){
     limpaTela();
     cout << "Acessando conta\n-----------------\n\n";
@@ -78,12 +96,22 @@ void CntrApresentacaoConta::acessarConta(){
     }
 }
 
+/**
+ * @brief Finaliza a aplicação.
+ *
+ * Este método exibe uma mensagem de encerramento e fecha o programa.
+ */
 void CntrApresentacaoControle:: exitCardapio(){
     cout << "Finalizando a aplicacao\n";
     espera();
     exit(0);
 }
 
+/**
+ * @brief Exibe o menu de viagens associadas a uma conta.
+ *
+ * @param codigo O código da conta logada.
+ */
 void CntrApresentacaoConta::viagensConta(string codigo){
     limpaTela();
     int opcao;
@@ -107,6 +135,11 @@ void CntrApresentacaoConta::viagensConta(string codigo){
     }
 }
 
+/**
+ * @brief Executa o menu de viagens.
+ *
+ * @param codigo O código da conta logada.
+ */
 void CntrApresentacaoViagem::executar(string codigo){
     limpaTela();
     int opcao;
@@ -132,6 +165,11 @@ void CntrApresentacaoViagem::executar(string codigo){
     }
 }
 
+/**
+ * @brief Cria uma nova viagem.
+ *
+ * @param codigo O código da conta logada.
+ */
 void CntrApresentacaoViagem::criarViagem(string codigo){
     limpaTela();
     cout << "Criando viagem\n-----------------\n\n";
@@ -157,6 +195,11 @@ void CntrApresentacaoViagem::criarViagem(string codigo){
     }
 }
 
+/**
+ * @brief Lista as viagens associadas a uma conta.
+ *
+ * @param codigo O código da conta logada.
+ */
 void CntrApresentacaoViagem::listarViagens(string codigo){
     limpaTela();
     cout << "Listando viagens\n-----------------\n\n";
@@ -182,6 +225,11 @@ void CntrApresentacaoViagem::listarViagens(string codigo){
     executar(codigo);
 }
 
+/**
+ * @brief Executa o menu de destinos.
+ *
+ * @param codigo O código da viagem selecionada.
+ */
 void CntrApresentacaoDestino::executar(string codigo){
     limpaTela();
     int opcao;
@@ -208,6 +256,11 @@ void CntrApresentacaoDestino::executar(string codigo){
     }
 }
 
+/**
+ * @brief Cria um novo destino.
+ *
+ * @param codigo O código da viagem associada ao destino.
+ */
 void CntrApresentacaoDestino::criarDestino(string codigo){
     limpaTela();
     cout << "Criando destino\n-----------------\n\n";
@@ -239,6 +292,11 @@ void CntrApresentacaoDestino::criarDestino(string codigo){
     }
 }
 
+/**
+ * @brief Lista os destinos associados a uma viagem.
+ *
+ * @param codigo O código da viagem selecionada.
+ */
 void CntrApresentacaoDestino::listarDestinos(string codigo){
     limpaTela();
     cntrServicoDestino->listarDestinos(codigo);
@@ -263,6 +321,11 @@ void CntrApresentacaoDestino::listarDestinos(string codigo){
     executar(codigo);
 }
 
+/**
+ * @brief Exibe o menu de detalhes de um destino.
+ *
+ * @param codigo O código do destino selecionado.
+ */
 void CntrApresentacaoDestino::showDestino(string codigo){
     limpaTela();
     cout << "Mostrando destino\n-----------------\n\n";
@@ -295,6 +358,11 @@ void CntrApresentacaoDestino::showDestino(string codigo){
     }
 }
 
+/**
+ * @brief Cria uma nova hospedagem.
+ *
+ * @param codigo O código do destino associado à hospedagem.
+ */
 void CntrApresentacaoHospedagem::criarHospedagem(string codigo){
     limpaTela();
     cout << "Criando hospedagem\n-----------------\n\n";
@@ -323,6 +391,11 @@ void CntrApresentacaoHospedagem::criarHospedagem(string codigo){
     }
 }
 
+/**
+ * @brief Lista as hospedagens associadas a um destino.
+ *
+ * @param codigo O código do destino selecionado.
+ */
 void CntrApresentacaoHospedagem::listarHospedagens(string codigo){
     limpaTela();
     cout << "Listando hospedagens\n-----------------\n\n";
@@ -342,6 +415,11 @@ void CntrApresentacaoHospedagem::listarHospedagens(string codigo){
     cntrApresentacaoDestino->showDestino(codigo);
 }
 
+/**
+ * @brief Cria uma nova atividade.
+ *
+ * @param codigo O código do destino associado à atividade.
+ */
 void CntrApresentacaoAtividade::criarAtividade(string codigo){
     limpaTela();
     cout << "Criando atividade\n-----------------\n\n";
@@ -379,6 +457,11 @@ void CntrApresentacaoAtividade::criarAtividade(string codigo){
     }
 }
 
+/**
+ * @brief Lista as atividades associadas a um destino.
+ *
+ * @param codigo O código do destino selecionado.
+ */
 void CntrApresentacaoAtividade::listarAtividades(string codigo){
     limpaTela();
     cout << "Listando atividades\n-----------------\n\n";
