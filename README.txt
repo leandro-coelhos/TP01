@@ -34,8 +34,11 @@ Participações dos membros:
 		Testes:
 			Ricardo Filipe Terra Martins de Melo, MAT:232038504
 
-Para ler a documentação da aplicação acesse:
+Para ler a documentação da aplicação, acesse:
 /Docs/html/index.html
+
+Para acesso aos diagramas, acesse:
+/Diagramas/ArquiteturaDeSoftware.drawio.pdf
 
 Vídeo explicativo do projeto:
 https://www.youtube.com/watch?v=D5ZunTBYa9Q
