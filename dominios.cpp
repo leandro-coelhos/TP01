@@ -64,10 +64,10 @@ using namespace std;
 
 /**
  * @brief Valida se a hora e os minutos estão dentro do padrão.
- * 
+ *
  * @param hora A hora a ser validada (0-23).
  * @param minuto Os minutos a serem validados (0-59).
- * 
+ *
  * @throws invalid_argument Se a hora ou os minutos estiverem fora do intervalo permitido.
  */
 void Horario::validateHora(unsigned short hora, unsigned short minuto){ //Valida se as horas e minutos estão dentro do padrão
@@ -81,9 +81,9 @@ void Horario::validateHora(unsigned short hora, unsigned short minuto){ //Valida
 
 /**
  * @brief Define a hora a partir de uma string no formato HH:MM.
- * 
+ *
  * @param horario A string que representa a hora no formato HH:MM.
- * 
+ *
  * @throws invalid_argument Se a string não estiver no formato correto ou se a hora/minuto for inválido.
  */
 void Horario::setHora(string horario){
@@ -104,7 +104,7 @@ void Horario::setHora(string horario){
 
 /**
  * @brief Obtém o horário no formato HH:MM.
- * 
+ *
  * @return A string que representa o horário no formato HH:MM.
  */
 string Horario::getHora() const { //Formata a string para o padrão HH:MM
@@ -129,12 +129,12 @@ string Horario::getHora() const { //Formata a string para o padrão HH:MM
 
 /**
  * @brief Valida se o dinheiro é válido.
- * 
+ *
  * Verifica onde a string tem "," e "." e os substitui para o padrão númerico aceito pelo computador.
  * Quando verificado vê se o número está entre 0 e 200000.
- * 
+ *
  * @param dinheiro A string que representa o dinheiro no formato XXX.XXX,XX.
- * 
+ *
  * @throws invalid_argument Se o dinheiro não for válido.
  */
 void Dinheiro::validateDinheiro(string dinheiro){ //Valida se o dinheiro está no padrão correto
@@ -159,9 +159,9 @@ void Dinheiro::validateDinheiro(string dinheiro){ //Valida se o dinheiro está n
 
 /**
  * @brief Define o dinheiro a partir de uma string no formato XXX.XXX,XX.
- * 
+ *
  * @param dinheiro A string que representa o dinheiro no formato XXX.XXX,XX.
- * 
+ *
  * @throws invalid_argument Se o dinheiro não for válido.
  */
 void Dinheiro::setDinheiro(string dinheiro){ //Coloca no padrão de calculo da linguagem
@@ -177,7 +177,7 @@ void Dinheiro::setDinheiro(string dinheiro){ //Coloca no padrão de calculo da l
 
 /**
  * @brief Obtém o dinheiro como número.
- * 
+ *
  * @return O valor monetário em formato numérico double.
  */
 double Dinheiro::getDinheiro() const {
@@ -186,7 +186,7 @@ double Dinheiro::getDinheiro() const {
 
 /**
  * @brief Obtém o dinheiro formatado como string.
- * 
+ *
  * @return O valor monetário em formato string.
  */
 string Dinheiro::getDinheiroView() const {
@@ -197,11 +197,11 @@ string Dinheiro::getDinheiroView() const {
 
 /**
  * @brief Valida se o nome é válido.
- * 
+ *
  * Verifica se o nome tem entre 1 e 30 caracteres e se não contém números.
- * 
+ *
  * @param nome O nome a ser validado.
- * 
+ *
  * @throws invalid_argument Se o nome não for válido.
  */
 void Nome::validateNome(string nome) {
@@ -215,9 +215,9 @@ void Nome::validateNome(string nome) {
 
 /**
  * @brief Define o nome a partir de uma string.
- * 
+ *
  * @param nome A string que representa o nome.
- * 
+ *
  * @throws invalid_argument Se o nome não for válido.
  */
 void Nome::setNome(string nome) {
@@ -232,7 +232,7 @@ void Nome::setNome(string nome) {
 
 /**
  * @brief Obtém o nome.
- * 
+ *
  * @return O nome armazenado.
  */
 string Nome::getNome() const {
@@ -243,11 +243,11 @@ string Nome::getNome() const {
 
 /**
  * @brief Valida se a avaliação é válida.
- * 
+ *
  * Verifica se a avaliação está entre 0 e 5.
- * 
+ *
  * @param avaliacao A avaliação a ser validada.
- * 
+ *
  * @throws invalid_argument Se a avaliação não for válida.
  */
 void Avaliacao::validateAvaliacao(int avaliacao){
@@ -258,9 +258,9 @@ void Avaliacao::validateAvaliacao(int avaliacao){
 
 /**
  * @brief Define a avaliação a partir de uma string.
- * 
+ *
  * @param avaliacao A string que representa a avaliação.
- * 
+ *
  * @throws invalid_argument Se a avaliação não for válida.
  */
 void Avaliacao::setAvaliacao(string avaliacao){
@@ -276,7 +276,7 @@ void Avaliacao::setAvaliacao(string avaliacao){
 
 /**
  * @brief Obtém a avaliação.
- * 
+ *
  * @return A avaliação armazenada.
  */
 string Avaliacao::getAvaliacao() const {
@@ -287,11 +287,11 @@ string Avaliacao::getAvaliacao() const {
 
 /**
  * @brief Valida se a duração é válida.
- * 
+ *
  * Verifica se a duração está entre 0 e 360.
- * 
+ *
  * @param duracao A duração a ser validada.
- * 
+ *
  * @throws invalid_argument Se a duração não for válida.
  */
 void Duracao::validateDuracao(int duracao){
@@ -302,9 +302,9 @@ void Duracao::validateDuracao(int duracao){
 
 /**
  * @brief Define a duração a partir de uma string.
- * 
+ *
  * @param duracao A string que representa a duração.
- * 
+ *
  * @throws invalid_argument Se a duração não for válida.
  */
 void Duracao::setDuracao(string duracao){
@@ -320,7 +320,7 @@ void Duracao::setDuracao(string duracao){
 
 /**
  * @brief Obtém a duração.
- * 
+ *
  * @return A duração armazenada.
  */
 string Duracao::getDuracao() const {
@@ -331,14 +331,14 @@ string Duracao::getDuracao() const {
 
 /**
  * @brief Valida se a data é válida.
- * 
+ *
  * Verifica se a data está no formato correto e se é uma data válida.
  * Verifica se o ano é bissexto e se o dia é válido para o mês.
- * 
+ *
  * @param dia O dia a ser validado.
  * @param mes O mês a ser validado.
  * @param ano O ano a ser validado.
- * 
+ *
  * @throws invalid_argument Se a data não for válida.
  */
 void Data::validateData(unsigned short dia, unsigned short mes, unsigned short ano){
@@ -387,9 +387,9 @@ void Data::validateData(unsigned short dia, unsigned short mes, unsigned short a
 
 /**
  * @brief Define a data a partir de uma string no formato DD-MM-AA.
- * 
+ *
  * @param data A string que representa a data.
- * 
+ *
  * @throws invalid_argument Se a data não for válida.
  */
 void Data::setData(string data){
@@ -412,7 +412,7 @@ void Data::setData(string data){
 
 /**
  * @brief Obtém a data no formato DD-MM-AA.
- * 
+ *
  * @return A string que representa a data no formato DD-MM-AA.
  */
 string Data::getData() const {
@@ -446,11 +446,11 @@ string Data::getData() const {
 
 /**
  * @brief Valida se o código é válido.
- * 
+ *
  * Verifica se o código tem 6 caracteres e se são válidos.
- * 
+ *
  * @param codigo O código a ser validado.
- * 
+ *
  * @throws invalid_argument Se o código não for válido.
  */
 void Codigo::validateCodigo(string codigo){
@@ -472,9 +472,9 @@ void Codigo::validateCodigo(string codigo){
 
 /**
  * @brief Define o código a partir de uma string.
- * 
+ *
  * @param codigo A string que representa o código.
- * 
+ *
  * @throws invalid_argument Se o código não for válido.
  */
 void Codigo::setCodigo(string codigo){
@@ -489,7 +489,7 @@ void Codigo::setCodigo(string codigo){
 
 /**
  * @brief Obtém o código.
- * 
+ *
  * @return O código armazenado.
  */
 string Codigo::getCodigo() const {
@@ -500,12 +500,12 @@ string Codigo::getCodigo() const {
 
 /**
  * @brief Valida se a senha é válida.
- * 
+ *
  * Verifica se a senha tem 5 caracteres, se são números e se não se repetem.
  * Verifica se a senha é crescente ou decrescente.
- * 
+ *
  * @param senha A senha a ser validada.
- * 
+ *
  * @throws invalid_argument Se a senha não for válida.
  */
 void Senha::validateSenha(string senha){
@@ -546,9 +546,9 @@ void Senha::validateSenha(string senha){
 
 /**
  * @brief Define a senha a partir de uma string.
- * 
+ *
  * @param senha A string que representa a senha.
- * 
+ *
  * @throws invalid_argument Se a senha não for válida.
  */
 void Senha::setSenha(string senha){
@@ -563,7 +563,7 @@ void Senha::setSenha(string senha){
 
 /**
  * @brief Obtém a senha.
- * 
+ *
  * @return A senha armazenada.
  */
 string Senha::getSenha() const {

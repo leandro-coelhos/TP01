@@ -19,7 +19,7 @@ CntrApresentacaoControle* Builder::construir(){
     cntrApresentacaoDestino = new CntrApresentacaoDestino();
     cntrApresentacaoHospedagem = new CntrApresentacaoHospedagem();
     cntrApresentacaoAtividade = new CntrApresentacaoAtividade();
-    
+
     // Instancia os controladores de serviço
     cntrServicoConta = new CntrServicoAutenticacaoConta();
     cntrServicoViagem = new CntrServicoViagem();

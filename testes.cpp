@@ -1195,7 +1195,7 @@ void TUAtividade::testarCenario(){
     Nome nome;
     nome.setNome(nome_valido);
     atividade->setNome(nome);
-    if(atividade->getNome().getNome() != nome_valido) estado = FALHA; 
+    if(atividade->getNome().getNome() != nome_valido) estado = FALHA;
     // Teste de avaliacao valida
     Avaliacao avaliacao;
     avaliacao.setAvaliacao(avaliacao_valida);

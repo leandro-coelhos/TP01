@@ -15,6 +15,16 @@ Participações dos membros:
 		Testes:
 			Lucas Santana Camilo Alves, MAT:211060666 - Teste de entidades
 			Eduardo Luna Scalassara, MAT:232011289 - Teste de domínios
+		Controles:
+			Leandro Coelho da Silva, MAT:232011396
+		Builder:
+			Leandro Coelho da Silva, MAT:232011396
+		Container:
+			Leandro Coelho da Silva, MAT:232011396
+		Interfaces:
+			Leandro Coelho da Silva, MAT:232011396
+		Utils:
+			Leandro Coelho da Silva, MAT:232011396
 
 	Documentação:
 		Domínios:
@@ -26,3 +36,6 @@ Participações dos membros:
 
 Para ler a documentação da aplicação acesse:
 /Docs/html/index.html
+
+Vídeo explicativo do projeto:
+https://www.youtube.com/watch?v=D5ZunTBYa9Q

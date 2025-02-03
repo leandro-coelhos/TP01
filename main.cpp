@@ -15,13 +15,13 @@
 
 //Feito por Eduardo Luna Scalassara, MAT:232011289
 //Feito por Leandro Coelho da Silva, MAT:232011396
-//Feito por Lucas Santana Camilo Alves, MAT:211060666 
+//Feito por Lucas Santana Camilo Alves, MAT:211060666
 
 using namespace std;
 
 int main(){
     Builder *builder = new Builder();
-    
+
     CntrApresentacaoControle *CntrApresentacaoControle = builder->construir();
 
     CntrApresentacaoControle->executar();
@@ -85,7 +85,7 @@ int main(){
             else if(entidades==3) inputHospedagem();
             else if(entidades==4) inputDestino();
             else if(entidades==5) inputAtividade();
-            else if(entidades==6){ 
+            else if(entidades==6){
                 cout << "Finalizando a aplicacao\n";
                 break;
             }
@@ -177,7 +177,7 @@ void inputViagem(){
         viagem->setCodigo(codigo);
         cout << "Valor: " << viagem->getCodigo().getCodigo() << "\n\n";
     } catch (invalid_argument &exp) {
-        cout << "Excecao: " << exp.what() << "\n\n"; 
+        cout << "Excecao: " << exp.what() << "\n\n";
     }
     Avaliacao avaliacao;
     avaliacao.setAvaliacao("3");
@@ -218,7 +218,7 @@ void inputHospedagem(){
         cout << "Valor: " << hospedagem->getCodigo().getCodigo() << "\n\n";
     } catch (invalid_argument &exp) {
         cout << "Excecao: " << exp.what() << "\n\n"; }
-    
+
     Avaliacao avaliacao;
     avaliacao.setAvaliacao("3");
     cout << '\n' << testeAvaliacao();
@@ -244,7 +244,7 @@ void inputHospedagem(){
     cout << '\n' << testeDinheiro();
     try {
         hospedagem->setDiaria(diaria);
-        cout << "Valor: " << hospedagem->getDiaria().getDinheiroView() << '\n' 
+        cout << "Valor: " << hospedagem->getDiaria().getDinheiroView() << '\n'
         << "Valor computacional: " << hospedagem->getDiaria().getDinheiro() << "\n\n";
     } catch (invalid_argument &exp) {
         cout << "Excecao: " << exp.what() << "\n\n";
@@ -273,7 +273,7 @@ void inputDestino(){
         cout << "Excecao: " << exp.what() << "\n\n"; }
 
     cout << "\n";
-    
+
     Avaliacao avaliacao;
     avaliacao.setAvaliacao("3");
     cout << '\n' << testeAvaliacao();
@@ -414,7 +414,7 @@ void inputAtividade(){
 
     try {
         atividade->setPreco(preco);
-        cout << "Valor: " << atividade->getPreco().getDinheiroView() << '\n' 
+        cout << "Valor: " << atividade->getPreco().getDinheiroView() << '\n'
         << "Valor computacional: " << atividade->getPreco().getDinheiro() << "\n\n";
     } catch (invalid_argument &exp) {
         cout << "Excecao: " << exp.what() << "\n\n";

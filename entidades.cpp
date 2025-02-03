@@ -298,7 +298,7 @@ Data Destino::getDataFim() const {
  * @brief Define o código da atividade.
  * @param codigo Objeto do tipo Codigo que representa o código da atividade.
  */
- 
+
 //ATIVIDADE - FEITO POR LEANDRO COELHO DA SILVA, MAT:232011396
 void Atividade::setCodigo(const Codigo& codigo){
     this->codigo = codigo;

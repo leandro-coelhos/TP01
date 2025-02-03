@@ -151,7 +151,7 @@ bool ContainerViagem::createViagem(string codigo, string nome, string avaliacao,
     delete viagem;
 
     return true;
-}   
+}
 
 /**
  * @brief Lista todas as viagens associadas a uma conta.

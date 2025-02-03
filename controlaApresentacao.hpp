@@ -2,7 +2,7 @@
 #define CONTROLAAPRESENTACAO_HPP_INCLUDED
 
 #include <iostream>
-#include <string> 
+#include <string>
 
 #include "utils.hpp"
 #include "interfaces.hpp"
@@ -171,8 +171,8 @@ inline void CntrApresentacaoViagem::setCntrApresentacaoDestino(IApresentacaoDest
 class CntrApresentacaoDestino: public IApresentacaoDestino {
     private:
         IServicoDestino *cntrServicoDestino; ///< Ponteiro para o serviço de destinos.
-        IServicoViagem *cntrServicoViagem; ///< Ponteiro para o serviço de viagens.   
-        IApresentacaoViagem *cntrApresentacaoViagem; ///< Ponteiro para o controlador de apresentação de viagens. 
+        IServicoViagem *cntrServicoViagem; ///< Ponteiro para o serviço de viagens.
+        IApresentacaoViagem *cntrApresentacaoViagem; ///< Ponteiro para o controlador de apresentação de viagens.
         IApresentacaoHospedagem *cntrApresentacaoHospedagem; ///< Ponteiro para o controlador de apresentação de hospedagens.
         IApresentacaoAtividade *cntrApresentacaoAtividade; ///< Ponteiro para o controlador de apresentação de atividades.
     public:

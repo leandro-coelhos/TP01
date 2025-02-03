@@ -17,7 +17,7 @@ using namespace std;
 
 /**
  * @brief Realiza o login de uma conta.
- * 
+ *
  * @param codigo Código da conta.
  * @param senha Senha da conta.
  * @return int Código do status do login.
@@ -29,7 +29,7 @@ int CntrServicoAutenticacaoConta::logarConta(string codigo, string senha){
 
 /**
  * @brief Cria uma nova conta.
- * 
+ *
  * @param codigo Código único da conta.
  * @param senha Senha associada à conta.
  * @return true Se a conta foi criada com sucesso.
@@ -42,7 +42,7 @@ bool CntrServicoAutenticacaoConta::createConta(string codigo, string senha){
 
 /**
  * @brief Cria uma nova viagem associada a uma conta.
- * 
+ *
  * @param codigo Código único da viagem.
  * @param nome Nome da viagem.
  * @param avaliacao Avaliação da viagem.
@@ -57,7 +57,7 @@ bool CntrServicoViagem::createViagem(string codigo, string nome, string avaliaca
 
 /**
  * @brief Lista todas as viagens associadas a uma conta.
- * 
+ *
  * @param codigoConta Código da conta do usuário.
  */
 void CntrServicoViagem::listarViagens(string codigoConta){
@@ -67,7 +67,7 @@ void CntrServicoViagem::listarViagens(string codigoConta){
 
 /**
  * @brief Obtém a conta associada a uma viagem.
- * 
+ *
  * @param codigoViagem Código da viagem.
  * @return string Código da conta associada à viagem.
  */
@@ -78,7 +78,7 @@ string CntrServicoDestino::getConta(string codigoViagem){
 
 /**
  * @brief Obtém a viagem associada a um destino.
- * 
+ *
  * @param codigoDestino Código do destino.
  * @return string Código da viagem associada ao destino.
  */
@@ -89,7 +89,7 @@ string CntrServicoDestino::getViagem(string codigoDestino){
 
 /**
  * @brief Cria um novo destino associado a uma viagem.
- * 
+ *
  * @param codigo Código único do destino.
  * @param nome Nome do destino.
  * @param data_inicio Data de início da viagem ao destino.
@@ -106,7 +106,7 @@ bool CntrServicoDestino::createDestino(string codigo, string nome, string data_i
 
 /**
  * @brief Lista todos os destinos associados a uma viagem.
- * 
+ *
  * @param codigoViagem Código da viagem.
  */
 void CntrServicoDestino::listarDestinos(string codigoViagem){
@@ -116,7 +116,7 @@ void CntrServicoDestino::listarDestinos(string codigoViagem){
 
 /**
  * @brief Cria uma nova hospedagem associada a um destino.
- * 
+ *
  * @param codigo Código único da hospedagem.
  * @param nome Nome da hospedagem.
  * @param diaria Valor da diária da hospedagem.
@@ -132,7 +132,7 @@ bool CntrServicoHospedagem::createHospedagem(string codigo, string nome, string 
 
 /**
  * @brief Lista todas as hospedagens associadas a um destino.
- * 
+ *
  * @param codigoDestino Código do destino.
  */
 void CntrServicoHospedagem::listarHospedagens(string codigoDestino){
@@ -142,7 +142,7 @@ void CntrServicoHospedagem::listarHospedagens(string codigoDestino){
 
 /**
  * @brief Cria uma nova atividade associada a um destino.
- * 
+ *
  * @param codigo Código único da atividade.
  * @param nome Nome da atividade.
  * @param data Data em que a atividade ocorrerá.
@@ -161,7 +161,7 @@ bool CntrServicoAtividade::createAtividade(string codigo, string nome, string da
 
 /**
  * @brief Lista todas as atividades associadas a um destino.
- * 
+ *
  * @param codigoDestino Código do destino.
  */
 void CntrServicoAtividade::listarAtividades(string codigoDestino){

@@ -1,3 +1,6 @@
+#ifndef BUILDER_HPP_INCLUDED
+#define BUILDER_HPP_INCLUDED
+
 #include "interfaces.hpp"
 #include "controlaApresentacao.hpp"
 #include "controleServicos.hpp"
@@ -17,7 +20,7 @@ class Builder {
           IApresentacaoDestino *cntrApresentacaoDestino;      ///< Controlador de apresentação de destino.
           IApresentacaoHospedagem *cntrApresentacaoHospedagem;///< Controlador de apresentação de hospedagem.
           IApresentacaoAtividade *cntrApresentacaoAtividade;  ///< Controlador de apresentação de atividade.
-          
+
           IServicoConta *cntrServicoConta;                    ///< Controlador de serviço de conta.
           IServicoViagem *cntrServicoViagem;                  ///< Controlador de serviço de viagem.
           IServicoDestino *cntrServicoDestino;                ///< Controlador de serviço de destino.
@@ -43,3 +46,6 @@ class Builder {
            */
           ~Builder();
 };
+
+
+#endif // BUILDER_HPP_INCLUDED

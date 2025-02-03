@@ -121,7 +121,7 @@ void CntrApresentacaoConta::viagensConta(string codigo){
     cout << "\n";
     if(opcao==1){
         cout << "Acessando viagens\n";
-        cntrApresentacaoViagem->executar(codigo);   
+        cntrApresentacaoViagem->executar(codigo);
     }
     else if(opcao==2){
         cout << "Voltando para o menu\n";

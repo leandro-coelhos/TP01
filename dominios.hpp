@@ -14,12 +14,12 @@ class Horario { //Leandro Coelho da Silva, MAT:232011396
         /**
          * @brief Representa as horas (0-23).
          */
-        unsigned short hora; 
+        unsigned short hora;
 
         /**
          * @brief Representa os minutos (0-59).
          */
-        unsigned short minuto; 
+        unsigned short minuto;
 
         /**
          * @brief Valida o horário informado.
@@ -54,12 +54,12 @@ class Dinheiro { //Leandro Coelho da Silva, MAT:232011396
         /**
          * @brief Valor monetário do tipo double de 0 a 200000.
          */
-        double dinheiro; 
+        double dinheiro;
 
         /**
          * @brief Valor monetário do tipo string no formato XXX.XXX,XX.
          */
-        string dinheiroView; 
+        string dinheiroView;
 
         /**
          * @brief Valida o valor monetário informado.
@@ -199,7 +199,7 @@ class Data { //Leandro Coelho da Silva, MAT:232011396
         /**
          * @brief Dia armazenado (1-31).
          */
-        unsigned short dia; 
+        unsigned short dia;
 
         /**
          * @brief Mês armazenado (1-12).
@@ -226,7 +226,7 @@ class Data { //Leandro Coelho da Silva, MAT:232011396
          * @throws invalid_argument Se o formato for inválido ou a data for inválida.
          */
         void setData(string data);
-        
+
         /**
          * @brief Obtém a data no formato DD-MM-AA.
          * @return String representando a data no formato DD-MM-AA.
@@ -277,7 +277,7 @@ class Codigo { //Lucas Santana Camilo Alves, MAT:211060666
         /**
          * @brief Código armazenado do tipo string de 6 dígitos.
          */
-        string codigo; 
+        string codigo;
 
         /**
          * @brief Valida o código informado.
